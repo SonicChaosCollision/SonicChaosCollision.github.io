@@ -300,19 +300,22 @@ Open your `style.css` file, click edit, scroll to the bottom, and paste this ent
     transform: translateY(0);      
 }
 
-/* 3. The Image Frame Area (NO RED LINE AT BOTTOM - completely seamless) */
+/* Optimized Frame Area for Transparent Art Renders */
 .char-image-container {
     width: 100%;
-    height: 180px;                 /* Fixed height for the portrait zone */
-    background-color: #0c1c14;     /* Matches card background perfectly so transparent PNGs loop seamlessly */
+    height: 220px;                 /* Increased vertical height to let tall art renders shine */
+    background-color: #0c1c14;     /* Dark green color flows behind the transparent background of your art */
     overflow: hidden;
+    position: relative;
+    padding-top: 15px;             /* Subtle gap at the top so heads don't touch the red outline border */
 }
 
 .char-avatar {
     width: 100%;
     height: 100%;
-    object-fit: contain;           /* Protects transparent character sprites from getting cropped */
-    object-position: bottom center; /* Sits character sheets squarely on the floor of the green box */
+    object-fit: contain;           /* Guarantees the transparent art render scales without being cropped */
+    object-position: bottom center; /* Forces the character's feet to rest perfectly on the bottom floor of the card */
+    display: block;
 }
 
 /* 4. The Inner Text Area right below the character */
