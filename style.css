@@ -193,26 +193,27 @@ Open your `style.css` file, click edit, scroll to the bottom, and paste this ent
    THE CHARACTER PANEL BOXES
    ========================================================================== */
 
-/* 1. Arranges the cards back into a responsive vertical multi-column grid grid */
+/* 1. Sets up the layout grid to force narrow vertical rectangles */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Resizes card grids automatically */
-    gap: 25px; /* Creates clean spacing rows between your vertical cards */
+    /* Changing minmax to 220px forces the cards to stay narrow portrait rectangles instead of expanding into squares */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+    gap: 25px; 
     padding: 20px 0 40px 0;
 }
 
-/* 2. Vertically stacked container panel box with a thick RED outline */
+/* 2. The Vertical Rectangle Card with a solid Red Outline and all-green background */
 .character-card {
-    background-color: #0c1c14;     /* Dark forest green background inside the box */
+    background-color: #0c1c14;     /* Signature dark green background behind everything */
     border: 2px solid #ff4a5a;     /* Sharp, crisp 2px RED outline border */
-    border-radius: 8px;            /* Slightly rounded clean corners */
-    overflow: hidden;              /* Clips anything poking out of the border boundary */
+    border-radius: 8px;            
+    overflow: hidden;              
     display: flex;
-    flex-direction: column;        /* Stacks image box frame vertically on top of the text box */
+    flex-direction: column;        /* Stacks image over text into a portrait rectangle */
     
     /* Scroll Animation settings */
-    opacity: 0;                    /* Starts invisible */
-    transform: translateY(40px);   /* Shifted down slightly */
+    opacity: 0;                    
+    transform: translateY(40px);   
     transition: opacity 0.6s ease-out, transform 0.6s ease-out; 
 }
 
@@ -222,45 +223,48 @@ Open your `style.css` file, click edit, scroll to the bottom, and paste this ent
     transform: translateY(0);      
 }
 
-/* 3. The Image Frame Box at the top of the card */
+/* 3. The Image Frame Area (The green color will show behind your PNGs here) */
 .char-image-container {
     width: 100%;
-    height: 180px;                 /* Fixed vertical portrait height for the artwork zone */
-    background-color: #0b0c10;     /* Extra dark layer behind image */
+    height: 200px;                 /* Fixed vertical height for character portraits */
+    background-color: #0c1c14;     /* Matches card background perfectly so transparent PNGs look seamless */
     overflow: hidden;
-    border-bottom: 2px solid #ff4a5a; /* Red dividing line separation between picture and text */
-    border-right: none !important; /* Cleans up old horizontal layout properties */
+    /* RED SEPARATION LINE REMOVED HERE so background color flows completely down */
 }
 
 .char-avatar {
     width: 100%;
     height: 100%;
-    object-fit: cover;             /* Crops image portrait cleanly into the box constraints */
-    object-position: center;
+    object-fit: contain;           /* Keeps your character PNG sprites from getting cropped or cut off */
+    object-position: bottom center; /* Sits character sprites perfectly on the floor of the green box */
 }
 
-/* 4. The Inner Text Box at the bottom of the card */
+/* 4. The Inner Text Area right below the character */
 .char-bio-content {
-    padding: 20px;                 /* Creates breathing room inside the box walls */
+    background-color: #0c1c14;     /* Continuous green background color */
+    padding: 15px;                 /* Breathing room for text inside the rectangle walls */
     display: flex;
     flex-direction: column;
-    flex-grow: 1;                  /* Forces all text boxes to match height evenly in rows */
+    flex-grow: 1;                  
 }
 
-/* Description Text layout inside the box */
+/* Description Text layout inside the rectangle */
 .char-bio {
-    font-size: 0.88rem !important;
-    color: #cbced4;                /* Clean gray text for ultra-readable descriptions */
-    line-height: 1.5;
-    text-transform: none !important; /* Prevents bios from turning all caps */
+    font-size: 0.85rem !important;
+    color: #cbced4;                
+    line-height: 1.4;
+    text-transform: none !important; 
 }
 
 /* Locked Variation with dashed red outline */
 .character-card.locked {
-    background-color: #090f0c;     /* Darker muted tone for locked state */
-    border: 2px dashed #ff4a5a;    /* Dashed RED outline for locked heroes */
+    background-color: #07100b;     /* Darker green tint to show it is un-activated */
+    border: 2px dashed #ff4a5a;    
     opacity: 0.8;
 }
 .character-card.locked .char-image-container {
-    border-bottom: 2px dashed #ff4a5a;
+    background-color: #07100b;
+}
+.character-card.locked .char-bio-content {
+    background-color: #07100b;
 }
