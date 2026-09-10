@@ -187,3 +187,72 @@ Open your `style.css` file, click edit, scroll to the bottom, and paste this ent
     color: #fd79a8;
     text-shadow: -2px -2px 0 #55efc4, 2px -2px 0 #55efc4, -2px 2px 0 #55efc4, 2px 2px 0 #55efc4, -2px 0px 0 #55efc4, 2px 0px 0 #55efc4, 0px -2px 0 #55efc4, 0px 2px 0 #55efc4;
 }
+
+
+/* ==========================================================================
+   THE CHARACTER PANEL BOXES
+   ========================================================================== */
+
+/* 1. This arranges the boxes into a clean, grid layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Resizes boxes beautifully */
+    gap: 25px; /* Creates clean spacing rows between your boxes */
+    padding: 20px 0 40px 0;
+}
+
+/* 2. This creates the actual panel box card */
+.character-card {
+    background-color: #12141c;     /* Clean dark background inside the box */
+    border: 1px solid #1a1e29;     /* Subtle frame line around the box */
+    border-radius: 8px;            /* Slightly rounded corners just like Megamix */
+    overflow: hidden;              /* Clips anything trying to poke out of the border */
+    display: flex;
+    flex-direction: column;        /* Stacks the image frame on top of the text box */
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* 3. Adds a nice float effect when you hover or tap a box */
+.character-card:hover {
+    transform: translateY(-4px);   
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6); /* Adds a heavy drop shadow beneath the box */
+}
+
+/* 4. The Image Box Container */
+.char-image-container {
+    width: 100%;
+    height: 160px;                 /* Fixed height for the portrait zone */
+    background-color: #0b0c10;     /* Extra dark layer behind image */
+    overflow: hidden;
+    border-bottom: 2px solid #1a1e29; /* Dividing line right underneath the picture */
+}
+
+.char-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;             /* Crops image perfectly into the box constraints */
+    object-position: center;
+}
+
+/* 5. The Inner Text Box (Manages margins so text isn't cramped) */
+.char-bio-content {
+    padding: 20px;                 /* Creates breathing room inside the box walls */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;                  /* Forces all text boxes to match height evenly in rows */
+}
+
+/* 6. Description Text layout inside the box */
+.char-bio {
+    font-size: 0.88rem !important;
+    color: #cbced4;                /* Clean gray text for ultra-readable descriptions */
+    line-height: 1.5;
+    text-transform: none !important; /* Prevents bios from accidentally turning into all caps */
+}
+
+/* 7. Special visual variation to make the locked boxes look distinct */
+.character-card.locked {
+    background-color: #0c0e14;
+    border: 1px dashed #3a3f50;    /* Dashed border line for locked heroes */
+    opacity: 0.8;
+}
