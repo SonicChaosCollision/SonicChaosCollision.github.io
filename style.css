@@ -21,16 +21,40 @@ body {
     padding-top: 70px;
 }
 
-/* Navigation Bar */
+/* Navigation Bar Container */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
+    height: 70px;       /* Forces a fixed, safe height for the navbar bar */
     background-color: #161920;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 5%;
+    padding: 0 5%;      /* Internal padding */
     z-index: 1000;
-    border-bottom: 2px solid #ff4a5a; /* Chaotic red accent line */
+    border-bottom: 2px solid #ff4a5a; 
+}
+
+/* Container for the Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    height: 100%;       /* Ensures the logo area matches the height of the navbar */
+}
+
+/* Constrained Logo Sizing */
+.nav-logo {
+    height: 45px;        /* Slightly reduced height to fit completely within the 70px bar */
+    width: auto;         
+    max-width: 180px;    
+    display: block;
+}
+
+/* Universal Page Body Buffer */
+body {
+    background-color: #0d0e12;
+    color: #cbced4;
+    line-height: 1.6;
+    padding-top: 100px;  /* Pushes all page text safely down below the fixed navbar */
 }
