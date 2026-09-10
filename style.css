@@ -58,3 +58,132 @@ body {
     line-height: 1.6;
     padding-top: 100px;  /* Pushes all page text safely down below the fixed navbar */
 }
+
+### 2. Add these Styling Rules to `style.css`
+Open your `style.css` file, click edit, scroll to the bottom, and paste this entire layout ruleset. Each character block includes a text hex color rule (`color`) and a thick pixel-border shadow rule (`text-shadow`) that acts as an outline:
+
+```css
+/* Base Style for all custom character text headers */
+.char-name {
+    font-size: 1.35rem !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+/* ==========================================================================
+   MAIN PLAYABLE ROSTER TYPOGRAPHY
+   ========================================================================== */
+
+/* Sonic: Deep Blue Text with Neon Yellow Outline */
+.name-sonic {
+    color: #0054b4;
+    text-shadow: -2px -2px 0 #f9d849, 2px -2px 0 #f9d849, -2px 2px 0 #f9d849, 2px 2px 0 #f9d849, -2px 0px 0 #f9d849, 2px 0px 0 #f9d849, 0px -2px 0 #f9d849, 0px 2px 0 #f9d849;
+}
+
+/* Tails: Orange Text with Sharp White Outline */
+.name-tails {
+    color: #ff9f1a;
+    text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff, 2px 2px 0 #ffffff, -2px 0px 0 #ffffff, 2px 0px 0 #ffffff, 0px -2px 0 #ffffff, 0px 2px 0 #ffffff;
+}
+
+/* Knuckles: Crimson Red Text with Green Outline */
+.name-knuckles {
+    color: #e50000;
+    text-shadow: -2px -2px 0 #00a800, 2px -2px 0 #00a800, -2px 2px 0 #00a800, 2px 2px 0 #00a800, -2px 0px 0 #00a800, 2px 0px 0 #00a800, 0px -2px 0 #00a800, 0px 2px 0 #00a800;
+}
+
+/* Shadow: Charcoal Dark Red Text with Glowing Crimson Outline */
+.name-shadow {
+    color: #1a1a1a;
+    text-shadow: -2px -2px 0 #ff0000, 2px -2px 0 #ff0000, -2px 2px 0 #ff0000, 2px 2px 0 #ff0000, -2px 0px 0 #ff0000, 2px 0px 0 #ff0000, 0px -2px 0 #ff0000, 0px 2px 0 #ff0000;
+}
+
+/* SpongeBob: Sponge Yellow Text with Dark Sea-Brown Outline */
+.name-spongebob {
+    color: #f9d849;
+    text-shadow: -2px -2px 0 #4a2f13, 2px -2px 0 #4a2f13, -2px 2px 0 #4a2f13, 2px 2px 0 #4a2f13, -2px 0px 0 #4a2f13, 2px 0px 0 #4a2f13, 0px -2px 0 #4a2f13, 0px 2px 0 #4a2f13;
+}
+
+/* Patrick: Coral Pink Text with Lime Green Outline */
+.name-patrick {
+    color: #ff9ff3;
+    text-shadow: -2px -2px 0 #2ed573, 2px -2px 0 #2ed573, -2px 2px 0 #2ed573, 2px 2px 0 #2ed573, -2px 0px 0 #2ed573, 2px 0px 0 #2ed573, 0px -2px 0 #2ed573, 0px 2px 0 #2ed573;
+}
+
+/* Squidward: Cyan/Teal Text with Light Purple Outline */
+.name-squidward {
+    color: #45aaf2;
+    text-shadow: -2px -2px 0 #a55eea, 2px -2px 0 #a55eea, -2px 2px 0 #a55eea, 2px 2px 0 #a55eea, -2px 0px 0 #a55eea, 2px 0px 0 #a55eea, 0px -2px 0 #a55eea, 0px 2px 0 #a55eea;
+}
+
+/* Larry: Lobster Crimson Text with Ocean Blue Outline */
+.name-larry {
+    color: #ff4757;
+    text-shadow: -2px -2px 0 #1e90ff, 2px -2px 0 #1e90ff, -2px 2px 0 #1e90ff, 2px 2px 0 #1e90ff, -2px 0px 0 #1e90ff, 2px 0px 0 #1e90ff, 0px -2px 0 #1e90ff, 0px 2px 0 #1e90ff;
+}
+
+/* Blossom: Bright Pink Text with Crimson Red Outline */
+.name-blossom {
+    color: #ff758f;
+    text-shadow: -2px -2px 0 #ba000d, 2px -2px 0 #ba000d, -2px 2px 0 #ba000d, 2px 2px 0 #ba000d, -2px 0px 0 #ba000d, 2px 0px 0 #ba000d, 0px -2px 0 #ba000d, 0px 2px 0 #ba000d;
+}
+
+/* Bubbles: Soft Sky Blue Text with Powerpuff Yellow Outline */
+.name-bubbles {
+    color: #70a1ff;
+    text-shadow: -2px -2px 0 #f9d849, 2px -2px 0 #f9d849, -2px 2px 0 #f9d849, 2px 2px 0 #f9d849, -2px 0px 0 #f9d849, 2px 0px 0 #f9d849, 0px -2px 0 #f9d849, 0px 2px 0 #f9d849;
+}
+
+/* Buttercup: Forest Green Text with Solid Black Outline */
+.name-buttercup {
+    color: #2ed573;
+    text-shadow: -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000, -2px 0px 0 #000000, 2px 0px 0 #000000, 0px -2px 0 #000000, 0px 2px 0 #000000;
+}
+
+/* ==========================================================================
+   UNLOCKABLE ROSTER TYPOGRAPHY
+   ========================================================================== */
+
+/* Sandy: Texas Brown Text with Deep Purple Outline */
+.name-sandy {
+    color: #a4b0be;
+    text-shadow: -2px -2px 0 #8854d0, 2px -2px 0 #8854d0, -2px 2px 0 #8854d0, 2px 2px 0 #8854d0, -2px 0px 0 #8854d0, 2px 0px 0 #8854d0, 0px -2px 0 #8854d0, 0px 2px 0 #8854d0;
+}
+
+/* Amy: Bubblegum Pink Text with Soft White Outline */
+.name-amy {
+    color: #ff4081;
+    text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff, 2px 2px 0 #ffffff, -2px 0px 0 #ffffff, 2px 0px 0 #ffffff, 0px -2px 0 #ffffff, 0px 2px 0 #ffffff;
+}
+
+/* Rouge: Dark Violet Text with Diamond White Outline */
+.name-rouge {
+    color: #3f51b5;
+    text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff, 2px 2px 0 #ffffff, -2px 0px 0 #ffffff, 2px 0px 0 #ffffff, 0px -2px 0 #ffffff, 0px 2px 0 #ffffff;
+}
+
+/* Cream: Light Cream-Tan Text with Bright Orange Outline */
+.name-cream {
+    color: #ffeaa7;
+    text-shadow: -2px -2px 0 #ff7675, 2px -2px 0 #ff7675, -2px 2px 0 #ff7675, 2px 2px 0 #ff7675, -2px 0px 0 #ff7675, 2px 0px 0 #ff7675, 0px -2px 0 #ff7675, 0px 2px 0 #ff7675;
+}
+
+/* Mighty: Dark Iron Rust Text with Matte Black Outline */
+.name-mighty {
+    color: #d63031;
+    text-shadow: -2px -2px 0 #2d3436, 2px -2px 0 #2d3436, -2px 2px 0 #2d3436, 2px 2px 0 #2d3436, -2px 0px 0 #2d3436, 2px 0px 0 #2d3436, 0px -2px 0 #2d3436, 0px 2px 0 #2d3436;
+}
+
+/* Hatsune Miku: Vocaloid Teal Text with Solid White Outline */
+.name-miku {
+    color: #39c5bb;
+    text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff, 2px 2px 0 #ffffff, -2px 0px 0 #ffffff, 2px 0px 0 #ffffff, 0px -2px 0 #ffffff, 0px 2px 0 #ffffff;
+}
+
+/* Timmy Turner: Fairy Pink Text with Magic Green Outline */
+.name-timmy {
+    color: #fd79a8;
+    text-shadow: -2px -2px 0 #55efc4, 2px -2px 0 #55efc4, -2px 2px 0 #55efc4, 2px 2px 0 #55efc4, -2px 0px 0 #55efc4, 2px 0px 0 #55efc4, 0px -2px 0 #55efc4, 0px 2px 0 #55efc4;
+}
