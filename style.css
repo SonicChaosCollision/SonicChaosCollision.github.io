@@ -21,34 +21,105 @@ body {
     padding-top: 70px;
 }
 
-/* Navigation Bar Container */
+/* Navigation Bar (Now just a clean, minimalist link container) */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 70px;       /* Forces a fixed, safe height for the navbar bar */
-    background-color: #161920;
+    height: 60px;
+    background-color: rgba(22, 25, 32, 0.95); /* Slight transparency */
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Centers the navigation links */
     align-items: center;
-    padding: 0 5%;      /* Internal padding */
     z-index: 1000;
     border-bottom: 2px solid #ff4a5a; 
 }
 
-/* Container for the Logo */
-.logo {
-    display: flex;
-    align-items: center;
-    height: 100%;       /* Ensures the logo area matches the height of the navbar */
+.centered-nav a {
+    color: #cbced4;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.3s;
 }
 
-/* Constrained Logo Sizing */
-.nav-logo {
-    height: 45px;        /* Slightly reduced height to fit completely within the 70px bar */
-    width: auto;         
-    max-width: 180px;    
+.centered-nav a:hover {
+    color: #ff4a5a;
+}
+
+/* Hero Section (Centering Container) */
+.hero-section {
+    text-align: center;
+    padding: 140px 20px 80px 20px; /* Leaves room below the top fixed navbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Takes up most of the screen view for impact */
+    
+    /* Your rolling background settings stay here */
+    background: linear-gradient(rgba(13, 14, 18, 0.88), rgba(13, 14, 18, 0.95)), url('scroll-bg.png');
+    background-repeat: repeat;
+    animation: scrollBackground 25s linear infinite;
+    border-bottom: 1px solid #1a1d26;
+}
+
+.hero-content-wrapper {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Forces everything inside to line up perfectly down the middle */
+}
+
+/* Big Hero Logo Sizing */
+.main-logo-container {
+    width: 100%;
+    max-width: 550px; /* Makes the logo image big and dominant */
+    margin-bottom: 25px; /* Gap between logo and button */
+}
+
+.big-hero-logo {
+    width: 100%;
+    height: auto;
     display: block;
+}
+
+/* Big Hero Download Button Layout */
+.hero-download-container {
+    margin-bottom: 40px; /* Gap between button and description text */
+}
+
+.big-download-btn {
+    display: inline-block;
+    background-color: #ff4a5a;
+    color: #ffffff;
+    padding: 18px 50px; /* Extra thick padded layout button */
+    font-size: 1.1rem;
+    font-weight: 900;
+    text-decoration: none;
+    border-radius: 40px; /* Clean oval pill shape */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 6px 20px rgba(255, 74, 90, 0.4); /* Glowing button shadow */
+}
+
+.big-download-btn:hover {
+    background-color: #e03242;
+    transform: scale(1.05); /* Slight expansion pulse on hover */
+    box-shadow: 0 8px 25px rgba(255, 74, 90, 0.6);
+}
+
+/* Responsive adjustments for mobile phone screens */
+@media (max-width: 600px) {
+    .main-logo-container {
+        max-width: 85%; /* Slightly shrinks logo on narrow phones so it fits comfortably */
+    }
+    .big-download-btn {
+        padding: 14px 30px;
+        font-size: 0.9rem; /* Scales button text down slightly on mobile screen views */
+    }
 }
 
 /* Universal Page Body Buffer */
