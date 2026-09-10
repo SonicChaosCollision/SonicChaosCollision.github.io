@@ -193,58 +193,53 @@ Open your `style.css` file, click edit, scroll to the bottom, and paste this ent
    THE CHARACTER PANEL BOXES
    ========================================================================== */
 
-/* 1. This arranges the boxes into a clean, grid layout */
+/* 1. Arranges the cards back into a responsive vertical multi-column grid grid */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Resizes boxes beautifully */
-    gap: 25px; /* Creates clean spacing rows between your boxes */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Resizes card grids automatically */
+    gap: 25px; /* Creates clean spacing rows between your vertical cards */
     padding: 20px 0 40px 0;
 }
 
-/* Updated Character Card Box to Green Theme */
+/* 2. Vertically stacked container panel box with a thick RED outline */
 .character-card {
     background-color: #0c1c14;     /* Dark forest green background inside the box */
-    border: 1px solid #1a3a2a;     /* Muted green border line around the box */
-    border-radius: 8px;            
-    overflow: hidden;              
+    border: 2px solid #ff4a5a;     /* Sharp, crisp 2px RED outline border */
+    border-radius: 8px;            /* Slightly rounded clean corners */
+    overflow: hidden;              /* Clips anything poking out of the border boundary */
     display: flex;
-    flex-direction: column;        
+    flex-direction: column;        /* Stacks image box frame vertically on top of the text box */
     
-    /* Prepare the box for the scroll animation */
-    opacity: 0;                    /* Starts completely invisible */
-    transform: translateY(40px);   /* Starts shifted down slightly */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
+    /* Scroll Animation settings */
+    opacity: 0;                    /* Starts invisible */
+    transform: translateY(40px);   /* Shifted down slightly */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; 
 }
 
-/* This class triggers when you scroll down to a box */
+/* Scroll reveal trigger class */
 .character-card.reveal {
-    opacity: 1;                    /* Fades in smoothly */
-    transform: translateY(0);      /* Moves up to its correct resting position */
+    opacity: 1;                    
+    transform: translateY(0);      
 }
 
-/* 3. Adds a nice float effect when you hover or tap a box */
-.character-card:hover {
-    transform: translateY(-4px);   
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6); /* Adds a heavy drop shadow beneath the box */
-}
-
-/* 4. The Image Box Container */
+/* 3. The Image Frame Box at the top of the card */
 .char-image-container {
     width: 100%;
-    height: 160px;                 /* Fixed height for the portrait zone */
+    height: 180px;                 /* Fixed vertical portrait height for the artwork zone */
     background-color: #0b0c10;     /* Extra dark layer behind image */
     overflow: hidden;
-    border-bottom: 2px solid #1a1e29; /* Dividing line right underneath the picture */
+    border-bottom: 2px solid #ff4a5a; /* Red dividing line separation between picture and text */
+    border-right: none !important; /* Cleans up old horizontal layout properties */
 }
 
 .char-avatar {
     width: 100%;
     height: 100%;
-    object-fit: cover;             /* Crops image perfectly into the box constraints */
+    object-fit: cover;             /* Crops image portrait cleanly into the box constraints */
     object-position: center;
 }
 
-/* 5. The Inner Text Box (Manages margins so text isn't cramped) */
+/* 4. The Inner Text Box at the bottom of the card */
 .char-bio-content {
     padding: 20px;                 /* Creates breathing room inside the box walls */
     display: flex;
@@ -252,17 +247,20 @@ Open your `style.css` file, click edit, scroll to the bottom, and paste this ent
     flex-grow: 1;                  /* Forces all text boxes to match height evenly in rows */
 }
 
-/* 6. Description Text layout inside the box */
+/* Description Text layout inside the box */
 .char-bio {
     font-size: 0.88rem !important;
     color: #cbced4;                /* Clean gray text for ultra-readable descriptions */
     line-height: 1.5;
-    text-transform: none !important; /* Prevents bios from accidentally turning into all caps */
+    text-transform: none !important; /* Prevents bios from turning all caps */
 }
 
-/* 7. Special visual variation to make the locked boxes look distinct */
+/* Locked Variation with dashed red outline */
 .character-card.locked {
-    background-color: #0c0e14;
-    border: 1px dashed #3a3f50;    /* Dashed border line for locked heroes */
+    background-color: #090f0c;     /* Darker muted tone for locked state */
+    border: 2px dashed #ff4a5a;    /* Dashed RED outline for locked heroes */
     opacity: 0.8;
+}
+.character-card.locked .char-image-container {
+    border-bottom: 2px dashed #ff4a5a;
 }
