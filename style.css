@@ -264,29 +264,32 @@ Open your `style.css` file, click edit, scroll to the bottom, and paste this ent
    THE CHARACTER PANEL BOXES
    ========================================================================== */
 
-/* 1. Sets up a grid that forces cards into narrow vertical columns */
+/* 1. The Layout Grid - Updated to match their massive, wide layout grid */
 .grid-container {
     display: grid;
-    /* Forces columns to stay narrow and centered on the page */
-    grid-template-columns: repeat(auto-fit, minmax(180px, 240px)); 
-    justify-content: center; /* Centers the whole layout on your screen */
-    gap: 25px; 
-    padding: 20px 0 40px 0;
+    /* Boosts the card sizing parameters to 300px minimum width, allowing cards to scale up to 340px */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    justify-content: center; 
+    gap: 30px; /* Clean spacing rows between large panels */
+    padding: 30px 0 60px 0;
+    max-width: 1200px; /* Allows the container layout to span wide across the desktop screen view */
+    margin: 0 auto;
 }
 
-/* 2. Forces a rigid, tall vertical rectangle shape with a red outline */
+/* 2. The Card Panel - Expanded size constraints to match their box dimensions exactly */
 .character-card {
-    background-color: #0c1c14;     /* Continuous dark green background behind everything */
-    border: 2px solid #ff4a5a;     /* Sharp, solid RED outline border */
+    background-color: #0d1e15;     /* Dark forest green background color */
+    border: 3px solid #ff4a5a;     /* Sharp 3px solid RED outline border */
     border-radius: 8px;            
     overflow: hidden;              
     display: flex;
-    flex-direction: column;        /* Stacks image vertically above text */
+    flex-direction: column;        
     
-    /* Enforces a tall vertical rectangle aspect ratio */
+    /* Bigger rectangular sizing constraints */
     width: 100%;
-    min-height: 360px;             /* Sets a minimum vertical height so it remains a tall rectangle */
-    max-width: 240px;              /* Caps the width so it can never stretch wide into a square */
+    min-height: 480px;             /* Height increased to 480px so the massive boxes have scale */
+    max-width: 340px;              /* Width increased to 340px to stop them from looking small */
+    margin: 0 auto;                /* Centers single rows nicely */
     
     /* Scroll Animation settings */
     opacity: 0;                    
@@ -300,48 +303,48 @@ Open your `style.css` file, click edit, scroll to the bottom, and paste this ent
     transform: translateY(0);      
 }
 
-/* Optimized Frame Area for Transparent Art Renders */
+/* 3. The Image Frame Area - Expanded to frame your big art renders */
 .char-image-container {
     width: 100%;
-    height: 220px;                 /* Increased vertical height to let tall art renders shine */
-    background-color: #0c1c14;     /* Dark green color flows behind the transparent background of your art */
+    height: 260px;                 /* Increased height to 260px so high-res art renders look huge */
+    background-color: #0d1e15;     /* Solid green background flows right behind transparent PNGs */
     overflow: hidden;
     position: relative;
-    padding-top: 15px;             /* Subtle gap at the top so heads don't touch the red outline border */
+    padding-top: 15px;             
 }
 
 .char-avatar {
     width: 100%;
     height: 100%;
-    object-fit: contain;           /* Guarantees the transparent art render scales without being cropped */
-    object-position: bottom center; /* Forces the character's feet to rest perfectly on the bottom floor of the card */
+    object-fit: contain;           
+    object-position: bottom center; 
     display: block;
 }
 
 /* 4. The Inner Text Area right below the character */
 .char-bio-content {
-    background-color: #0c1c14;     /* Flowing continuous green background color */
-    padding: 15px;                 /* Breathing room for text inside the rectangle walls */
+    background-color: #0d1e15;     
+    padding: 20px 25px 25px 25px;  /* Padded layout room match their text structure formatting */
     display: flex;
     flex-direction: column;
     flex-grow: 1;                  
     justify-content: flex-start;
 }
 
-/* Description Text layout inside the vertical rectangle */
+/* Description Text inside the big box */
 .char-bio {
-    font-size: 0.85rem !important;
+    font-size: 0.9rem !important;  /* Marginally larger font to scale with the bigger card sizing */
     color: #cbced4;                
-    line-height: 1.4;
+    line-height: 1.5;
     text-transform: none !important; 
-    margin-top: 6px;
+    margin-top: 8px;
 }
 
-/* Locked Variation with a dashed red outline */
+/* Locked Variation with matching expanded constraints */
 .character-card.locked {
-    background-color: #07100b;     /* Darker muted green tint for un-activated state */
-    border: 2px dashed #ff4a5a;    
-    opacity: 0.8;
+    background-color: #07100b;     
+    border: 3px dashed #ff4a5a;    
+    opacity: 0.75;
 }
 .character-card.locked .char-image-container { background-color: #07100b; }
 .character-card.locked .char-bio-content { background-color: #07100b; }
