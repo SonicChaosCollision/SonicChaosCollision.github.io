@@ -323,7 +323,7 @@ Open your `style.css` file, click edit, scroll to the bottom, and paste this ent
 
 /* 4. The Inner Text Area right below the character */
 .char-bio-content {
-    background-color: #0d1e15;     
+    background-color: #7dbd9c;     
     padding: 20px 25px 25px 25px;  /* Padded layout room match their text structure formatting */
     display: flex;
     flex-direction: column;
