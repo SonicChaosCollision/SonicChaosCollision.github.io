@@ -241,5 +241,28 @@
         <p>&copy; 2026 Collision Chaos Team. Fan-made project disclaimer or credits go here.</p>
     </footer>
 
+    <!-- Scroll Animation Script -->
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    // Box is visible on screen -> Reveal it
+                    entry.target.classList.add('reveal');
+                } else {
+                    // Box left the screen -> Hide it again
+                    entry.target.classList.remove('reveal');
+                }
+            });
+        }, {
+            threshold: 0.1 // Triggers when 10% of the box is visible
+        });
+
+        // Find all character cards and tell the observer to track them
+        const cards = document.querySelectorAll('.character-card');
+        cards.forEach((card) => observer.observe(card));
+    </script>
+</body>
+</html>
+
 </body>
 </html>
