@@ -8,17 +8,38 @@
 </head>
 <body>
 
-    <!-- Top Navigation Bar -->
+   <!-- Top Navigation Bar (Simplified to just handle text links) -->
     <header class="navbar">
-        <div class="logo">
-    <img src="Untitled1924_20260909224644.png" alt="Sonic the Hedgehog: Collision Chaos Logo" class="nav-logo">
-</div>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#features">Features</a>
-            <a href="#download">Download</a>
+        <nav class="centered-nav">
+            <a href="#story">The Crisis</a>
+            <a href="#roster">Roster</a>
+            <a href="#download">Play</a>
         </nav>
     </header>
+
+    <!-- Hero / Intro Section (Big Centered Logo and Download Button) -->
+    <section id="story" class="hero-section">
+        <div class="hero-content-wrapper">
+            
+            <!-- Big Centered Logo Image -->
+            <div class="main-logo-container">
+                <img src="logo.png" alt="Sonic the Hedgehog: Collision Chaos" class="big-hero-logo" onerror="this.src='https://placeholder.com';">
+            </div>
+
+            <!-- Big Centered Download Button (Directly beneath the logo) -->
+            <div class="hero-download-container">
+                <a href="#" class="big-download-btn">Download Demo (Coming Soon)</a>
+            </div>
+
+            <p class="subtitle">Three dimensions clash. Dr. Eggman, Plankton, and Mojo Jojo have united to break reality. Sonic, SpongeBob, Blossom, and their allies must band together to undo the ultimate universe collision!</p>
+            
+            <div class="badge-container">
+                <span class="badge">Fangame Project</span>
+                <span class="badge status">In Development</span>
+            </div>
+            
+        </div>
+    </section>
 
    <!-- Character Roster Section -->
     <section id="roster" class="features-section">
