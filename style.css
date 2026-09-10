@@ -343,9 +343,9 @@ Open your `style.css` file, click edit, scroll to the bottom, and paste this ent
 
 /* Locked Variation with matching expanded constraints */
 .character-card.locked {
-    background-color: #07100b;     
-    border: 3px dashed #ff4a5a;    
+    background-color: #7dbd9c;     
+    border: 3px soild #d90c15;    
     opacity: 0.75;
 }
-.character-card.locked .char-image-container { background-color: #07100b; }
-.character-card.locked .char-bio-content { background-color: #07100b; }
+.character-card.locked .char-image-container { background-color: #7dbd9c; }
+.character-card.locked .char-bio-content { background-color: #7dbd9c; }
