@@ -201,15 +201,25 @@ Open your `style.css` file, click edit, scroll to the bottom, and paste this ent
     padding: 20px 0 40px 0;
 }
 
-/* 2. This creates the actual panel box card */
+/* Updated Character Card Box to Green Theme */
 .character-card {
-    background-color: #12141c;     /* Clean dark background inside the box */
-    border: 1px solid #1a1e29;     /* Subtle frame line around the box */
-    border-radius: 8px;            /* Slightly rounded corners just like Megamix */
-    overflow: hidden;              /* Clips anything trying to poke out of the border */
+    background-color: #0c1c14;     /* Dark forest green background inside the box */
+    border: 1px solid #1a3a2a;     /* Muted green border line around the box */
+    border-radius: 8px;            
+    overflow: hidden;              
     display: flex;
-    flex-direction: column;        /* Stacks the image frame on top of the text box */
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    flex-direction: column;        
+    
+    /* Prepare the box for the scroll animation */
+    opacity: 0;                    /* Starts completely invisible */
+    transform: translateY(40px);   /* Starts shifted down slightly */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
+}
+
+/* This class triggers when you scroll down to a box */
+.character-card.reveal {
+    opacity: 1;                    /* Fades in smoothly */
+    transform: translateY(0);      /* Moves up to its correct resting position */
 }
 
 /* 3. Adds a nice float effect when you hover or tap a box */
