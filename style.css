@@ -136,127 +136,128 @@ Open your `style.css` file, click edit, scroll to the bottom, and paste this ent
 ```css
 /* Base Style for all custom character text headers */
 .char-name {
-    font-size: 1.35rem !important;
+    font-size: 1.4rem !important;
     font-weight: 900 !important;
     text-transform: uppercase !important;
     letter-spacing: 0.5px;
     margin-bottom: 8px;
+    display: inline-block; /* Helps the shadow layers calculate accurately on mobile */
 }
 
 /* ==========================================================================
-   MAIN PLAYABLE ROSTER TYPOGRAPHY
+   MAIN PLAYABLE ROSTER WITH HEAVY BLACK DROP SHADOWS
    ========================================================================== */
 
-/* Sonic: Deep Blue Text with Neon Yellow Outline */
+/* Sonic: Deep Blue Text, Yellow Outline, Heavy Black Drop Shadow */
 .name-sonic {
     color: #0054b4;
-    text-shadow: -2px -2px 0 #f9d849, 2px -2px 0 #f9d849, -2px 2px 0 #f9d849, 2px 2px 0 #f9d849, -2px 0px 0 #f9d849, 2px 0px 0 #f9d849, 0px -2px 0 #f9d849, 0px 2px 0 #f9d849;
+    text-shadow: -2px -2px 0 #f9d849, 2px -2px 0 #f9d849, -2px 2px 0 #f9d849, 2px 2px 0 #f9d849, -2px 0px 0 #f9d849, 2px 0px 0 #f9d849, 0px -2px 0 #f9d849, 0px 2px 0 #f9d849, 3px 3px 0px rgba(0,0,0,0.85);
 }
 
-/* Tails: Orange Text with Sharp White Outline */
+/* Tails: Orange Text, White Outline, Heavy Black Drop Shadow */
 .name-tails {
     color: #ff9f1a;
-    text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff, 2px 2px 0 #ffffff, -2px 0px 0 #ffffff, 2px 0px 0 #ffffff, 0px -2px 0 #ffffff, 0px 2px 0 #ffffff;
+    text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff, 2px 2px 0 #ffffff, -2px 0px 0 #ffffff, 2px 0px 0 #ffffff, 0px -2px 0 #ffffff, 0px 2px 0 #ffffff, 3px 3px 0px rgba(0,0,0,0.85);
 }
 
-/* Knuckles: Crimson Red Text with Green Outline */
+/* Knuckles: Crimson Red Text, Green Outline, Heavy Black Drop Shadow */
 .name-knuckles {
     color: #e50000;
-    text-shadow: -2px -2px 0 #00a800, 2px -2px 0 #00a800, -2px 2px 0 #00a800, 2px 2px 0 #00a800, -2px 0px 0 #00a800, 2px 0px 0 #00a800, 0px -2px 0 #00a800, 0px 2px 0 #00a800;
+    text-shadow: -2px -2px 0 #00a800, 2px -2px 0 #00a800, -2px 2px 0 #00a800, 2px 2px 0 #00a800, -2px 0px 0 #00a800, 2px 0px 0 #00a800, 0px -2px 0 #00a800, 0px 2px 0 #00a800, 3px 3px 0px rgba(0,0,0,0.85);
 }
 
-/* Shadow: Charcoal Dark Red Text with Glowing Crimson Outline */
+/* Shadow: Charcoal Text, Crimson Outline, Heavy Black Drop Shadow */
 .name-shadow {
     color: #1a1a1a;
-    text-shadow: -2px -2px 0 #ff0000, 2px -2px 0 #ff0000, -2px 2px 0 #ff0000, 2px 2px 0 #ff0000, -2px 0px 0 #ff0000, 2px 0px 0 #ff0000, 0px -2px 0 #ff0000, 0px 2px 0 #ff0000;
+    text-shadow: -2px -2px 0 #ff0000, 2px -2px 0 #ff0000, -2px 2px 0 #ff0000, 2px 2px 0 #ff0000, -2px 0px 0 #ff0000, 2px 0px 0 #ff0000, 0px -2px 0 #ff0000, 0px 2px 0 #ff0000, 3px 3px 0px rgba(0,0,0,0.85);
 }
 
-/* SpongeBob: Sponge Yellow Text with Dark Sea-Brown Outline */
+/* SpongeBob: Sponge Yellow Text, Brown Outline, Heavy Black Drop Shadow */
 .name-spongebob {
     color: #f9d849;
-    text-shadow: -2px -2px 0 #4a2f13, 2px -2px 0 #4a2f13, -2px 2px 0 #4a2f13, 2px 2px 0 #4a2f13, -2px 0px 0 #4a2f13, 2px 0px 0 #4a2f13, 0px -2px 0 #4a2f13, 0px 2px 0 #4a2f13;
+    text-shadow: -2px -2px 0 #4a2f13, 2px -2px 0 #4a2f13, -2px 2px 0 #4a2f13, 2px 2px 0 #4a2f13, -2px 0px 0 #4a2f13, 2px 0px 0 #4a2f13, 0px -2px 0 #4a2f13, 0px 2px 0 #4a2f13, 3px 3px 0px rgba(0,0,0,0.85);
 }
 
-/* Patrick: Coral Pink Text with Lime Green Outline */
+/* Patrick: Coral Pink Text, Green Outline, Heavy Black Drop Shadow */
 .name-patrick {
     color: #ff9ff3;
-    text-shadow: -2px -2px 0 #2ed573, 2px -2px 0 #2ed573, -2px 2px 0 #2ed573, 2px 2px 0 #2ed573, -2px 0px 0 #2ed573, 2px 0px 0 #2ed573, 0px -2px 0 #2ed573, 0px 2px 0 #2ed573;
+    text-shadow: -2px -2px 0 #2ed573, 2px -2px 0 #2ed573, -2px 2px 0 #2ed573, 2px 2px 0 #2ed573, -2px 0px 0 #2ed573, 2px 0px 0 #2ed573, 0px -2px 0 #2ed573, 0px 2px 0 #2ed573, 3px 3px 0px rgba(0,0,0,0.85);
 }
 
-/* Squidward: Cyan/Teal Text with Light Purple Outline */
+/* Squidward: Cyan Text, Purple Outline, Heavy Black Drop Shadow */
 .name-squidward {
     color: #45aaf2;
-    text-shadow: -2px -2px 0 #a55eea, 2px -2px 0 #a55eea, -2px 2px 0 #a55eea, 2px 2px 0 #a55eea, -2px 0px 0 #a55eea, 2px 0px 0 #a55eea, 0px -2px 0 #a55eea, 0px 2px 0 #a55eea;
+    text-shadow: -2px -2px 0 #a55eea, 2px -2px 0 #a55eea, -2px 2px 0 #a55eea, 2px 2px 0 #a55eea, -2px 0px 0 #a55eea, 2px 0px 0 #a55eea, 0px -2px 0 #a55eea, 0px 2px 0 #a55eea, 3px 3px 0px rgba(0,0,0,0.85);
 }
 
-/* Larry: Lobster Crimson Text with Ocean Blue Outline */
+/* Larry: Crimson Text, Ocean Blue Outline, Heavy Black Drop Shadow */
 .name-larry {
     color: #ff4757;
-    text-shadow: -2px -2px 0 #1e90ff, 2px -2px 0 #1e90ff, -2px 2px 0 #1e90ff, 2px 2px 0 #1e90ff, -2px 0px 0 #1e90ff, 2px 0px 0 #1e90ff, 0px -2px 0 #1e90ff, 0px 2px 0 #1e90ff;
+    text-shadow: -2px -2px 0 #1e90ff, 2px -2px 0 #1e90ff, -2px 2px 0 #1e90ff, 2px 2px 0 #1e90ff, -2px 0px 0 #1e90ff, 2px 0px 0 #1e90ff, 0px -2px 0 #1e90ff, 0px 2px 0 #1e90ff, 3px 3px 0px rgba(0,0,0,0.85);
 }
 
-/* Blossom: Bright Pink Text with Crimson Red Outline */
+/* Blossom: Bright Pink Text, Dark Red Outline, Heavy Black Drop Shadow */
 .name-blossom {
     color: #ff758f;
-    text-shadow: -2px -2px 0 #ba000d, 2px -2px 0 #ba000d, -2px 2px 0 #ba000d, 2px 2px 0 #ba000d, -2px 0px 0 #ba000d, 2px 0px 0 #ba000d, 0px -2px 0 #ba000d, 0px 2px 0 #ba000d;
+    text-shadow: -2px -2px 0 #ba000d, 2px -2px 0 #ba000d, -2px 2px 0 #ba000d, 2px 2px 0 #ba000d, -2px 0px 0 #ba000d, 2px 0px 0 #ba000d, 0px -2px 0 #ba000d, 0px 2px 0 #ba000d, 3px 3px 0px rgba(0,0,0,0.85);
 }
 
-/* Bubbles: Soft Sky Blue Text with Powerpuff Yellow Outline */
+/* Bubbles: Sky Blue Text, Yellow Outline, Heavy Black Drop Shadow */
 .name-bubbles {
     color: #70a1ff;
-    text-shadow: -2px -2px 0 #f9d849, 2px -2px 0 #f9d849, -2px 2px 0 #f9d849, 2px 2px 0 #f9d849, -2px 0px 0 #f9d849, 2px 0px 0 #f9d849, 0px -2px 0 #f9d849, 0px 2px 0 #f9d849;
+    text-shadow: -2px -2px 0 #f9d849, 2px -2px 0 #f9d849, -2px 2px 0 #f9d849, 2px 2px 0 #f9d849, -2px 0px 0 #f9d849, 2px 0px 0 #f9d849, 0px -2px 0 #f9d849, 0px 2px 0 #f9d849, 3px 3px 0px rgba(0,0,0,0.85);
 }
 
-/* Buttercup: Forest Green Text with Solid Black Outline */
+/* Buttercup: Green Text, Black Outline, Extra Bottom Offset Shadow */
 .name-buttercup {
     color: #2ed573;
-    text-shadow: -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000, -2px 0px 0 #000000, 2px 0px 0 #000000, 0px -2px 0 #000000, 0px 2px 0 #000000;
+    text-shadow: -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000, -2px 0px 0 #000000, 2px 0px 0 #000000, 0px -2px 0 #000000, 0px 2px 0 #000000, 4px 4px 0px rgba(0,0,0,0.9);
 }
 
 /* ==========================================================================
-   UNLOCKABLE ROSTER TYPOGRAPHY
+   UNLOCKABLE ROSTER WITH HEAVY BLACK DROP SHADOWS
    ========================================================================== */
 
-/* Sandy: Texas Brown Text with Deep Purple Outline */
+/* Sandy: Gray Text, Purple Outline, Heavy Black Drop Shadow */
 .name-sandy {
     color: #a4b0be;
-    text-shadow: -2px -2px 0 #8854d0, 2px -2px 0 #8854d0, -2px 2px 0 #8854d0, 2px 2px 0 #8854d0, -2px 0px 0 #8854d0, 2px 0px 0 #8854d0, 0px -2px 0 #8854d0, 0px 2px 0 #8854d0;
+    text-shadow: -2px -2px 0 #8854d0, 2px -2px 0 #8854d0, -2px 2px 0 #8854d0, 2px 2px 0 #8854d0, -2px 0px 0 #8854d0, 2px 0px 0 #8854d0, 0px -2px 0 #8854d0, 0px 2px 0 #8854d0, 3px 3px 0px rgba(0,0,0,0.85);
 }
 
-/* Amy: Bubblegum Pink Text with Soft White Outline */
+/* Amy: Bubblegum Pink Text, White Outline, Heavy Black Drop Shadow */
 .name-amy {
     color: #ff4081;
-    text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff, 2px 2px 0 #ffffff, -2px 0px 0 #ffffff, 2px 0px 0 #ffffff, 0px -2px 0 #ffffff, 0px 2px 0 #ffffff;
+    text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff, 2px 2px 0 #ffffff, -2px 0px 0 #ffffff, 2px 0px 0 #ffffff, 0px -2px 0 #ffffff, 0px 2px 0 #ffffff, 3px 3px 0px rgba(0,0,0,0.85);
 }
 
-/* Rouge: Dark Violet Text with Diamond White Outline */
+/* Rouge: Violet Text, White Outline, Heavy Black Drop Shadow */
 .name-rouge {
     color: #3f51b5;
-    text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff, 2px 2px 0 #ffffff, -2px 0px 0 #ffffff, 2px 0px 0 #ffffff, 0px -2px 0 #ffffff, 0px 2px 0 #ffffff;
+    text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff, 2px 2px 0 #ffffff, -2px 0px 0 #ffffff, 2px 0px 0 #ffffff, 0px -2px 0 #ffffff, 0px 2px 0 #ffffff, 3px 3px 0px rgba(0,0,0,0.85);
 }
 
-/* Cream: Light Cream-Tan Text with Bright Orange Outline */
+/* Cream: Cream Text, Orange Outline, Heavy Black Drop Shadow */
 .name-cream {
     color: #ffeaa7;
-    text-shadow: -2px -2px 0 #ff7675, 2px -2px 0 #ff7675, -2px 2px 0 #ff7675, 2px 2px 0 #ff7675, -2px 0px 0 #ff7675, 2px 0px 0 #ff7675, 0px -2px 0 #ff7675, 0px 2px 0 #ff7675;
+    text-shadow: -2px -2px 0 #ff7675, 2px -2px 0 #ff7675, -2px 2px 0 #ff7675, 2px 2px 0 #ff7675, -2px 0px 0 #ff7675, 2px 0px 0 #ff7675, 0px -2px 0 #ff7675, 0px 2px 0 #ff7675, 3px 3px 0px rgba(0,0,0,0.85);
 }
 
-/* Mighty: Dark Iron Rust Text with Matte Black Outline */
+/* Mighty: Rust Red Text, Black Outline, Heavy Black Drop Shadow */
 .name-mighty {
     color: #d63031;
-    text-shadow: -2px -2px 0 #2d3436, 2px -2px 0 #2d3436, -2px 2px 0 #2d3436, 2px 2px 0 #2d3436, -2px 0px 0 #2d3436, 2px 0px 0 #2d3436, 0px -2px 0 #2d3436, 0px 2px 0 #2d3436;
+    text-shadow: -2px -2px 0 #2d3436, 2px -2px 0 #2d3436, -2px 2px 0 #2d3436, 2px 2px 0 #2d3436, -2px 0px 0 #2d3436, 2px 0px 0 #2d3436, 0px -2px 0 #2d3436, 0px 2px 0 #2d3436, 3px 3px 0px rgba(0,0,0,0.85);
 }
 
-/* Hatsune Miku: Vocaloid Teal Text with Solid White Outline */
+/* Hatsune Miku: Teal Text, White Outline, Heavy Black Drop Shadow */
 .name-miku {
     color: #39c5bb;
-    text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff, 2px 2px 0 #ffffff, -2px 0px 0 #ffffff, 2px 0px 0 #ffffff, 0px -2px 0 #ffffff, 0px 2px 0 #ffffff;
+    text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff, 2px 2px 0 #ffffff, -2px 0px 0 #ffffff, 2px 0px 0 #ffffff, 0px -2px 0 #ffffff, 0px 2px 0 #ffffff, 3px 3px 0px rgba(0,0,0,0.85);
 }
 
-/* Timmy Turner: Fairy Pink Text with Magic Green Outline */
+/* Timmy Turner: Pink Text, Green Outline, Heavy Black Drop Shadow */
 .name-timmy {
     color: #fd79a8;
-    text-shadow: -2px -2px 0 #55efc4, 2px -2px 0 #55efc4, -2px 2px 0 #55efc4, 2px 2px 0 #55efc4, -2px 0px 0 #55efc4, 2px 0px 0 #55efc4, 0px -2px 0 #55efc4, 0px 2px 0 #55efc4;
+    text-shadow: -2px -2px 0 #55efc4, 2px -2px 0 #55efc4, -2px 2px 0 #55efc4, 2px 2px 0 #55efc4, -2px 0px 0 #55efc4, 2px 0px 0 #55efc4, 0px -2px 0 #55efc4, 0px 2px 0 #55efc4, 3px 3px 0px rgba(0,0,0,0.85);
 }
 
 
