@@ -278,8 +278,8 @@ Open your `style.css` file, click edit, scroll to the bottom, and paste this ent
 
 /* 2. The Card Panel - Expanded size constraints to match their box dimensions exactly */
 .character-card {
-    background-color: #0d1e15;     /* Dark forest green background color */
-    border: 3px solid #ff4a5a;     /* Sharp 3px solid RED outline border */
+    background-color: #7dbd9c;     /* Dark forest green background color */
+    border: 3px solid #d90c15;     /* Sharp 3px solid RED outline border */
     border-radius: 8px;            
     overflow: hidden;              
     display: flex;
@@ -307,7 +307,7 @@ Open your `style.css` file, click edit, scroll to the bottom, and paste this ent
 .char-image-container {
     width: 100%;
     height: 260px;                 /* Increased height to 260px so high-res art renders look huge */
-    background-color: #0d1e15;     /* Solid green background flows right behind transparent PNGs */
+    background-color: #7dbd9c;     /* Solid green background flows right behind transparent PNGs */
     overflow: hidden;
     position: relative;
     padding-top: 15px;             
