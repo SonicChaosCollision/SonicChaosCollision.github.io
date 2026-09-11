@@ -172,73 +172,70 @@ footer .links a:hover {
 }
 
 /* ==========================================================================
-   EXACT MEGAMIX MANIA CHARACTER BLOCK COMPONENT
+   EXACT MEGAMIX MANIA SITE CHARACTER REPLICA
    ========================================================================== */
 
-/* Green Container Box Matrix */
+/* 1. The Font Environment */
+/* Replicates the clean, block-styled sans-serif type used on the official site */
+.megamix-title, .card-label, .card-status-tag {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    text-shadow: none; /* Removes overly bulky text shadows to match the true site minimalist design */
+}
+
+/* 2. Main Outer Container Box */
 .roster-section-container {
-    background-color: #0b1510; /* Deepest green-black background zone */
-    border: 4px solid #142d1f;  /* Thick muted forest green framing */
+    background-color: #0d2319; /* Exact deep retro green backing theme */
+    border: 3px solid #142d1f;   /* Muted inner frame */
     border-radius: 8px;
-    padding: 40px 20px;
+    padding: 30px 20px;
     margin: 40px auto;
 }
 
-/* Bold Title Header - Centered with Crisp Pixel Stroke + Block Drop Shadow */
+/* 3. Group Headings */
 .megamix-title {
     text-align: center;
-    font-family: 'Impact', 'Arial Black', sans-serif;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
+    font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     color: #ffffff;
-    
-    /* Layered text strokes and hard directional drop shadow */
-    text-shadow: 
-        -3px -3px 0 #000,  
-         3px -3px 0 #000,
-        -3px  3px 0 #000,
-         3px  3px 0 #000,
-         5px  5px 0px #000;
-    margin-top: 20px;
-    margin-bottom: 35px;
+    margin: 30px 0 20px 0;
 }
 
-/* Flex Grid: Centers the cards and loops them naturally */
+/* 4. Exact Flex Grid Setup */
 .exact-roster-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 16px;
     justify-content: center;
-    align-items: stretch;
     padding: 10px 0;
 }
 
-/* Vertical Narrow Card Core: Image stack directly on top of text labels */
+/* 5. The Narrow Vertical Cards (The Missing Box Setup) */
 .narrow-character-card {
-    background-color: #06090e; /* Matte dark inner card engine fill */
-    border: 4px solid #cc2222;  /* Initial Heavy Red Core Outline */
-    border-radius: 4px;
-    width: 160px;               /* Forced narrow uniform dimension */
-    padding: 20px 10px 15px 10px;
+    background-color: #070c14; /* Deep matte black inner frame */
+    border: 3px solid #cc2222;  /* Bold solid outer bounding box lines */
+    border-radius: 6px;
+    width: 140px;               /* Strict narrow base width formatting */
+    height: 200px;              /* Exact uniform height limits */
+    padding: 15px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 8px 0px #000000; /* Flat retro 2D blocky drop shadow */
-    transition: transform 0.15s ease, border-color 0.15s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    box-sizing: border-box;     /* Prevents internal content from breaking borders */
+    transition: transform 0.15s ease;
 }
 
 .narrow-character-card:hover {
-    transform: translateY(-4px);
-    border-color: #fcc117; /* Transforms outline to Sonic Ring Gold on hover */
+    transform: translateY(-3px);
 }
 
-/* Perfect Vertical Card Content Stack */
+/* 6. Strict Image/Avatar Scaling (Fixes Big Render Glitch) */
 .card-avatar {
-    width: 120px;
-    height: 140px; /* Tall box layout optimized for full-character body sprites */
-    margin-bottom: 15px;
+    width: 100%;
+    height: 110px;             /* Absolute height cap for rendering art */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -246,46 +243,42 @@ footer .links a:hover {
 }
 
 .card-avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Prevents character artwork stretching */
+    max-width: 100%;           /* Constrains width tightly inside the box */
+    max-height: 100%;          /* Constrains height tightly inside the box */
+    width: auto;
+    height: auto;
+    object-fit: contain;       /* Preserves your custom game character artwork proportions */
 }
 
-/* Label styling: Centered, all-caps, with individual black drop shadows */
+/* 7. Centered Card Typography labels */
 .card-label {
-    font-family: 'Arial Black', 'Impact', sans-serif;
-    font-size: 0.95rem;
-    font-weight: 900;
+    font-size: 0.85rem;
+    font-weight: 700;
     color: #ffffff;
     text-transform: uppercase;
     text-align: center;
     line-height: 1.2;
-    margin: 0;
-    padding: 0;
-    text-shadow: 2px 2px 0px #000000;
+    margin: 5px 0 0 0;
 }
 
-/* Lock Status Badge Element */
+/* Locked status tags */
 .card-status-tag {
-    font-family: 'Arial Black', sans-serif;
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     font-weight: bold;
     color: #cc2222;
     text-transform: uppercase;
-    margin-top: 8px;
-    text-shadow: 1px 1px 0px #000;
+    margin-top: 2px;
 }
-/* --------------------------------------------------------------------------
-   STORY CROSSOVER DIMENSION THEME COLOR-CODING
-   -------------------------------------------------------------------------- */
+
+/* 8. Crossover Faction Overrides */
 .faction-sonic { border-color: #0054a6 !important; }
-.faction-sonic .card-label { color: #3b9eff !important; }
+.faction-sonic .card-label { color: #ffffff !important; }
 
 .faction-sponge { border-color: #fcc117 !important; }
-.faction-sponge .card-label { color: #fff176 !important; }
+.faction-sponge .card-label { color: #ffffff !important; }
 
 .faction-ppg { border-color: #2ecc71 !important; }
-.faction-ppg .card-label { color: #a3e4d7 !important; }
+.faction-ppg .card-label { color: #ffffff !important; }
 
 .faction-guest { border-color: #9b59b6 !important; }
-.faction-guest .card-label { color: #e8daef !important; }
+.faction-guest .card-label { color: #ffffff !important; }
