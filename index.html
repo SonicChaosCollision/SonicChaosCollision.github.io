@@ -4,26 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sonic the Hedgehog: Chaos Collision</title>
-    <!-- Direct link connection to your stylesheet asset -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Cache-busting parameter avoids stale iPhone Safari styling glitches -->
+    <link rel="stylesheet" href="style.css?v=2.0">
 </head>
 <body>
 
-    <!-- Header Banner Title Element -->
+    <!-- Header Block Container (Houses Seamless Looping Level Scrolling Background) -->
     <header>
-        <h1>Sonic the Hedgehog: Chaos Collision</h1>
-        <p>A Harmony Framework Non-Profit Retro Project</p>
+        <!-- 🛠️ YOUR GAME LOGO: Upload your title art file as 'game-logo.png' to your repo -->
+        <img src="Untitled1924_20260909224644.png" alt="Sonic Chaos Collision Logo" class="megamix-main-logo">
+        
+        <!-- Primary Action Download Button sitting directly underneath the main logo -->
+        <a href="#" class="header-download-button">Download Mod Build</a>
     </header>
 
     <div class="container">
         
-        <!-- Game Story / Framework Context Feature Card -->
-        <section style="background-color: #0f172a; border-left: 5px solid #0054a6; padding: 25px; border-radius: 4px; margin-bottom: 40px; border: 1px solid rgba(255,255,255,0.05);">
-            <h2>The Dimensional Collision</h2>
-            <p style="font-style: italic; color: #fff; font-size: 1.15rem; margin-bottom: 15px;">Three worlds. One adventure.</p>
-            <p>A strange dimensional disturbance has thrown the worlds of <strong>Sonic the Hedgehog</strong>, <strong>SpongeBob SquarePants</strong>, and <strong>The Powerpuff Girls</strong> into a chaotic collision! As familiar dimensions fuse together, unique teams must join forces to uncover the source of the anomaly.</p>
-            <p>With <strong>Dr. Eggman</strong>, <strong>Plankton</strong>, and <strong>Mojo Jojo</strong> aligning into an ultimate villainous alliance, the stakes have never been higher. Race across retro-rendered 16-bit Sega Genesis/32X styled zones to collect the <strong>Chaos Emeralds</strong>, <strong>Secret Formula</strong>, and <strong>Chemical X samples</strong> before they fall into enemy hands!</p>
+        <!-- Section: Game Story Synopsis with Inline Character Highlight Style Classes -->
+        <section class="story-synopsis-card">
+            <h2>The Dimensional Anomaly</h2>
+            <p>A strange dimensional disturbance has thrown the worlds of <span class="txt-sonic">Sonic the Hedgehog</span>, <span class="txt-spongebob">SpongeBob SquarePants</span>, and <span class="txt-ppg">The Powerpuff Girls</span> into a chaotic collision! As familiar dimensions become fused together, Sonic and his new allies must work together to uncover the source of the disturbance and put an end to the chaos.</p>
+            <p>But with <span class="txt-eggman">Dr. Eggman</span>, <span class="txt-plankton">Plankton</span>, and <span class="txt-mojojojo">Mojo Jojo</span> joining forces, the heroes will have to face a threat unlike anything they've encountered before. Across strange new worlds filled with familiar faces, deadly enemies, and unexpected challenges, they'll need to collect the Chaos Emeralds, Secret Formula, and Chemical X samples before their enemies can use the dimensional chaos for their own purposes.</p>
+            <h5 class="story-tagline">The collision has begun. Three worlds. One adventure.</h5>
         </section>
+
+    </div> <!-- End upper content container wrap -->
+
+    <!-- ==========================================================================
+         CANVAS STAGE: SEPARATE TILED BRICK LABYRINTH STAGE BACKGROUND
+         ========================================================================== -->
+    <div class="labyrinth-matrix-canvas">
+        <div class="container">
 
         <!-- ==========================================================================
              SECTION 1: MAIN PLAYABLE CHARACTERS
