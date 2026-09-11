@@ -170,3 +170,109 @@ footer .links a {
 footer .links a:hover {
     text-decoration: underline;
 }
+
+/* ==========================================================================
+   EXACT MEGAMIX MANIA ROSTER STYLING
+   ========================================================================== */
+
+/* Retro Text Styling with Outline & Heavy Drop-Shadow */
+.megamix-title {
+    text-align: center;
+    font-family: 'Impact', 'Arial Black', sans-serif; /* Replicates bold retro arcade weights */
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fcc117; /* Sonic Ring Gold */
+    
+    /* Replicates the layered crisp outline and blocky drop shadow */
+    text-shadow: 
+        -2px -2px 0 #000,  
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000,
+         4px  4px 0px rgba(0, 0, 0, 1);
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+/* Green Theme Background Section Wrapper */
+.roster-section-container {
+    background-color: #0d2319; /* Deep Green Retro Zone Tone */
+    border: 3px solid #1e4630;
+    border-radius: 12px;
+    padding: 30px 20px;
+    margin: 40px auto;
+}
+
+/* Exact Card Layout Grid */
+.exact-roster-grid {
+    display: grid;
+    /* Forces columns to stay narrow and tight */
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); 
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* Vertical Narrow Rectangle Boxes with Red Outlines */
+.narrow-character-card {
+    background-color: #070c14; /* Deep dark inner card base */
+    border: 3px solid #dc2626;  /* Bold Signature Red Outline */
+    border-radius: 6px;
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    aspect-ratio: 2 / 3; /* Forces a tall, narrow vertical rectangle format */
+    box-shadow: 0 6px 16px rgba(0,0,0,0.6);
+    transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+/* Hover Accent Alteration */
+.narrow-character-card:hover {
+    transform: scale(1.05);
+    border-color: #fcc117; /* Changes outline to Gold on hover */
+}
+
+/* Card Avatar Window */
+.card-avatar {
+    width: 75px;
+    height: 75px;
+    border: 2px solid #1e293b;
+    background-color: #0f172a;
+    margin-bottom: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Perfect for handling retro pixel sprites */
+}
+
+/* Centered Card Character Text with Mini Shadows */
+.card-label {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 900;
+    color: #ffffff;
+    text-transform: uppercase;
+    line-height: 1.2;
+    word-break: break-word;
+    text-shadow: 2px 2px 0px #000000;
+}
+
+/* Specific Subtag for Hidden Characters */
+.card-status-tag {
+    font-size: 0.65rem;
+    font-weight: bold;
+    color: #dc2626;
+    text-transform: uppercase;
+    margin-top: 5px;
+    text-shadow: 1px 1px 0px #000;
+}
