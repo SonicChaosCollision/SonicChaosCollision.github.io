@@ -172,107 +172,106 @@ footer .links a:hover {
 }
 
 /* ==========================================================================
-   EXACT MEGAMIX MANIA ROSTER STYLING
+   EXACT MEGAMIX MANIA CHARACTER BLOCK COMPONENT
    ========================================================================== */
 
-/* Retro Text Styling with Outline & Heavy Drop-Shadow */
-.megamix-title {
-    text-align: center;
-    font-family: 'Impact', 'Arial Black', sans-serif; /* Replicates bold retro arcade weights */
-    font-size: 2.2rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #fcc117; /* Sonic Ring Gold */
-    
-    /* Replicates the layered crisp outline and blocky drop shadow */
-    text-shadow: 
-        -2px -2px 0 #000,  
-         2px -2px 0 #000,
-        -2px  2px 0 #000,
-         2px  2px 0 #000,
-         4px  4px 0px rgba(0, 0, 0, 1);
-    margin-top: 40px;
-    margin-bottom: 25px;
-}
-
-/* Green Theme Background Section Wrapper */
+/* Green Container Box Matrix */
 .roster-section-container {
-    background-color: #0d2319; /* Deep Green Retro Zone Tone */
-    border: 3px solid #1e4630;
-    border-radius: 12px;
-    padding: 30px 20px;
+    background-color: #0b1510; /* Deepest green-black background zone */
+    border: 4px solid #142d1f;  /* Thick muted forest green framing */
+    border-radius: 8px;
+    padding: 40px 20px;
     margin: 40px auto;
 }
 
-/* Exact Card Layout Grid */
-.exact-roster-grid {
-    display: grid;
-    /* Forces columns to stay narrow and tight */
-    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); 
-    gap: 15px;
-    justify-content: center;
-    padding: 10px;
+/* Bold Title Header - Centered with Crisp Pixel Stroke + Block Drop Shadow */
+.megamix-title {
+    text-align: center;
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff;
+    
+    /* Layered text strokes and hard directional drop shadow */
+    text-shadow: 
+        -3px -3px 0 #000,  
+         3px -3px 0 #000,
+        -3px  3px 0 #000,
+         3px  3px 0 #000,
+         5px  5px 0px #000;
+    margin-top: 20px;
+    margin-bottom: 35px;
 }
 
-/* Vertical Narrow Rectangle Boxes with Red Outlines */
+/* Flex Grid: Centers the cards and loops them naturally */
+.exact-roster-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    align-items: stretch;
+    padding: 10px 0;
+}
+
+/* Vertical Narrow Card Core: Image stack directly on top of text labels */
 .narrow-character-card {
-    background-color: #070c14; /* Deep dark inner card base */
-    border: 3px solid #dc2626;  /* Bold Signature Red Outline */
-    border-radius: 6px;
-    padding: 15px 10px;
+    background-color: #06090e; /* Matte dark inner card engine fill */
+    border: 4px solid #cc2222;  /* Initial Heavy Red Core Outline */
+    border-radius: 4px;
+    width: 160px;               /* Forced narrow uniform dimension */
+    padding: 20px 10px 15px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    aspect-ratio: 2 / 3; /* Forces a tall, narrow vertical rectangle format */
-    box-shadow: 0 6px 16px rgba(0,0,0,0.6);
+    justify-content: space-between;
+    box-shadow: 0 8px 0px #000000; /* Flat retro 2D blocky drop shadow */
     transition: transform 0.15s ease, border-color 0.15s ease;
 }
 
-/* Hover Accent Alteration */
 .narrow-character-card:hover {
-    transform: scale(1.05);
-    border-color: #fcc117; /* Changes outline to Gold on hover */
+    transform: translateY(-4px);
+    border-color: #fcc117; /* Transforms outline to Sonic Ring Gold on hover */
 }
 
-/* Card Avatar Window */
+/* Perfect Vertical Card Content Stack */
 .card-avatar {
-    width: 75px;
-    height: 75px;
-    border: 2px solid #1e293b;
-    background-color: #0f172a;
-    margin-bottom: 12px;
-    overflow: hidden;
+    width: 120px;
+    height: 140px; /* Tall box layout optimized for full-character body sprites */
+    margin-bottom: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .card-avatar img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Perfect for handling retro pixel sprites */
+    object-fit: contain; /* Prevents character artwork stretching */
 }
 
-/* Centered Card Character Text with Mini Shadows */
+/* Label styling: Centered, all-caps, with individual black drop shadows */
 .card-label {
-    font-family: 'Arial Black', sans-serif;
-    font-size: 0.85rem;
+    font-family: 'Arial Black', 'Impact', sans-serif;
+    font-size: 0.95rem;
     font-weight: 900;
     color: #ffffff;
     text-transform: uppercase;
+    text-align: center;
     line-height: 1.2;
-    word-break: break-word;
+    margin: 0;
+    padding: 0;
     text-shadow: 2px 2px 0px #000000;
 }
 
-/* Specific Subtag for Hidden Characters */
+/* Lock Status Badge Element */
 .card-status-tag {
-    font-size: 0.65rem;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 0.7rem;
     font-weight: bold;
-    color: #dc2626;
+    color: #cc2222;
     text-transform: uppercase;
-    margin-top: 5px;
+    margin-top: 8px;
     text-shadow: 1px 1px 0px #000;
 }
