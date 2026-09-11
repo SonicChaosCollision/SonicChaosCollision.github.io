@@ -4,15 +4,6 @@
 * ==========================================================================
    CUSTOM FONT CONFIGURATION (RUDE EXTRA WIDE BLACK)
    ========================================================================== */
-@font-face {
-    font-family: 'Rude Extra Wide Black';
-    /* If you download the font file, upload it to GitHub and name it exactly 'RudeExtraWideBlack.woff2' */
-    src: url('RudeExtraWideBlack.woff2') format('woff2'),
-         url('RudeExtraWideBlack.ttf') format('truetype');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-}
 
 :root {
     --bg-dark: #070c14;          /* Main dark background */
@@ -137,7 +128,7 @@ p {
 
 /* THE GIANT CHARACTER CARD: Green background, bold red outline */
 .individual-character-box {
-    background-color: #0b1d12;   /* EXACT DEEP RETRO RETRO ZONE GREEN */
+    background-color: #7dbd9c;   /* EXACT DEEP RETRO RETRO ZONE GREEN */
     border: 5px solid #cc2222;    /* EXACT BOLD SIGNATURE RED OUTLINE */
     border-radius: 8px;
     padding: 30px 20px;
@@ -182,7 +173,7 @@ p {
 /* BIG ARCADE HEADER TEXT */
 .card-label {
     text-align: center;
-    font-family: 'Rude Extra Wide Black', 'Arial Black',Impact, sans-serif;
+    font-family: 'Impact', 'Arial Black', sans-serif;
     font-size: 1.7rem;         /* Enlarged font size to match the big card footprint */
     text-transform: uppercase;
     margin: 5px 0 15px 0;
