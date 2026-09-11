@@ -3,290 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sonic the Hedgehog: Collision Chaos</title>
-    <link rel="stylesheet" href="style.css">
+    <title>YOUR FAN GAME NAME</title>
+    <style>
+        /* Sonic-Inspired Theme Variables */
+        :root {
+            --sonic-blue: #0054a6;
+            --sonic-dark: #0b192c;
+            --sonic-gold: #fbc02d;
+            --text-light: #ffffff;
+            --text-muted: #b0bec5;
+            --card-bg: #1e293b;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--sonic-dark);
+            color: var(--text-light);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Hero Banner Section */
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placeholder.com') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 5px solid var(--sonic-blue);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            color: var(--text-light);
+            text-shadow: 3px 3px 0px var(--sonic-blue), 5px 5px 0px #000;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--sonic-gold);
+            margin: 10px 0 0 0;
+            font-weight: bold;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Section blocks */
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--sonic-blue);
+            border-bottom: 2px solid var(--card-bg);
+            padding-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        /* Feature Blocks (Alternating Layout) */
+        .feature-block {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .feature-text {
+            flex: 1;
+            min-widen: 300px;
+        }
+
+        .feature-media {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .feature-media img, .feature-media video {
+            width: 100%;
+            border-radius: 8px;
+            border: 3px solid var(--sonic-blue);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        /* Download Section & Buttons */
+        .download-container {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid var(--sonic-blue);
+        }
+
+        .btn-download {
+            display: inline-block;
+            background-color: var(--sonic-gold);
+            color: #000;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 30px;
+            text-transform: uppercase;
+            transition: transform 0.2s, background-color 0.2s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            margin-top: 15px;
+        }
+
+        .btn-download:hover {
+            background-color: #fff;
+            transform: scale(1.05);
+        }
+
+        /* Footer links */
+        footer {
+            background-color: #050b14;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            border-top: 3px solid var(--card-bg);
+        }
+
+        footer a {
+            color: var(--sonic-gold);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
-   <!-- Top Navigation Bar (Simplified to just handle text links) -->
-    <header class="navbar">
-        <nav class="centered-nav">
-            <a href="#story">The Crisis</a>
-            <a href="#roster">Roster</a>
-            <a href="#download">Play</a>
-        </nav>
+    <!-- Header Banner -->
+    <header>
+        <!-- Tip: Replace placeholder URL with your game logo or key art -->
+        <h1>Sonic Mania: Fan Edition</h1>
+        <p>A Non-Profit Fan Game Experience</p>
     </header>
 
-    <!-- Hero / Intro Section (Big Centered Logo and Download Button) -->
-    <section id="story" class="hero-section">
-        <div class="hero-content-wrapper">
-            
-            <!-- Big Centered Logo Image -->
-            <div class="main-logo-container">
-                <img src="Untitled1924_20260909224644.png" alt="Sonic the Hedgehog: Collision Chaos" class="big-hero-logo" onerror="this.src='https://placeholder.com';">
-            </div>
-
-            <!-- Big Centered Download Button (Directly beneath the logo) -->
-            <div class="hero-download-container">
-                <a href="#" class="big-download-btn">Download Demo (Coming Soon)</a>
-            </div>
-
-            <p class="subtitle">Three dimensions clash. Dr. Eggman, Plankton, and Mojo Jojo have united to break reality. Sonic, SpongeBob, Blossom, and their allies must band together to undo the ultimate universe collision!</p>
-            
-            <div class="badge-container">
-                <span class="badge">Fangame Project</span>
-                <span class="badge status">In Development</span>
-            </div>
-            
-        </div>
-    </section>
-
-   <!-- Character Roster Section -->
-    <section id="roster" class="features-section">
-        <h2>Choose Your Hero</h2>
+    <div class="container">
         
-        <!-- Main Playable Roster -->
-        <h3 class="roster-heading">Main Playable Characters</h3>
-        <div class="grid-container">
-            
-            <!-- Sonic -->
-            <div class="grid-card character-card sonic-theme">
-                <div class="char-image-container">
-                    <img src="sonic_20260910142141.png" alt="Sonic the Hedgehog" class="char-avatar" onerror="this.src='https://placeholder.com';">
+        <!-- Game Overview -->
+        <section>
+            <h2>Overview</h2>
+            <p>Welcome to the project page for my upcoming Sonic fan game. Inspired by frameworks like OpenMania and historical releases, this project aims to blend classic speed with entirely new level layouts, gimmicks, and mechanics.</p>
+        </section>
+
+        <!-- Feature Section 1 (Text Left, Image Right) -->
+        <section>
+            <h2>Game Modes</h2>
+            <div class="feature-block">
+                <div class="feature-text">
+                    <h3>Classic Mode</h3>
+                    <p>Experience a faithful recreation of beloved zones built from scratch with adjusted physics, custom sprite enhancements, and alternative pathways designed to test your platforming skills.</p>
                 </div>
-                <div class="char-bio-content">
-                    <h3 class="char-name name-sonic">Sonic the Hedgehog</h3>
-                    <p class="char-bio">The fastest thing alive. Leading the charge across colliding dimensions to rally his allies and restore the broken timelines before reality completely shatters.</p>
+                <div class="feature-media">
+                    <img src="https://placeholder.com" alt="Gameplay Gameplay">
                 </div>
             </div>
+        </section>
 
-            <!-- Tails -->
-            <div class="grid-card character-card sonic-theme">
-                <div class="char-image-container">
-                    <img src="tails_20260910152010.png" alt="Miles 'Tails' Prower" class="char-avatar" onerror="this.src='https://placeholder.com';">
+        <!-- Feature Section 2 (Text Right, Media Left) -->
+        <section>
+            <div class="feature-block" style="flex-direction: row-reverse;">
+                <div class="feature-text">
+                    <h3>Challenge Mode</h3>
+                    <p>Ready for a real test? Tackle unique challenge acts featuring twisted layout variants, fast-paced gauntlets, and abstract stage obstacles designed for veterans.</p>
                 </div>
-                <div class="char-bio-content">
-                    <h3 class="char-name name-tails">Miles "Tails" Prower</h3>
-                    <p class="char-bio">Providing the crucial mechanical genius and tracking equipment needed to analyze the massive cross-universal dimensional rifts tearing through space.</p>
+                <div class="feature-media">
+                    <img src="https://placeholder.com" alt="Challenge Mode">
                 </div>
             </div>
+        </section>
 
-            <!-- Knuckles -->
-            <div class="grid-card character-card sonic-theme">
-                <div class="char-image-container">
-                    <img src="knuckles_20260910152106.png" alt="Knuckles the Echidna" class="char-avatar" onerror="this.src='https://placeholder.com';">
-                </div>
-                <div class="char-bio-content">
-                    <h3 class="char-name name-knuckles">Knuckles the Echidna</h3>
-                    <p class="char-bio">Using his raw power and experience as the Master Emerald's guardian to shatter the structural fortresses of the newly formed alliance of evil.</p>
-                </div>
+        <!-- Download & Requirements -->
+        <section>
+            <h2>Get the Game</h2>
+            <div class="download-container">
+                <h3>Download Release v1.0</h3>
+                <p>Ensure you have all native requirements or base game files set up before running the installation.</p>
+                <a href="#" class="btn-download">Download Mod / Build</a>
             </div>
+        </section>
 
-            <!-- Shadow -->
-            <div class="grid-card character-card sonic-theme">
-                <div class="char-image-container">
-                    <img src="shadow_20260910152116.png" alt="Shadow the Hedgehog" class="char-avatar" onerror="this.src='https://placeholder.com';">
-                </div>
-                <div class="char-bio-content">
-                    <h3 class="char-name name-shadow">Shadow the Hedgehog</h3>
-                    <p class="char-bio">Operating solo from the dark depths of the rifts. He is determined to eliminate Dr. Eggman's new multidimensional accomplices by any means necessary.</p>
-                </div>
-            </div>
+    </div>
 
-            <!-- SpongeBob -->
-            <div class="grid-card character-card spongebob-theme">
-                <div class="char-image-container">
-                    <img src="spongebob_20260910174742.png" alt="SpongeBob SquarePants" class="char-avatar" onerror="this.src='https://placeholder.com';">
-                </div>
-                <div class="char-bio-content">
-                    <h3 class="char-name name-spongebob">SpongeBob SquarePants</h3>
-                    <p class="char-bio">Armed with a high-powered bubble wand and pure, unshakeable optimism. He steps out of his comfort zone to rescue Bikini Bottom from Plankton's grandest scheme.</p>
-                </div>
-            </div>
-
-            <!-- Patrick -->
-            <div class="grid-card character-card spongebob-theme">
-                <div class="char-image-container">
-                    <img src="patrick_20260910174848.png" alt="Patrick Star" class="char-avatar" onerror="this.src='https://placeholder.com';">
-                </div>
-                <div class="char-bio-content">
-                    <h3 class="char-name name-patrick">Patrick Star</h3>
-                    <p class="char-bio">Bringing unpredictable physical strength, profound confusion, and absolute loyalty to his best buddy as they march through unfamiliar worlds.</p>
-                </div>
-            </div>
-
-            <!-- Squidward -->
-            <div class="grid-card character-card spongebob-theme">
-                <div class="char-image-container">
-                    <img src="squidward_20260910174920.png" alt="Squidward Tentacles" class="char-avatar" onerror="this.src='https://placeholder.com';">
-                </div>
-                <div class="char-bio-content">
-                    <h3 class="char-name name-squidward">Squidward Tentacles</h3>
-                    <p class="char-bio">Reluctantly joining the heroic resistance solely because the universal collision ruined his peaceful afternoon. He wants his quiet neighborhood back.</p>
-                </div>
-            </div>
-
-            <!-- Larry -->
-            <div class="grid-card character-card spongebob-theme">
-                <div class="char-image-container">
-                    <img src="larry_20260910175237.png" alt="Larry the Lobster" class="char-avatar" onerror="this.src='https://placeholder.com';">
-                </div>
-                <div class="char-bio-content">
-                    <h3 class="char-name name-larry">Larry the Lobster</h3>
-                    <p class="char-bio">Bringing elite athleticism and heavy muscle straight from the shores of Goo Lagoon to act as a frontline defensive wall for the team.</p>
-                </div>
-            </div>
-
-            <!-- Blossom -->
-            <div class="grid-card character-card ppg-theme">
-                <div class="char-image-container">
-                    <img src="blossom_20260910175403.png" alt="Blossom Utonium" class="char-avatar" onerror="this.src='https://placeholder.com';">
-                </div>
-                <div class="char-bio-content">
-                    <h3 class="char-name name-blossom">Blossom Utonium</h3>
-                    <p class="char-bio">The brilliant tactical commander of the Powerpuff Girls. She works alongside Tails to coordinate precise cross-world strategies against Mojo Jojo.</p>
-                </div>
-            </div>
-
-            <!-- Bubbles -->
-            <div class="grid-card character-card ppg-theme">
-                <div class="char-image-container">
-                    <img src="bubbles_20260910175443.png" alt="Bubbles Utonium" class="char-avatar" onerror="this.src='https://placeholder.com';">
-                </div>
-                <div class="char-bio-content">
-                    <h3 class="char-name name-bubbles">Bubbles Utonium</h3>
-                    <p class="char-bio">Spreading joy, laughter, and hardcore power. Her devastating sonic screams and ability to talk to local creatures prove invaluable across the dimensions.</p>
-                </div>
-            </div>
-
-            <!-- Buttercup -->
-            <div class="grid-card character-card ppg-theme">
-                <div class="char-image-container">
-                    <img src="buttercup_20260910175516.png" alt="Buttercup Utonium" class="char-avatar" onerror="this.src='https://placeholder.com';">
-                </div>
-                <div class="char-bio-content">
-                    <h3 class="char-name name-buttercup">Buttercup Utonium</h3>
-                    <p class="char-bio">Townsville's toughest fighter is incredibly eager to throw hands with Mojo's new mechanical allies. She charges headfirst into any fight.</p>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Unlockable Roster -->
-        <h3 class="roster-heading unlockable-heading">Unlockable Challengers</h3>
-        <div class="grid-container">
-            
-            <!-- Sandy -->
-            <div class="grid-card character-card locked">
-                <div class="char-image-container">
-                    <img src="sandy_20260910175605.png" alt="Sandy Cheeks" class="char-avatar" onerror="this.src='https://placeholder.com';">
-                </div>
-                <div class="char-bio-content">
-                    <h3 class="char-name name-sandy">Sandy Cheeks</h3>
-                    <p class="char-bio"><strong>Unlock Condition:</strong> Complete all Bikini Bottom anomaly stages with an 'A' Rank or higher to recruit this karate-chopping scientist.</p>
-                </div>
-            </div>
-
-            <!-- Amy -->
-            <div class="grid-card character-card locked">
-                <div class="char-image-container">
-                    <img src="amy_20260910152131.png" alt="Amy Rose" class="char-avatar" onerror="this.src='https://placeholder.com';">
-                </div>
-                <div class="char-bio-content">
-                    <h3 class="char-name name-amy">Amy Rose</h3>
-                    <p class="char-bio"><strong>Unlock Condition:</strong> Discover the hidden mystical tarot cards scattered across the early Act 2 collision zones.</p>
-                </div>
-            </div>
-
-            <!-- Rouge -->
-            <div class="grid-card character-card locked">
-                <div class="char-image-container">
-                    <img src="rouge_20260910152155.png" alt="Rouge the Bat" class="char-avatar" onerror="this.src='https://placeholder.com';">
-                </div>
-                <div class="char-bio-content">
-                    <h3 class="char-name name-rouge">Rouge the Bat</h3>
-                    <p class="char-bio"><strong>Unlock Condition:</strong> Find 5 Red Star Rings in Green Hill Zone.</p>
-                </div>
-            </div>
-
-             <!-- Cream -->
-            <div class="grid-card character-card locked">
-                <div class="char-image-container">
-                    <img src="cream_20260910152205.png" alt="Cream the Rabbit" class="char-avatar" onerror="this.src='https://placeholder.com';">
-                </div>
-                <div class="char-bio-content">
-                    <h3 class="char-name name-cream">Cream the Rabbit</h3>
-                    <p class="char-bio"><strong>Unlock Condition:</strong> Find and rescue Cheese the Chao trapped deep inside the unstable shifting Chaos Zone layers.</p>
-                </div>
-            </div>
-
-            <!-- Mighty -->
-            <div class="grid-card character-card locked">
-                <div class="char-image-container">
-                    <img src="mighty_20260910152230.png" alt="Mighty the Armadillo" class="char-avatar" onerror="this.src='https://placeholder.com';">
-                </div>
-                <div class="char-bio-content">
-                    <h3 class="char-name name-mighty">Mighty the Armadillo</h3>
-                    <p class="char-bio"><strong>Unlock Condition:</strong> Smash through the hidden structural walls using a heavy physical character in Townsville Act 2.</p>
-                </div>
-            </div>
-
-            <!-- Hatsune Miku -->
-            <div class="grid-card character-card locked">
-                <div class="char-image-container">
-                    <img src="miku_20260910180506.png" alt="Hatsune Miku" class="char-avatar" onerror="this.src='https://placeholder.com';">
-                </div>
-                <div class="char-bio-content">
-                    <h3 class="char-name name-miku">Hatsune Miku</h3>
-                    <p class="char-bio"><strong>Unlock Condition:</strong> Achieve a perfect rhythmic synchronization rank on every custom sound-stage mini-game.</p>
-                </div>
-            </div>
-
-            <!-- Timmy Turner -->
-            <div class="grid-card character-card locked">
-                <div class="char-image-container">
-                    <img src="timmy_20260910174701.png" alt="Timmy Turner" class="char-avatar" onerror="this.src='https://placeholder.com';">
-                </div>
-                <div class="char-bio-content">
-                    <h3 class="char-name name-timmy">Timmy Turner</h3>
-                    <p class="char-bio"><strong>Unlock Condition:</strong> Uncover the lost magic wand item components hidden across Mojo Jojo's high-tech volcanic lair.</p>
-                </div>
-            </div>      
-
-    <!-- Download Section -->
-    <section id="download" class="download-section">
-        <h2>Get Started</h2>
-        <p>Follow these quick links to jump into the action.</p>
-        <a href="#" class="download-btn">Download Mod / Files</a>
-    </section>
-
-    <!-- Footer -->
+    <!-- Footer Disclaimers exactly like Megamix Mania's -->
     <footer>
-        <p>&copy; 2026 Collision Chaos Team. Fan-made project disclaimer or credits go here.</p>
+        <p>This project is a non-profit fan game. Sonic the Hedgehog is a registered trademark of SEGA Holdings Co., Ltd. This project is not affiliated with, endorsed by, or licensed by SEGA. All characters and related assets belong to SEGA.</p>
+        <p>
+            <a href="#">Twitter</a> • 
+            <a href="#">Discord</a> • 
+            <a href="#">YouTube</a>
+        </p>
     </footer>
-
-    <!-- Scroll Animation Script -->
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    // Box is visible on screen -> Reveal it
-                    entry.target.classList.add('reveal');
-                } else {
-                    // Box left the screen -> Hide it again
-                    entry.target.classList.remove('reveal');
-                }
-            });
-        }, {
-            threshold: 0.1 // Triggers when 10% of the box is visible
-        });
-
-        // Find all character cards and tell the observer to track them
-        const cards = document.querySelectorAll('.character-card');
-        cards.forEach((card) => observer.observe(card));
-    </script>
-</body>
-</html>
 
 </body>
 </html>
