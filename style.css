@@ -134,14 +134,15 @@ body {
 Open your `style.css` file, click edit, scroll to the bottom, and paste this entire layout ruleset. Each character block includes a text hex color rule (`color`) and a thick pixel-border shadow rule (`text-shadow`) that acts as an outline:
 
 ```css
-/* Base Style for all custom character text headers */
 .char-name {
+    /* Uses the exact modern browser system-ui arrangement they implement */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
     font-size: 1.4rem !important;
-    font-weight: 900 !important;
-    text-transform: uppercase !important;
+    font-weight: 700 !important;        /* Replicates their exact structural thickness */
+    text-transform: uppercase !important;  /* Forces capital letters */
     letter-spacing: 0.5px;
     margin-bottom: 8px;
-    display: inline-block; /* Helps the shadow layers calculate accurately on mobile */
+    display: inline-block; 
 }
 
 /* ==========================================================================
