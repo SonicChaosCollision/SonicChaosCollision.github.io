@@ -1,6 +1,18 @@
 /* ==========================================================================
    HARMONY ENGINE CROSSOVER LANDING THEME & CHARACTER MENUS
    ========================================================================== */
+* ==========================================================================
+   CUSTOM FONT CONFIGURATION (RUDE EXTRA WIDE BLACK)
+   ========================================================================== */
+@font-face {
+    font-family: 'Rude Extra Wide Black';
+    /* If you download the font file, upload it to GitHub and name it exactly 'RudeExtraWideBlack.woff2' */
+    src: url('RudeExtraWideBlack.woff2') format('woff2'),
+         url('RudeExtraWideBlack.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
 
 :root {
     --bg-dark: #070c14;          /* Main dark background */
@@ -170,7 +182,7 @@ p {
 /* BIG ARCADE HEADER TEXT */
 .card-label {
     text-align: center;
-    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-family: 'Rude Extra Wide Black', 'Arial Black',Impact, sans-serif;
     font-size: 1.7rem;         /* Enlarged font size to match the big card footprint */
     text-transform: uppercase;
     margin: 5px 0 15px 0;
