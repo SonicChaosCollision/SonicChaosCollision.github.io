@@ -203,63 +203,187 @@ p {
 
 
 /* ==========================================================================
-   STORY CROSSOVER DIMENSION THEME COLOR-CODING (OUTLINE & TEXT SETUPS)
+   INDIVIDUAL CHARACTER ARCADE TYPOGRAPHY PALETTES
    ========================================================================== */
 
-/* Faction 1: Sonic Universe -> Blue Text / Yellow Outlines */
-.faction-sonic .card-label {
-    color: #3b9eff; /* Sonic Blue Body */
-    text-shadow: 
-        -2px -2px 0 #fcc117,  
-         2px -2px 0 #fcc117,
-        -2px  2px 0 #fcc117,
-         2px  2px 0 #fcc117,
-         4px  4px 0px #000000; /* Black drop shadow layer */
+/* --- TEAM SONIC MAIN PLAYABLES --- */
+
+/* Sonic the Hedgehog: Cobalt Blue Text + Ring Gold Outline + Black Shadow */
+.char-sonic .card-label {
+    color: #1e90ff;
+    text-shadow: -2px -2px 0 #fcc117,  2px -2px 0 #fcc117, 
+                -2px  2px 0 #fcc117,  2px  2px 0 #fcc117, 
+                 3px  3px 0px #000000;
 }
 
-/* Faction 2: SpongeBob Universe -> Yellow Text / Pink Outlines */
-.faction-sponge .card-label {
-    color: #fff176; /* SpongeBob Yellow Body */
-    text-shadow: 
-        -2px -2px 0 #ff8da1,  
-         2px -2px 0 #ff8da1,
-        -2px  2px 0 #ff8da1,
-         2px  2px 0 #ff8da1,
-         4px  4px 0px #000000;
+/* Miles "Tails" Prower: Mechanical Amber Orange Text + Pure White Outline + Black Shadow */
+.char-tails .card-label {
+    color: #ffaa00;
+    text-shadow: -2px -2px 0 #ffffff,  2px -2px 0 #ffffff, 
+                -2px  2px 0 #ffffff,  2px  2px 0 #ffffff, 
+                 3px  3px 0px #000000;
 }
 
-/* Faction 3: Powerpuff Girls -> Light Green Text / Crimson Red Outlines */
-.faction-ppg .card-label {
-    color: #a3e4d7; /* Lime Green Body */
-    text-shadow: 
-        -2px -2px 0 #e74c3c,  
-         2px -2px 0 #e74c3c,
-        -2px  2px 0 #e74c3c,
-         2px  2px 0 #e74c3c,
-         4px  4px 0px #000000;
+/* Knuckles the Echidna: Guardian Red Text + Pure White Outline + Black Shadow */
+.char-knuckles .card-label {
+    color: #ff2222;
+    text-shadow: -2px -2px 0 #ffffff,  2px -2px 0 #ffffff, 
+                -2px  2px 0 #ffffff,  2px  2px 0 #ffffff, 
+                 3px  3px 0px #000000;
 }
 
-/* Faction 4: Unlockable Guests -> Purple Text / Cyan Outlines */
-.faction-guest .card-label {
-    color: #e8daef; /* Lavender Guest Body */
-    text-shadow: 
-        -2px -2px 0 #5dade2,  
-         2px -2px 0 #5dade2,
-        -2px  2px 0 #5dade2,
-         2px  2px 0 #5dade2,
-         4px  4px 0px #000000;
+/* Shadow the Hedgehog: Charcoal Dark Text + Doom Red Outline + Black Shadow */
+.char-shadow .card-label {
+    color: #2b2b2b;
+    text-shadow: -2px -2px 0 #ff0000,  2px -2px 0 #ff0000, 
+                -2px  2px 0 #ff0000,  2px  2px 0 #ff0000, 
+                 3px  3px 0px #000000;
 }
 
-/* Villain Faction -> Dark Purple / Dark Metallic Gray Outlines */
-.faction-villain {
-    border-color: #5b21b6 !important;
+
+/* --- TEAM SPONGEBOB MAIN PLAYABLES --- */
+
+/* SpongeBob SquarePants: Sponge Yellow Text + Patrick Pink Outline + Black Shadow */
+.char-spongebob .card-label {
+    color: #fff176;
+    text-shadow: -2px -2px 0 #ff8da1,  2px -2px 0 #ff8da1, 
+                -2px  2px 0 #ff8da1,  2px  2px 0 #ff8da1, 
+                 3px  3px 0px #000000;
 }
-.faction-villain .card-label {
-    color: #a78bfa;
-    text-shadow: 
-        -2px -2px 0 #4b5563,  
-         2px -2px 0 #4b5563,
-        -2px  2px 0 #4b5563,
-         2px  2px 0 #4b5563,
-         4px  4px 0px #000000;
+
+/* Patrick Star: Starfish Soft Pink Text + Seafoam Green Outline + Black Shadow */
+.char-patrick .card-label {
+    color: #ff9999;
+    text-shadow: -2px -2px 0 #99ff99,  2px -2px 0 #99ff99, 
+                -2px  2px 0 #99ff99,  2px  2px 0 #99ff99, 
+                 3px  3px 0px #000000;
+}
+
+/* Squidward Tentacles: Clarinet Cyan Text + Angry Maroon Red Outline + Black Shadow */
+.char-squidward .card-label {
+    color: #7fcdff;
+    text-shadow: -2px -2px 0 #cc3333,  2px -2px 0 #cc3333, 
+                -2px  2px 0 #cc3333,  2px  2px 0 #cc3333, 
+                 3px  3px 0px #000000;
+}
+
+/* Larry the Lobster: Lifeguard Crimson Text + Sun Gold Outline + Black Shadow */
+.char-larry .card-label {
+    color: #ff4500;
+    text-shadow: -2px -2px 0 #ffff00,  2px -2px 0 #ffff00, 
+                -2px  2px 0 #ffff00,  2px  2px 0 #ffff00, 
+                 3px  3px 0px #000000;
+}
+
+
+/* --- TEAM POWERPUFF GIRLS MAIN PLAYABLES --- */
+
+/* Blossom Utonium: Leader Pink Text + Bow Ribbon Orange Outline + Black Shadow */
+.char-blossom .card-label {
+    color: #ff3366;
+    text-shadow: -2px -2px 0 #ffaa00,  2px -2px 0 #ffaa00, 
+                -2px  2px 0 #ffaa00,  2px  2px 0 #ffaa00, 
+                 3px  3px 0px #000000;
+}
+
+/* Bubbles Utonium: Joyful Light Blue Text + Dress Yellow Outline + Black Shadow */
+.char-bubbles .card-label {
+    color: #33ccff;
+    text-shadow: -2px -2px 0 #ffff33,  2px -2px 0 #ffff33, 
+                -2px  2px 0 #ffff33,  2px  2px 0 #ffff33, 
+                 3px  3px 0px #000000;
+}
+
+/* Buttercup Utonium: Tough Lime Green Text + Sharp Matte Black Outline + White Drop Shadow */
+.char-buttercup .card-label {
+    color: #33cc66;
+    text-shadow: -2px -2px 0 #000000,  2px -2px 0 #000000, 
+                -2px  2px 0 #000000,  2px  2px 0 #000000, 
+                 3px  3px 0px #ffffff;
+}
+
+
+/* --- UNLOCKABLE SECRET GUESTS --- */
+
+/* Sandy Cheeks: Texas Oak Brown Text + Treedome Yellow Outline + Black Shadow */
+.char-sandy .card-label {
+    color: #d2b48c;
+    text-shadow: -2px -2px 0 #ffcc00,  2px -2px 0 #ffcc00, 
+                -2px  2px 0 #ffcc00,  2px  2px 0 #ffcc00, 
+                 3px  3px 0px #000000;
+}
+
+/* Amy Rose: Sweet Rose Pink Text + Headband Crimson Outline + Black Shadow */
+.char-amy .card-label {
+    color: #ff69b4;
+    text-shadow: -2px -2px 0 #cc0033,  2px -2px 0 #cc0033, 
+                -2px  2px 0 #cc0033,  2px  2px 0 #cc0033, 
+                 3px  3px 0px #000000;
+}
+
+/* Rouge the Bat: Heart Lavender Text + Eyes Jade Green Outline + Black Shadow */
+.char-rouge .card-label {
+    color: #e0b0ff;
+    text-shadow: -2px -2px 0 #2ecc71,  2px -2px 0 #2ecc71, 
+                -2px  2px 0 #2ecc71,  2px  2px 0 #2ecc71, 
+                 3px  3px 0px #000000;
+}
+
+/* Cream the Rabbit: Soft Vanilla Beige Text + Tie Sky Blue Outline + Black Shadow */
+.char-cream .card-label {
+    color: #f5f5dc;
+    text-shadow: -2px -2px 0 #3498db,  2px -2px 0 #3498db, 
+                -2px  2px 0 #3498db,  2px  2px 0 #3498db, 
+                 3px  3px 0px #000000;
+}
+
+/* Mighty the Armadillo: Shell Crimson Orange Text + Heavy Matte Black Outline + White Drop Shadow */
+.char-mighty .card-label {
+    color: #ff4500;
+    text-shadow: -2px -2px 0 #000000,  2px -2px 0 #000000, 
+                -2px  2px 0 #000000,  2px  2px 0 #000000, 
+                 3px  3px 0px #ffffff;
+}
+
+/* Hatsune Miku: Digital Leek Teal Text + Neon Vocaloid Pink Outline + Black Shadow */
+.char-miku .card-label {
+    color: #33ccbf;
+    text-shadow: -2px -2px 0 #ff66cc,  2px -2px 0 #ff66cc, 
+                -2px  2px 0 #ff66cc,  2px  2px 0 #ff66cc, 
+                 3px  3px 0px #000000;
+}
+
+/* Timmy Turner: Fairy Magic Pink Text + Wand Neon Green Outline + Black Shadow */
+.char-timmy .card-label {
+    color: #ff66cc;
+    text-shadow: -2px -2px 0 #76ff03,  2px -2px 0 #76ff03, 
+                -2px  2px 0 #76ff03,  2px  2px 0 #76ff03, 
+                 3px  3px 0px #000000;
+}
+
+
+/* --- THE UNHOLY ALLIANCE VILLAINS --- */
+
+/* Dr. Eggman: Eggman Empire Red Text + Mechanical Caution Yellow Outline + Black Shadow */
+.char-eggman .card-label {
+    color: #ff1111;
+    text-shadow: -2px -2px 0 #ffff00,  2px -2px 0 #ffff00, 
+                -2px  2px 0 #ffff00,  2px  2px 0 #ffff00, 
+                 3px  3px 0px #000000;
+}
+
+/* Plankton: Deep Sea Green Text + Single Eye Red Outline + Black Shadow */
+.char-plankton .card-label {
+    color: #006400;
+    text-shadow: -2px -2px 0 #ff3333,  2px -2px 0 #ff3333, 
+                -2px  2px 0 #ff3333,  2px  2px 0 #ff3333, 
+                 3px  3px 0px #000000;
+}
+
+/* Mojo Jojo: Evil Mind Purple Text + Brain Helmet White Outline + Black Shadow */
+.char-mojojojo .card-label {
+    color: #8b5cf6;
+    text-shadow: -2px -2px 0 #ffffff,  2px -2px 0 #ffffff, 
+                -2px  2px 0 #ffffff,  2px  2px 0 #ffffff, 
+                 3px  3px 0px #000000;
 }
