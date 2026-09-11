@@ -1,366 +1,172 @@
-/* Universal Base Settings */
+/* ==========================================================================
+   SONIC MEGAMIX MANIA STYLING BASE TEMPLATE
+   ========================================================================== */
+
+:root {
+    --bg-dark: #070c14;          /* Main dark background */
+    --card-bg: #0f172a;          /* Dark gray/blue for content blocks */
+    --sonic-blue: #0054a6;       /* SEGA Signature Blue Accent */
+    --sonic-gold: #fcc117;       /* Sonic Ring Gold */
+    --text-white: #ffffff;
+    --text-muted: #94a3b8;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Megamix Mania Style Headings */
-h1, h2, h3 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 900;           /* Maximum bold thickness */
-    text-transform: uppercase;  /* Forces all caps */
-    letter-spacing: 1px;        /* Pushes letters slightly apart */
 }
 
 body {
-    background-color: #0d0e12;
-    color: #cbced4;
-    line-height: 1.6;
-    padding-top: 70px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    line-height: 1.7;
+    padding-bottom: 40px;
 }
 
-/* Navigation Bar (Now just a clean, minimalist link container) */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 60px;
-    background-color: rgba(22, 25, 32, 0.95); /* Slight transparency */
-    display: flex;
-    justify-content: center; /* Centers the navigation links */
-    align-items: center;
-    z-index: 1000;
-    border-bottom: 2px solid #ff4a5a; 
+/* --- Container Alignment --- */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-.centered-nav a {
-    color: #cbced4;
-    text-decoration: none;
-    margin: 0 15px;
+/* --- Hero Banner Section --- */
+header {
+    text-align: center;
+    padding: 80px 20px 60px 20px;
+    background: linear-gradient(180deg, rgba(0,84,166,0.1) 0%, rgba(7,12,20,1) 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    color: var(--text-white);
+    text-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.15rem;
+    color: var(--sonic-gold);
     font-weight: 600;
     text-transform: uppercase;
-    transition: color 0.3s;
+    letter-spacing: 1px;
 }
 
-.centered-nav a:hover {
-    color: #ff4a5a;
+/* --- Section Formatting --- */
+section {
+    margin-bottom: 50px;
 }
 
-/* Hero Section (Centering Container) */
-.hero-section {
-    text-align: center;
-    padding: 140px 20px 80px 20px; /* Leaves room below the top fixed navbar */
+h2 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--text-white);
+    border-left: 5px solid var(--sonic-blue);
+    padding-left: 15px;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+}
+
+p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+}
+
+/* --- Flexbox Feature Row --- */
+.feature-row {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
     align-items: center;
-    min-height: 80vh; /* Takes up most of the screen view for impact */
-    
-    /* Your rolling background settings stay here */
-    background: linear-gradient(rgba(13, 14, 18, 0.88), rgba(13, 14, 18, 0.95)), url('scroll-bg.png');
-    background-repeat: repeat;
-    animation: scrollBackground 25s linear infinite;
-    border-bottom: 1px solid #1a1d26;
+    margin-bottom: 40px;
 }
 
-.hero-content-wrapper {
-    max-width: 800px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Forces everything inside to line up perfectly down the middle */
+.feature-col {
+    flex: 1;
+    min-width: 280px;
 }
 
-/* Big Hero Logo Container - Scaled to match Megamix Mania perfectly */
-.main-logo-container {
-    width: 100%;
-    /* Max-width expanded to 720px to let the hero logo scale out large and dominant */
-    max-width: 720px; 
-    margin-top: 20px;
-    margin-bottom: 25px; /* Perfect padding safety gap before your download pill */
-    display: flex;
-    justify-content: center;
-}
-
-/* Master Logo Render Properties */
-.big-hero-logo {
+/* --- Game Media Wrapper --- */
+.media-box img, 
+.media-box video {
     width: 100%;
     height: auto;
-    max-height: 280px;   /* Prevents high-resolution files from vertically overflowing */
-    object-fit: contain; /* Prevents your custom graphic art from stretching out of shape */
     display: block;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
-/* Responsive fix to keep it gorgeous on small phone screen sizes */
-@media (max-width: 768px) {
-    .main-logo-container {
-        max-width: 90%;  /* Lets it take up almost the full width of narrow mobile views */
-    }
+/* --- Download Card Block --- */
+.download-card {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 35px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    margin-top: 20px;
 }
 
-/* Big Hero Download Button Layout */
-.hero-download-container {
-    margin-bottom: 40px; /* Gap between button and description text */
+.download-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
 }
 
-.big-download-btn {
+/* --- Megamix-Styled Call to Action Button --- */
+.btn-action {
     display: inline-block;
-    background-color: #ff4a5a;
-    color: #ffffff;
-    padding: 18px 50px; /* Extra thick padded layout button */
-    font-size: 1.1rem;
-    font-weight: 900;
-    text-decoration: none;
-    border-radius: 40px; /* Clean oval pill shape */
+    background-color: var(--sonic-blue);
+    color: var(--text-white);
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
-    box-shadow: 0 6px 20px rgba(255, 74, 90, 0.4); /* Glowing button shadow */
-}
-
-.big-download-btn:hover {
-    background-color: #e03242;
-    transform: scale(1.05); /* Slight expansion pulse on hover */
-    box-shadow: 0 8px 25px rgba(255, 74, 90, 0.6);
-}
-
-/* Responsive adjustments for mobile phone screens */
-@media (max-width: 600px) {
-    .main-logo-container {
-        max-width: 85%; /* Slightly shrinks logo on narrow phones so it fits comfortably */
-    }
-    .big-download-btn {
-        padding: 14px 30px;
-        font-size: 0.9rem; /* Scales button text down slightly on mobile screen views */
-    }
-}
-
-/* Universal Page Body Buffer */
-body {
-    background-color: #0d0e12;
-    color: #cbced4;
-    line-height: 1.6;
-    padding-top: 100px;  /* Pushes all page text safely down below the fixed navbar */
-}
-
-### 2. Add these Styling Rules to `style.css`
-Open your `style.css` file, click edit, scroll to the bottom, and paste this entire layout ruleset. Each character block includes a text hex color rule (`color`) and a thick pixel-border shadow rule (`text-shadow`) that acts as an outline:
-
-```css
-.char-name {
-    /* Uses the exact modern browser system-ui arrangement they implement */
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
-    font-size: 1.4rem !important;
-    font-weight: 700 !important;        /* Replicates their exact structural thickness */
-    text-transform: uppercase !important;  /* Forces capital letters */
+    text-decoration: none;
+    padding: 12px 36px;
+    border-radius: 6px;
     letter-spacing: 0.5px;
-    margin-bottom: 8px;
-    display: inline-block; 
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+    margin-top: 15px;
 }
 
-/* ==========================================================================
-   MAIN PLAYABLE ROSTER WITH HEAVY BLACK DROP SHADOWS
-   ========================================================================== */
-
-/* Sonic: Deep Blue Text, Yellow Outline, Heavy Black Drop Shadow */
-.name-sonic {
-    color: #0054b4;
-    text-shadow: -2px -2px 0 #f9d849, 2px -2px 0 #f9d849, -2px 2px 0 #f9d849, 2px 2px 0 #f9d849, -2px 0px 0 #f9d849, 2px 0px 0 #f9d849, 0px -2px 0 #f9d849, 0px 2px 0 #f9d849, 3px 3px 0px rgba(0,0,0,0.85);
+.btn-action:hover {
+    background-color: transparent;
+    border-color: var(--sonic-blue);
+    color: var(--sonic-blue);
+    transform: translateY(-2px);
 }
 
-/* Tails: Orange Text, White Outline, Heavy Black Drop Shadow */
-.name-tails {
-    color: #ff9f1a;
-    text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff, 2px 2px 0 #ffffff, -2px 0px 0 #ffffff, 2px 0px 0 #ffffff, 0px -2px 0 #ffffff, 0px 2px 0 #ffffff, 3px 3px 0px rgba(0,0,0,0.85);
+/* --- Footer Area --- */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.88rem;
+    color: #64748b;
 }
 
-/* Knuckles: Crimson Red Text, Green Outline, Heavy Black Drop Shadow */
-.name-knuckles {
-    color: #e50000;
-    text-shadow: -2px -2px 0 #00a800, 2px -2px 0 #00a800, -2px 2px 0 #00a800, 2px 2px 0 #00a800, -2px 0px 0 #00a800, 2px 0px 0 #00a800, 0px -2px 0 #00a800, 0px 2px 0 #00a800, 3px 3px 0px rgba(0,0,0,0.85);
+footer p {
+    font-size: 0.88rem;
+    max-width: 700px;
+    margin: 0 auto 20px auto;
 }
 
-/* Shadow: Charcoal Text, Crimson Outline, Heavy Black Drop Shadow */
-.name-shadow {
-    color: #1a1a1a;
-    text-shadow: -2px -2px 0 #ff0000, 2px -2px 0 #ff0000, -2px 2px 0 #ff0000, 2px 2px 0 #ff0000, -2px 0px 0 #ff0000, 2px 0px 0 #ff0000, 0px -2px 0 #ff0000, 0px 2px 0 #ff0000, 3px 3px 0px rgba(0,0,0,0.85);
+footer .links a {
+    color: var(--sonic-gold);
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 10px;
 }
 
-/* SpongeBob: Sponge Yellow Text, Brown Outline, Heavy Black Drop Shadow */
-.name-spongebob {
-    color: #f9d849;
-    text-shadow: -2px -2px 0 #4a2f13, 2px -2px 0 #4a2f13, -2px 2px 0 #4a2f13, 2px 2px 0 #4a2f13, -2px 0px 0 #4a2f13, 2px 0px 0 #4a2f13, 0px -2px 0 #4a2f13, 0px 2px 0 #4a2f13, 3px 3px 0px rgba(0,0,0,0.85);
+footer .links a:hover {
+    text-decoration: underline;
 }
-
-/* Patrick: Coral Pink Text, Green Outline, Heavy Black Drop Shadow */
-.name-patrick {
-    color: #ff9ff3;
-    text-shadow: -2px -2px 0 #2ed573, 2px -2px 0 #2ed573, -2px 2px 0 #2ed573, 2px 2px 0 #2ed573, -2px 0px 0 #2ed573, 2px 0px 0 #2ed573, 0px -2px 0 #2ed573, 0px 2px 0 #2ed573, 3px 3px 0px rgba(0,0,0,0.85);
-}
-
-/* Squidward: Cyan Text, Purple Outline, Heavy Black Drop Shadow */
-.name-squidward {
-    color: #45aaf2;
-    text-shadow: -2px -2px 0 #a55eea, 2px -2px 0 #a55eea, -2px 2px 0 #a55eea, 2px 2px 0 #a55eea, -2px 0px 0 #a55eea, 2px 0px 0 #a55eea, 0px -2px 0 #a55eea, 0px 2px 0 #a55eea, 3px 3px 0px rgba(0,0,0,0.85);
-}
-
-/* Larry: Crimson Text, Ocean Blue Outline, Heavy Black Drop Shadow */
-.name-larry {
-    color: #ff4757;
-    text-shadow: -2px -2px 0 #1e90ff, 2px -2px 0 #1e90ff, -2px 2px 0 #1e90ff, 2px 2px 0 #1e90ff, -2px 0px 0 #1e90ff, 2px 0px 0 #1e90ff, 0px -2px 0 #1e90ff, 0px 2px 0 #1e90ff, 3px 3px 0px rgba(0,0,0,0.85);
-}
-
-/* Blossom: Bright Pink Text, Dark Red Outline, Heavy Black Drop Shadow */
-.name-blossom {
-    color: #ff758f;
-    text-shadow: -2px -2px 0 #ba000d, 2px -2px 0 #ba000d, -2px 2px 0 #ba000d, 2px 2px 0 #ba000d, -2px 0px 0 #ba000d, 2px 0px 0 #ba000d, 0px -2px 0 #ba000d, 0px 2px 0 #ba000d, 3px 3px 0px rgba(0,0,0,0.85);
-}
-
-/* Bubbles: Sky Blue Text, Yellow Outline, Heavy Black Drop Shadow */
-.name-bubbles {
-    color: #70a1ff;
-    text-shadow: -2px -2px 0 #f9d849, 2px -2px 0 #f9d849, -2px 2px 0 #f9d849, 2px 2px 0 #f9d849, -2px 0px 0 #f9d849, 2px 0px 0 #f9d849, 0px -2px 0 #f9d849, 0px 2px 0 #f9d849, 3px 3px 0px rgba(0,0,0,0.85);
-}
-
-/* Buttercup: Green Text, Black Outline, Extra Bottom Offset Shadow */
-.name-buttercup {
-    color: #2ed573;
-    text-shadow: -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000, -2px 0px 0 #000000, 2px 0px 0 #000000, 0px -2px 0 #000000, 0px 2px 0 #000000, 4px 4px 0px rgba(0,0,0,0.9);
-}
-
-/* ==========================================================================
-   UNLOCKABLE ROSTER WITH HEAVY BLACK DROP SHADOWS
-   ========================================================================== */
-
-/* Sandy: Gray Text, Purple Outline, Heavy Black Drop Shadow */
-.name-sandy {
-    color: #a4b0be;
-    text-shadow: -2px -2px 0 #8854d0, 2px -2px 0 #8854d0, -2px 2px 0 #8854d0, 2px 2px 0 #8854d0, -2px 0px 0 #8854d0, 2px 0px 0 #8854d0, 0px -2px 0 #8854d0, 0px 2px 0 #8854d0, 3px 3px 0px rgba(0,0,0,0.85);
-}
-
-/* Amy: Bubblegum Pink Text, White Outline, Heavy Black Drop Shadow */
-.name-amy {
-    color: #ff4081;
-    text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff, 2px 2px 0 #ffffff, -2px 0px 0 #ffffff, 2px 0px 0 #ffffff, 0px -2px 0 #ffffff, 0px 2px 0 #ffffff, 3px 3px 0px rgba(0,0,0,0.85);
-}
-
-/* Rouge: Violet Text, White Outline, Heavy Black Drop Shadow */
-.name-rouge {
-    color: #3f51b5;
-    text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff, 2px 2px 0 #ffffff, -2px 0px 0 #ffffff, 2px 0px 0 #ffffff, 0px -2px 0 #ffffff, 0px 2px 0 #ffffff, 3px 3px 0px rgba(0,0,0,0.85);
-}
-
-/* Cream: Cream Text, Orange Outline, Heavy Black Drop Shadow */
-.name-cream {
-    color: #ffeaa7;
-    text-shadow: -2px -2px 0 #ff7675, 2px -2px 0 #ff7675, -2px 2px 0 #ff7675, 2px 2px 0 #ff7675, -2px 0px 0 #ff7675, 2px 0px 0 #ff7675, 0px -2px 0 #ff7675, 0px 2px 0 #ff7675, 3px 3px 0px rgba(0,0,0,0.85);
-}
-
-/* Mighty: Rust Red Text, Black Outline, Heavy Black Drop Shadow */
-.name-mighty {
-    color: #d63031;
-    text-shadow: -2px -2px 0 #2d3436, 2px -2px 0 #2d3436, -2px 2px 0 #2d3436, 2px 2px 0 #2d3436, -2px 0px 0 #2d3436, 2px 0px 0 #2d3436, 0px -2px 0 #2d3436, 0px 2px 0 #2d3436, 3px 3px 0px rgba(0,0,0,0.85);
-}
-
-/* Hatsune Miku: Teal Text, White Outline, Heavy Black Drop Shadow */
-.name-miku {
-    color: #39c5bb;
-    text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff, 2px 2px 0 #ffffff, -2px 0px 0 #ffffff, 2px 0px 0 #ffffff, 0px -2px 0 #ffffff, 0px 2px 0 #ffffff, 3px 3px 0px rgba(0,0,0,0.85);
-}
-
-/* Timmy Turner: Pink Text, Green Outline, Heavy Black Drop Shadow */
-.name-timmy {
-    color: #fd79a8;
-    text-shadow: -2px -2px 0 #55efc4, 2px -2px 0 #55efc4, -2px 2px 0 #55efc4, 2px 2px 0 #55efc4, -2px 0px 0 #55efc4, 2px 0px 0 #55efc4, 0px -2px 0 #55efc4, 0px 2px 0 #55efc4, 3px 3px 0px rgba(0,0,0,0.85);
-}
-
-
-/* ==========================================================================
-   THE CHARACTER PANEL BOXES
-   ========================================================================== */
-
-/* 1. The Layout Grid - Updated to match their massive, wide layout grid */
-.grid-container {
-    display: grid;
-    /* Boosts the card sizing parameters to 300px minimum width, allowing cards to scale up to 340px */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    justify-content: center; 
-    gap: 30px; /* Clean spacing rows between large panels */
-    padding: 30px 0 60px 0;
-    max-width: 1200px; /* Allows the container layout to span wide across the desktop screen view */
-    margin: 0 auto;
-}
-
-/* 2. The Card Panel - Expanded size constraints to match their box dimensions exactly */
-.character-card {
-    background-color: #7dbd9c;     /* Dark forest green background color */
-    border: 3px solid #d90c15;     /* Sharp 3px solid RED outline border */
-    border-radius: 8px;            
-    overflow: hidden;              
-    display: flex;
-    flex-direction: column;        
-    
-    /* Bigger rectangular sizing constraints */
-    width: 100%;
-    min-height: 480px;             /* Height increased to 480px so the massive boxes have scale */
-    max-width: 340px;              /* Width increased to 340px to stop them from looking small */
-    margin: 0 auto;                /* Centers single rows nicely */
-    
-    /* Scroll Animation settings */
-    opacity: 0;                    
-    transform: translateY(40px);   
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out; 
-}
-
-/* Scroll reveal trigger class */
-.character-card.reveal {
-    opacity: 1;                    
-    transform: translateY(0);      
-}
-
-/* 3. The Image Frame Area - Expanded to frame your big art renders */
-.char-image-container {
-    width: 100%;
-    height: 260px;                 /* Increased height to 260px so high-res art renders look huge */
-    background-color: #7dbd9c;     /* Solid green background flows right behind transparent PNGs */
-    overflow: hidden;
-    position: relative;
-    padding-top: 15px;             
-}
-
-.char-avatar {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;           
-    object-position: bottom center; 
-    display: block;
-}
-
-/* 4. The Inner Text Area right below the character */
-.char-bio-content {
-    background-color: #7dbd9c;     
-    padding: 20px 25px 25px 25px;  /* Padded layout room match their text structure formatting */
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;                  
-    justify-content: flex-start;
-}
-
-/* Description Text inside the big box */
-.char-bio {
-    font-size: 0.9rem !important;  /* Marginally larger font to scale with the bigger card sizing */
-    color: #cbced4;                
-    line-height: 1.5;
-    text-transform: none !important; 
-    margin-top: 8px;
-}
-
-/* Locked Variation with matching expanded constraints */
-.character-card.locked {
-    background-color: #7dbd9c;     
-    border: 3px soild #d90c15;    
-    opacity: 0.75;
-}
-.character-card.locked .char-image-container { background-color: #7dbd9c; }
-.character-card.locked .char-bio-content { background-color: #7dbd9c; }
