@@ -106,50 +106,69 @@ p {
     text-shadow: 3px 3px 0px #000;
 }
 
-/* Responsive Flex/Grid Layout to house the card rows cleanly */
+/* ==========================================================================
+   INDIVIDUAL GREEN BOX CHARACTER COMPONENT
+   ========================================================================== */
+
+/* The outer grid that holds all the separate individual green boxes */
 .exact-roster-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 30px;
     justify-content: center;
-    padding: 10px 0;
+    padding: 20px 0;
+    margin-bottom: 50px;
 }
 
-/* The Vertical Narrow Character Card Container Box */
-.narrow-character-card {
-    background-color: #05080c; /* Crisp matte black card interior */
-    border: 4px solid #cc2222;  /* EXACT BOLD RED OUTLINE WINDOW */
-    border-radius: 4px;
-    width: 250px;               /* Fixed width for uniform text structure */
-    padding: 20px 15px;
+/* THE GREEN BOX: Now wrapped around EACH individual character */
+.individual-character-box {
+    background-color: #0b1d12;   /* Deep retro zone green background */
+    border: 4px solid #143521;    /* Muted forest green frame outline */
+    border-radius: 8px;
+    width: 280px;                 /* Slightly wider to give text room inside the green box */
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    box-shadow: 6px 6px 0px #000000; /* Retro hard black block drop shadow */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
     box-sizing: border-box;
     
-    /* Animation Core Setup */
+    /* Animation Core Setup for scroll reveal */
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
                 transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* Dynamic Animation Class Triggered By Scroll Script */
-.narrow-character-card.reveal-active {
+/* Dynamic Animation Reveal Class */
+.individual-character-box.reveal-active {
     opacity: 1;
     transform: translateY(0);
 }
 
-.narrow-character-card:hover {
+.individual-character-box:hover {
     transform: translateY(-5px);
+    border-color: #1c4d30; /* Brightens the green border slightly on hover */
+}
+
+/* INNER BLACK WINDOW: The vertical narrow rectangle with the RED outline */
+.narrow-character-card {
+    background-color: #05080c;   /* Matte black inner frame */
+    border: 4px solid #cc2222;    /* BOLD RED OUTLINE WINDOW */
+    border-radius: 4px;
+    width: 100%;                  /* Fills up the green box container completely */
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 4px 4px 0px #000000;
+    box-sizing: border-box;
 }
 
 /* Strict Image Sizing Window */
 .card-avatar {
     width: 100%;
-    height: 160px;             
+    height: 150px;             
     display: flex;
     align-items: center;
     justify-content: center;
@@ -160,14 +179,14 @@ p {
 .card-avatar img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain;       /* Preserves your original sprite sizing completely */
+    object-fit: contain;
 }
 
-/* The Exact Styled Centered Text Name Component */
+/* Centered Text Name Component with Multi-Tone Outline & Shadow */
 .card-label {
     text-align: center;
     font-family: 'Impact', 'Arial Black', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     text-transform: uppercase;
     margin: 5px 0 12px 0;
     line-height: 1.1;
@@ -177,22 +196,21 @@ p {
 /* Character Bio text wrapper */
 .card-bio {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    color: #94a3b8; /* Muted reading gray */
-    font-size: 0.9rem;
+    color: #94a3b8; 
+    font-size: 0.85rem;
     line-height: 1.5;
     text-align: center;
-    margin: 0 0 15px 0;
-    padding: 0;
+    margin: 0 0 10px 0;
 }
 
-/* Locked sub-indicator overlay */
+/* Locked status text tag */
 .card-status-tag {
     font-family: 'Impact', sans-serif;
     font-size: 0.8rem;
     color: #cc2222;
     text-transform: uppercase;
     margin-top: auto;
-    padding-top: 10px;
+    padding-top: 5px;
     letter-spacing: 1px;
 }
 
