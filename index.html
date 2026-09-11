@@ -255,7 +255,25 @@
             </div>
         </section>
 
-// Gathers every single standalone green box and hooks them to the scroll tracker
-const characterBoxes = document.querySelectorAll(".individual-character-box");
-characterBoxes.forEach(box => scrollTracker.observe(box));
+  <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const scrollTracker = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("reveal-active");
+                    } else {
+                        entry.target.classList.remove("reveal-active");
+                    }
+                });
+            }, {
+                root: null,          
+                // ⚠️ LOWER THIS NUMBER: Mobile screens need a small trigger threshold
+                threshold: 0.05 
+            });
+
+            // ⚠️ FIX THIS LINE: It must target the outer green box container!
+            const characterBoxes = document.querySelectorAll(".individual-character-box");
+            characterBoxes.forEach(box => scrollTracker.observe(box));
+        });
+    </script>
 
