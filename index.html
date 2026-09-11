@@ -224,23 +224,25 @@
             </div>
         </section>
 
-  <script>
+  <!-- Script Tracking: Adds and Removes the visibility class depending on scroll direction -->
+    <script>
         document.addEventListener("DOMContentLoaded", () => {
             const scrollTracker = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
+                        // Triggers when scrolling DOWN: Card enters the screen view
                         entry.target.classList.add("reveal-active");
                     } else {
+                        // Triggers when scrolling UP: Card leaves the screen view, hiding it again
                         entry.target.classList.remove("reveal-active");
                     }
                 });
             }, {
                 root: null,          
-                // ⚠️ LOWER THIS NUMBER: Mobile screens need a small trigger threshold
-                threshold: 0.05 
+                threshold: 0.05       // Triggers as soon as 5% of the massive box clips onto the screen
             });
 
-            // ⚠️ FIX THIS LINE: It must target the outer green box container!
+            // Target the large individual green box modules directly
             const characterBoxes = document.querySelectorAll(".individual-character-box");
             characterBoxes.forEach(box => scrollTracker.observe(box));
         });
