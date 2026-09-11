@@ -166,8 +166,8 @@ header {
 
 /* THE GIANT CHARACTER CARD: Green background, bold red outline */
 .individual-character-box {
-    background-color: ##7dbd9c;   /* Deep retro zone green background */
-    border: 5px solid ##d91015;    /* Bold red outline */
+    background-color: #7dbd9c;   /* Deep retro zone green background */
+    border: 5px solid #d91015;    /* Bold red outline */
     border-radius: 0;             /* Pointed edges */
     padding: 30px 20px;
     display: flex;
