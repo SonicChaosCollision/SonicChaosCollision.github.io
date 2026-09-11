@@ -275,3 +275,17 @@ footer .links a:hover {
     margin-top: 8px;
     text-shadow: 1px 1px 0px #000;
 }
+/* --------------------------------------------------------------------------
+   STORY CROSSOVER DIMENSION THEME COLOR-CODING
+   -------------------------------------------------------------------------- */
+.faction-sonic { border-color: #0054a6 !important; }
+.faction-sonic .card-label { color: #3b9eff !important; }
+
+.faction-sponge { border-color: #fcc117 !important; }
+.faction-sponge .card-label { color: #fff176 !important; }
+
+.faction-ppg { border-color: #2ecc71 !important; }
+.faction-ppg .card-label { color: #a3e4d7 !important; }
+
+.faction-guest { border-color: #9b59b6 !important; }
+.faction-guest .card-label { color: #e8daef !important; }
