@@ -390,3 +390,34 @@ p {
                 -2px  2px 0 #ffffff,  2px  2px 0 #ffffff, 
                  3px  3px 0px #000000;
 }
+/* ==========================================================================
+   OFFICIAL COPYRIGHT FOOTER STYLE
+   ========================================================================== */
+footer {
+    background-color: #04080e; /* Deep midnight void backdrop */
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 80px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Bold Non-Profit Header */
+.footer-disclaimer-header {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #e2e8f0;
+    font-size: 0.95rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+/* Tiny Legal Text Strings */
+.footer-legal-text {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #64748b; /* Clean muted legal reading gray */
+    font-size: 0.82rem;
+    line-height: 1.6;
+    max-width: 850px;
+    margin: 0 auto;
+}
