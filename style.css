@@ -130,7 +130,7 @@ p {
 .individual-character-box {
     background-color: #7dbd9c;   /* EXACT DEEP RETRO RETRO ZONE GREEN */
     border: 5px solid #cc2222;    /* EXACT BOLD SIGNATURE RED OUTLINE */
-    border-radius: 8px;
+    border-radius: 0px;
     padding: 30px 20px;
     display: flex;
     flex-direction: column;
