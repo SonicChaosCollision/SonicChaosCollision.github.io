@@ -1,11 +1,11 @@
 /* ==========================================================================
-   SONIC MEGAMIX MANIA STYLING BASE TEMPLATE
+   HARMONY ENGINE CROSSOVER LANDING THEME & CHARACTER MENUS
    ========================================================================== */
 
 :root {
     --bg-dark: #070c14;          /* Main dark background */
-    --card-bg: #0f172a;          /* Dark gray/blue for content blocks */
-    --sonic-blue: #0054a6;       /* SEGA Signature Blue Accent */
+    --card-bg: #0f172a;          /* Content block fill */
+    --sonic-blue: #0054a6;       /* Accent Blue */
     --sonic-gold: #fcc117;       /* Sonic Ring Gold */
     --text-white: #ffffff;
     --text-muted: #94a3b8;
@@ -27,7 +27,7 @@ body {
 
 /* --- Container Alignment --- */
 .container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -43,10 +43,8 @@ header {
 header h1 {
     font-size: 3rem;
     font-weight: 900;
-    letter-spacing: -1px;
     text-transform: uppercase;
     color: var(--text-white);
-    text-shadow: 0 4px 12px rgba(0,0,0,0.5);
     margin-bottom: 10px;
 }
 
@@ -71,7 +69,6 @@ h2 {
     border-left: 5px solid var(--sonic-blue);
     padding-left: 15px;
     margin-bottom: 25px;
-    letter-spacing: 0.5px;
 }
 
 p {
@@ -80,71 +77,115 @@ p {
     margin-bottom: 20px;
 }
 
-/* --- Flexbox Feature Row --- */
-.feature-row {
+/* --- Outer Green Menu Matrix Wrapper --- */
+.roster-section-container {
+    background-color: #0b1d12; /* Deep retro zone green background */
+    border: 4px solid #143521;  /* Muted forest green frame outline */
+    border-radius: 8px;
+    padding: 40px 20px;
+    margin: 40px auto;
+}
+
+/* --- Category Headers --- */
+.megamix-category-title {
+    text-align: center;
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: 2px;
+    margin: 40px 0 25px 0;
+    text-shadow: 3px 3px 0px #000;
+}
+
+/* --- Responsive Flex Layout --- */
+.exact-roster-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 25px;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+/* --- The Vertical Narrow Character Card Container Box --- */
+.narrow-character-card {
+    background-color: #05080c; /* Crisp matte black card interior */
+    border: 4px solid #cc2222;  /* EXACT BOLD RED OUTLINE WINDOW */
+    border-radius: 4px;
+    width: 250px;               /* Fixed width for uniform text structure */
+    min-height: 420px;          /* Enforces a narrow vertical rectangle aspect */
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 40px;
+    justify-content: flex-start;
+    box-shadow: 6px 6px 0px #000000; /* Retro hard black block drop shadow */
+    box-sizing: border-box;
+    
+    /* Animation Properties */
+    opacity: 0;
+    transform: translateY(40px); /* Initial offset state */
+    transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
+                transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.feature-col {
-    flex: 1;
-    min-width: 280px;
+/* --- The Animation Reveal Trigger Class --- */
+.narrow-character-card.reveal-active {
+    opacity: 1;
+    transform: translateY(0); /* Returns card up to layout space */
 }
 
-/* --- Game Media Wrapper --- */
-.media-box img, 
-.media-box video {
+/* --- Strict Image Sizing Window --- */
+.card-avatar {
     width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    height: 160px;             
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 15px;
 }
 
-/* --- Download Card Block --- */
-.download-card {
-    background-color: var(--card-bg);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 12px;
-    padding: 35px;
+.card-avatar img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;       /* Preserves your original sprite sizing completely */
+}
+
+/* --- Exact Styled Centered Text Name Component --- */
+.card-label {
     text-align: center;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-    margin-top: 20px;
-}
-
-.download-card h3 {
+    font-family: 'Impact', 'Arial Black', sans-serif;
     font-size: 1.4rem;
-    margin-bottom: 10px;
-}
-
-/* --- Megamix-Styled Call to Action Button --- */
-.btn-action {
-    display: inline-block;
-    background-color: var(--sonic-blue);
-    color: var(--text-white);
-    font-weight: 700;
     text-transform: uppercase;
-    text-decoration: none;
-    padding: 12px 36px;
-    border-radius: 6px;
+    margin: 5px 0 12px 0;
+    line-height: 1.1;
     letter-spacing: 0.5px;
-    transition: all 0.2s ease;
-    border: 1px solid transparent;
-    margin-top: 15px;
 }
 
-.btn-action:hover {
-    background-color: transparent;
-    border-color: var(--sonic-blue);
-    color: var(--sonic-blue);
-    transform: translateY(-2px);
+/* --- Character Bio Wrapper --- */
+.card-bio {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    color: #94a3b8; 
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
-/* --- Footer Area --- */
+/* --- Locked Sub-Indicator Overlay --- */
+.card-status-tag {
+    font-family: 'Impact', sans-serif;
+    font-size: 0.8rem;
+    color: #cc2222;
+    text-transform: uppercase;
+    margin-top: auto;
+    padding-top: 10px;
+    letter-spacing: 1px;
+}
+
+/* --- Legal Footer Area --- */
 footer {
     text-align: center;
     padding: 40px 20px;
@@ -156,64 +197,54 @@ footer {
 
 footer p {
     font-size: 0.88rem;
-    max-width: 700px;
-    margin: 0 auto 20px auto;
-}
-
-footer .links a {
-    color: var(--sonic-gold);
-    text-decoration: none;
-    font-weight: 600;
-    margin: 0 10px;
-}
-
-footer .links a:hover {
-    text-decoration: underline;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 /* ==========================================================================
-   EXACT SONIC MEGAMIX MANIA CHARACTER LIST SETUP
+   STORY CROSSOVER DIMENSION THEME COLOR-CODING (OUTLINE & TEXT SETUPS)
    ========================================================================== */
 
-/* Main Character Header (Matches Site Typography Rules) */
-.megamix-character-header {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #ffffff;
-    margin-top: 40px;
-    margin-bottom: 15px;
-    text-transform: none; /* No stylized uppercase or hard text shadows */
-    text-shadow: none;
+/* Faction 1: Sonic Universe -> Blue Text / Yellow Outlines */
+.faction-sonic .card-label {
+    color: #3b9eff; 
+    text-shadow: 
+        -2px -2px 0 #fcc117,  
+         2px -2px 0 #fcc117,
+        -2px  2px 0 #fcc117,
+         2px  2px 0 #fcc117,
+         4px  4px 0px #000000; 
 }
 
-/* Character List Wrapper */
-.megamix-character-list {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: #94a3b8; /* Exact site muted slate gray color for body paragraphs */
-    font-size: 1.05rem;
-    line-height: 1.7;
-    padding-left: 20px;
-    margin-bottom: 40px;
+/* Faction 2: SpongeBob Universe -> Yellow Text / Pink Outlines */
+.faction-sponge .card-label {
+    color: #fff176; 
+    text-shadow: 
+        -2px -2px 0 #ff8da1,  
+         2px -2px 0 #ff8da1,
+        -2px  2px 0 #ff8da1,
+         2px  2px 0 #ff8da1,
+         4px  4px 0px #000000;
 }
 
-/* Single Character Row Alignment */
-.megamix-character-list li {
-    margin-bottom: 12px;
-    list-style-type: disc; /* Replicates classic solid bullet points */
+/* Faction 3: Powerpuff Girls -> Light Green Text / Crimson Red Outlines */
+.faction-ppg .card-label {
+    color: #a3e4d7; 
+    text-shadow: 
+        -2px -2px 0 #e74c3c,  
+         2px -2px 0 #e74c3c,
+        -2px  2px 0 #e74c3c,
+         2px  2px 0 #e74c3c,
+         4px  4px 0px #000000;
 }
 
-/* Bold Label for Individual Characters */
-.megamix-character-name {
-    color: #ffffff; /* Names pop in bright solid white */
-    font-weight: bold;
-}
-
-/* Visual Tag for Locked Content */
-.megamix-lock-indicator {
-    color: #ef4444; /* Retro red warning alert string */
-    font-weight: bold;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    margin-left: 6px;
+/* Faction 4: Unlockable Guests -> Purple Text / Cyan Outlines */
+.faction-guest .card-label {
+    color: #e8daef; 
+    text-shadow: 
+        -2px -2px 0 #5dade2,  
+         2px -2px 0 #5dade2,
+        -2px  2px 0 #5dade2,
+         2px  2px 0 #5dade2,
+         4px  4px 0px #000000;
 }
