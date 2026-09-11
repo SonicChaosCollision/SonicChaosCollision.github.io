@@ -72,17 +72,31 @@ body {
     align-items: center; /* Forces everything inside to line up perfectly down the middle */
 }
 
-/* Big Hero Logo Sizing */
+/* Big Hero Logo Container - Scaled to match Megamix Mania perfectly */
 .main-logo-container {
     width: 100%;
-    max-width: 550px; /* Makes the logo image big and dominant */
-    margin-bottom: 25px; /* Gap between logo and button */
+    /* Max-width expanded to 720px to let the hero logo scale out large and dominant */
+    max-width: 720px; 
+    margin-top: 20px;
+    margin-bottom: 25px; /* Perfect padding safety gap before your download pill */
+    display: flex;
+    justify-content: center;
 }
 
+/* Master Logo Render Properties */
 .big-hero-logo {
     width: 100%;
     height: auto;
+    max-height: 280px;   /* Prevents high-resolution files from vertically overflowing */
+    object-fit: contain; /* Prevents your custom graphic art from stretching out of shape */
     display: block;
+}
+
+/* Responsive fix to keep it gorgeous on small phone screen sizes */
+@media (max-width: 768px) {
+    .main-logo-container {
+        max-width: 90%;  /* Lets it take up almost the full width of narrow mobile views */
+    }
 }
 
 /* Big Hero Download Button Layout */
