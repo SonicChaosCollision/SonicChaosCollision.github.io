@@ -98,6 +98,10 @@ p {
    INDIVIDUAL LARGE GREEN BOX CHARACTER CARDS (MEGAMIX SITE ACCURATE)
    ========================================================================== */
 
+/* ==========================================================================
+   EXACT MEGAMIX MANIA INDIVIDUAL LARGE CARDS SETUP
+   ========================================================================== */
+
 /* Flat Section Headers */
 .megamix-category-title {
     font-family: 'Impact', 'Arial Black', sans-serif;
@@ -109,66 +113,45 @@ p {
     text-shadow: 3px 3px 0px #000;
 }
 
-/* Big Grid Layout Track */
+/* Big Grid Track to hold the giant boxes spacious */
 .exact-roster-grid {
     display: grid;
-    /* Forces elements to render as large as possible across displays */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    /* This makes the grid tracks wide so the boxes have maximum screen width */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
     gap: 30px;
     margin-bottom: 60px;
     width: 100%;
 }
 
-/* THE GREEN BOX: The standalone frame for EACH individual slot */
+/* THE GIANT CHARACTER CARD: Green background, bold red outline */
 .individual-character-box {
-    background-color: #0b1d12;   /* Deep retro zone green background */
-    border: 4px solid #143521;    /* Muted forest green frame outline */
+    background-color: #0b1d12;   /* EXACT DEEP RETRO RETRO ZONE GREEN */
+    border: 5px solid #cc2222;    /* EXACT BOLD SIGNATURE RED OUTLINE */
     border-radius: 8px;
-    padding: 25px;
+    padding: 30px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+    box-shadow: 6px 6px 0px #000000; /* Retro hard flat 2D black drop shadow */
     box-sizing: border-box;
     width: 100%;
+    min-height: 480px;            /* Gives massive breathing room vertically */
     
-    /* Scroll Animation Reveal Core Properties */
-    opacity: 1;
-    transform: translateY(40px);
-    transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
-                transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-/* Active transition triggered dynamically via your scroll JS intercept */
-.individual-character-box.reveal-active {
+    /* Keeps them visible instantly on iPhone Safari */
     opacity: 1;
     transform: translateY(0);
+    transition: transform 0.15s ease;
 }
 
 .individual-character-box:hover {
     transform: translateY(-5px);
-    border-color: #1d4d31;
+    border-color: #fcc117; /* Changes outer red outline to Ring Gold on hover! */
 }
 
-/* INNER BLACK WINDOW: The vertical frame with the bold RED outline */
-.narrow-character-card {
-    background-color: #05080c;   /* Matte black inner frame */
-    border: 4px solid #cc2222;    /* BOLD RED OUTLINE WINDOW */
-    border-radius: 4px;
-    width: 100%;                  /* Expands completely inside the large green wrapper */
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 4px 4px 0px #000000;
-    box-sizing: border-box;
-    min-height: 400px;            /* Guarantees clean spacing proportions */
-}
-
-/* Image Scaler (Prevents image blowouts while keeping art spacious) */
+/* MASSIVE ARTWORK WINDOW: Takes up the upper half of the green box */
 .card-avatar {
     width: 100%;
-    height: 180px;             
+    height: 220px;             /* Drastically increased to make your character artwork huge */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -179,41 +162,44 @@ p {
 .card-avatar img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain;       /* Protects original pixel sizing proportions */
+    width: auto;
+    height: auto;
+    object-fit: contain;       /* Keeps pixel art sprites crisp and perfectly proportioned */
 }
 
-/* Centered Name Tag Component with Multi-Tone Outline and Drop Shadow */
+/* BIG ARCADE HEADER TEXT */
 .card-label {
     text-align: center;
     font-family: 'Impact', 'Arial Black', sans-serif;
-    font-size: 1.5rem;         /* Enlarged typography to balance wide box footprint */
+    font-size: 1.7rem;         /* Enlarged font size to match the big card footprint */
     text-transform: uppercase;
     margin: 5px 0 15px 0;
     line-height: 1.1;
     letter-spacing: 0.5px;
 }
 
-/* Character Biography Reading Block */
+/* ENLARGED CHARACTER BIOGRAPHY STYLING */
 .card-bio {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    color: #94a3b8; 
-    font-size: 0.95rem;        
+    color: #e2e8f0;            /* Brightened to near-white for high contrast on green */
+    font-size: 1.05rem;        /* Made larger so it's clean and easily readable on mobile */
     line-height: 1.6;
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
-/* Lock text element formatting */
+/* Lock state tag formatting element */
 .card-status-tag {
     font-family: 'Impact', sans-serif;
-    font-size: 0.85rem;
-    color: #cc2222;
+    font-size: 0.95rem;
+    color: #ff4d4d;            /* Neon warning red */
     text-transform: uppercase;
     margin-top: auto;
     padding-top: 15px;
     letter-spacing: 1px;
 }
+
 
 
 /* ==========================================================================
