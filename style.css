@@ -82,12 +82,16 @@ p {
    ========================================================================== */
 
 /* Outer Green Menu Matrix Wrapper */
+/* This single rule automatically styles all three separate green boxes */
 .roster-section-container {
     background-color: #0b1d12; /* Deep retro zone green background */
     border: 4px solid #143521;  /* Muted forest green frame outline */
     border-radius: 8px;
     padding: 40px 20px;
-    margin: 40px auto;
+    
+    /* This forces healthy vertical spacing between the boxes so they stay separated */
+    margin-top: 30px;
+    margin-bottom: 50px; 
 }
 
 /* Category Headers */
