@@ -1,15 +1,11 @@
 /* ==========================================================================
-   HARMONY ENGINE CROSSOVER LANDING THEME & CHARACTER MENUS
-   ========================================================================== */
-* ==========================================================================
-   CUSTOM FONT CONFIGURATION (RUDE EXTRA WIDE BLACK)
+   HARMONY MASTER SHEET - CORE RETRO LAYOUT PARAMS
    ========================================================================== */
 
 :root {
-    --bg-dark: #070c14;          /* Main dark background */
-    --card-bg: #0f172a;          /* Content block fill */
-    --sonic-blue: #0054a6;       /* Accent Blue */
-    --sonic-gold: #fcc117;       /* Sonic Ring Gold */
+    --bg-dark: #070c14;          
+    --sonic-blue: #0054a6;       
+    --sonic-gold: #fcc117;       
     --text-white: #ffffff;
     --text-muted: #94a3b8;
 }
@@ -20,148 +16,172 @@
     padding: 0;
 }
 
-/* ==========================================================================
-   OFFICIAL BLUE BACKGROUND THEME
-   ========================================================================== */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    
-    /* 🛠️ EXACT GRADIENT: Fades from rich Sega Blue down into a dark matte midnight gray */
-    background: linear-gradient(180deg, #002b5c 0%, #070c14 400px, #070c14 100%);
-    background-attachment: scroll;
-    
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: var(--bg-dark);
     color: var(--text-white);
     line-height: 1.7;
-    padding-bottom: 0; /* Let the footer control the bottom wall spacing */
+    padding-bottom: 0;
 }
 
-/* --- Container Alignment --- */
 .container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
+    position: relative;
+    z-index: 2; /* Keeps all page cards floating on top of level backgrounds */
 }
 
-/* --- Hero Banner Section --- */
+/* --------------------------------------------------------------------------
+   HERO HEADER AREA: SCROLLING PANORAMA BACKGROUND STAGE
+   -------------------------------------------------------------------------- */
 header {
     text-align: center;
-    padding: 80px 20px 60px 20px;
-    background: linear-gradient(180deg, rgba(0,84,166,0.1) 0%, rgba(7,12,20,1) 100%);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 60px 20px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 5px solid #cc2222;
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* 🛠️ SCROLLING LEVEL BANNER BACKGROUND: Set your looping landscape here */
+    background-image: url('hero-level-bg.png'); 
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    animation: loopLevelScroll 25s linear infinite; /* Seamless infinite horizontal scroll loop */
 }
 
-header h1 {
-    font-size: 3rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    color: var(--text-white);
-    margin-bottom: 10px;
+/* Background Scrolling Animation Logic */
+@keyframes loopLevelScroll {
+    from { background-position: 0 0; }
+    to { background-position: -1000px 0; }
 }
 
-header p {
-    font-size: 1.15rem;
-    color: var(--sonic-gold);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* --- Section Formatting --- */
-section {
-    margin-bottom: 50px;
-}
-
-h2 {
-    font-size: 1.75rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: var(--text-white);
-    border-left: 5px solid var(--sonic-blue);
-    padding-left: 15px;
+/* Logo Image Container (Replaces Plain Text Title) */
+.megamix-main-logo {
+    max-width: 450px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0px 8px 0px rgba(0,0,0,1)); /* Pop accent shadow effect */
     margin-bottom: 25px;
 }
 
-p {
-    color: var(--text-muted);
-    font-size: 1.05rem;
+/* Header Direct Download Block Button Configuration */
+.header-download-button {
+    display: inline-block;
+    background-color: #cc2222; /* High-contrast retro button face red */
+    color: var(--text-white);
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding: 16px 45px;
+    border: 4px solid var(--text-white);
+    box-shadow: 6px 6px 0px #000000;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.header-download-button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0px #000000;
+    background-color: #e52e2e;
+}
+
+/* --------------------------------------------------------------------------
+   STORY SYNOPSIS SECTION & TYPOGRAPHY HIGHLIGHT TARGETS
+   -------------------------------------------------------------------------- */
+.story-synopsis-card {
+    background-color: rgba(5, 8, 12, 0.9); /* Opaque overlay shielding text from the image layer */
+    border: 4px solid #cc2222;
+    padding: 35px;
+    margin: 40px auto;
+    box-shadow: 6px 6px 0px #000000;
+}
+
+.story-synopsis-card h2 {
+    font-family: 'Impact', sans-serif;
+    font-size: 2rem;
+    color: var(--text-white);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px #000;
+}
+
+.story-synopsis-card p {
+    font-size: 1.1rem;
+    color: #e2e8f0;
+    line-height: 1.6;
     margin-bottom: 20px;
 }
 
-/* ==========================================================================
-   ISOLATED MEGAMIX STYLE ROSTER COMPONENT
-   ========================================================================== */
-
-/* Outer Green Menu Matrix Wrapper */
-/* This single rule automatically styles all three separate green boxes */
-.roster-section-container {
-    background-color: #0b1d12; /* Deep retro zone green background */
-    border: 4px solid #143521;  /* Muted forest green frame outline */
-    border-radius: 8px;
-    padding: 40px 20px;
-    
-    /* This forces healthy vertical spacing between the boxes so they stay separated */
-    margin-top: 30px;
-    margin-bottom: 50px; 
+.story-tagline {
+    font-family: 'Impact', sans-serif;
+    font-size: 1.4rem;
+    color: var(--sonic-gold);
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 25px;
+    text-shadow: 2px 2px 0px #000;
 }
 
-/* ==========================================================================
-   INDIVIDUAL LARGE GREEN BOX CHARACTER CARDS (MEGAMIX SITE ACCURATE)
-   ========================================================================== */
+/* --------------------------------------------------------------------------
+   ROSTER CANVAS WRAPPER: RETRO LABYRINTH BRICK BACKGROUND ZONE
+   -------------------------------------------------------------------------- */
+.labyrinth-matrix-canvas {
+    width: 100%;
+    padding: 60px 0;
+    position: relative;
 
-/* ==========================================================================
-   EXACT MEGAMIX MANIA INDIVIDUAL LARGE CARDS SETUP
-   ========================================================================== */
+    /* 🛠️ LABYRINTH SECTION BACKGROUND: Set your custom brick texture graphic here */
+    background-image: url('labyrinth-brick-bg.png'); 
+    background-repeat: repeat; /* Tiles your game asset smoothly infinitely */
+    background-position: center;
+    border-top: 5px solid #cc2222;
+}
 
-/* Flat Section Headers */
+/* Flat Category Structural Title */
 .megamix-category-title {
+    text-align: center;
     font-family: 'Impact', 'Arial Black', sans-serif;
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     text-transform: uppercase;
     color: #ffffff;
     letter-spacing: 2px;
-    margin: 50px 0 20px 0;
-    text-shadow: 3px 3px 0px #000;
+    margin: 0 0 35px 0;
+    text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000, 5px 5px 0px #000;
 }
 
-/* Big Grid Track to hold the giant boxes spacious */
+/* Grid parameters */
 .exact-roster-grid {
     display: grid;
-    /* This makes the grid tracks wide so the boxes have maximum screen width */
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-    gap: 30px;
-    margin-bottom: 60px;
+    gap: 35px;
     width: 100%;
 }
 
-/* THE GIANT CHARACTER CARD: Green background, bold red outline */
+/* Standalone Massive Green Character Box */
 .individual-character-box {
-    background-color: #7dbd9c;   /* EXACT DEEP RETRO RETRO ZONE GREEN */
-    border: 5px solid #cc2222;    /* EXACT BOLD SIGNATURE RED OUTLINE */
-    border-radius: 0px;
+    background-color: #0b1d12;   
+    border: 5px solid #cc2222;    
+    border-radius: 0; /* Forced sharp pointed grid edges */
     padding: 30px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 6px 6px 0px #000000; /* Retro hard flat 2D black drop shadow */
+    box-shadow: 8px 8px 0px #000000; 
     box-sizing: border-box;
     width: 100%;
-    min-height: 480px;            /* Gives massive breathing room vertically */
-    
-    /* Keeps them visible instantly on iPhone Safari */
-    opacity: 1;
-    transform: translateY(0);
-    transition: transform 0.15s ease;
+    min-height: 480px;            
 }
 
-.individual-character-box:hover {
-    transform: translateY(-5px);
-    border-color: #fcc117; /* Changes outer red outline to Ring Gold on hover! */
-}
-
-/* MASSIVE ARTWORK WINDOW: Takes up the upper half of the green box */
 .card-avatar {
     width: 100%;
-    height: 220px;             /* Drastically increased to make your character artwork huge */
+    height: 220px;             
     display: flex;
     align-items: center;
     justify-content: center;
@@ -172,259 +192,93 @@ p {
 .card-avatar img {
     max-width: 100%;
     max-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: contain;       /* Keeps pixel art sprites crisp and perfectly proportioned */
+    object-fit: contain;       
 }
 
-/* BIG ARCADE HEADER TEXT */
 .card-label {
     text-align: center;
     font-family: 'Impact', 'Arial Black', sans-serif;
-    font-size: 1.7rem;         /* Enlarged font size to match the big card footprint */
+    font-size: 1.7rem;         
     text-transform: uppercase;
     margin: 5px 0 15px 0;
     line-height: 1.1;
     letter-spacing: 0.5px;
 }
 
-/* ENLARGED CHARACTER BIOGRAPHY STYLING */
 .card-bio {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    color: #e2e8f0;            /* Brightened to near-white for high contrast on green */
-    font-size: 1.05rem;        /* Made larger so it's clean and easily readable on mobile */
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #e2e8f0;            
+    font-size: 1.05rem;        
     line-height: 1.6;
     text-align: center;
-    margin: 0;
-    padding: 0;
 }
 
-/* Lock state tag formatting element */
 .card-status-tag {
     font-family: 'Impact', sans-serif;
     font-size: 0.95rem;
-    color: #ff4d4d;            /* Neon warning red */
+    color: #ff4d4d;            
     text-transform: uppercase;
     margin-top: auto;
     padding-top: 15px;
-    letter-spacing: 1px;
 }
 
-
-
-/* ==========================================================================
-   INDIVIDUAL CHARACTER ARCADE TYPOGRAPHY PALETTES
-   ========================================================================== */
-
-/* --- TEAM SONIC MAIN PLAYABLES --- */
-
-/* Sonic the Hedgehog: Cobalt Blue Text + Ring Gold Outline + Black Shadow */
-.char-sonic .card-label {
-    color: #1e90ff;
-    text-shadow: -2px -2px 0 #fcc117,  2px -2px 0 #fcc117, 
-                -2px  2px 0 #fcc117,  2px  2px 0 #fcc117, 
-                 3px  3px 0px #000000;
-}
-
-/* Miles "Tails" Prower: Mechanical Amber Orange Text + Pure White Outline + Black Shadow */
-.char-tails .card-label {
-    color: #ffaa00;
-    text-shadow: -2px -2px 0 #ffffff,  2px -2px 0 #ffffff, 
-                -2px  2px 0 #ffffff,  2px  2px 0 #ffffff, 
-                 3px  3px 0px #000000;
-}
-
-/* Knuckles the Echidna: Guardian Red Text + Pure White Outline + Black Shadow */
-.char-knuckles .card-label {
-    color: #ff2222;
-    text-shadow: -2px -2px 0 #ffffff,  2px -2px 0 #ffffff, 
-                -2px  2px 0 #ffffff,  2px  2px 0 #ffffff, 
-                 3px  3px 0px #000000;
-}
-
-/* Shadow the Hedgehog: Charcoal Dark Text + Doom Red Outline + Black Shadow */
-.char-shadow .card-label {
-    color: #2b2b2b;
-    text-shadow: -2px -2px 0 #ff0000,  2px -2px 0 #ff0000, 
-                -2px  2px 0 #ff0000,  2px  2px 0 #ff0000, 
-                 3px  3px 0px #000000;
-}
-
-
-/* --- TEAM SPONGEBOB MAIN PLAYABLES --- */
-
-/* SpongeBob SquarePants: Sponge Yellow Text + Patrick Pink Outline + Black Shadow */
-.char-spongebob .card-label {
-    color: #fff176;
-    text-shadow: -2px -2px 0 #ff8da1,  2px -2px 0 #ff8da1, 
-                -2px  2px 0 #ff8da1,  2px  2px 0 #ff8da1, 
-                 3px  3px 0px #000000;
-}
-
-/* Patrick Star: Starfish Soft Pink Text + Seafoam Green Outline + Black Shadow */
-.char-patrick .card-label {
-    color: #ff9999;
-    text-shadow: -2px -2px 0 #99ff99,  2px -2px 0 #99ff99, 
-                -2px  2px 0 #99ff99,  2px  2px 0 #99ff99, 
-                 3px  3px 0px #000000;
-}
-
-/* Squidward Tentacles: Clarinet Cyan Text + Angry Maroon Red Outline + Black Shadow */
-.char-squidward .card-label {
-    color: #7fcdff;
-    text-shadow: -2px -2px 0 #cc3333,  2px -2px 0 #cc3333, 
-                -2px  2px 0 #cc3333,  2px  2px 0 #cc3333, 
-                 3px  3px 0px #000000;
-}
-
-/* Larry the Lobster: Lifeguard Crimson Text + Sun Gold Outline + Black Shadow */
-.char-larry .card-label {
-    color: #ff4500;
-    text-shadow: -2px -2px 0 #ffff00,  2px -2px 0 #ffff00, 
-                -2px  2px 0 #ffff00,  2px  2px 0 #ffff00, 
-                 3px  3px 0px #000000;
-}
-
-
-/* --- TEAM POWERPUFF GIRLS MAIN PLAYABLES --- */
-
-/* Blossom Utonium: Leader Pink Text + Bow Ribbon Orange Outline + Black Shadow */
-.char-blossom .card-label {
-    color: #ff3366;
-    text-shadow: -2px -2px 0 #ffaa00,  2px -2px 0 #ffaa00, 
-                -2px  2px 0 #ffaa00,  2px  2px 0 #ffaa00, 
-                 3px  3px 0px #000000;
-}
-
-/* Bubbles Utonium: Joyful Light Blue Text + Dress Yellow Outline + Black Shadow */
-.char-bubbles .card-label {
-    color: #33ccff;
-    text-shadow: -2px -2px 0 #ffff33,  2px -2px 0 #ffff33, 
-                -2px  2px 0 #ffff33,  2px  2px 0 #ffff33, 
-                 3px  3px 0px #000000;
-}
-
-/* Buttercup Utonium: Tough Lime Green Text + Sharp Matte Black Outline + White Drop Shadow */
-.char-buttercup .card-label {
-    color: #33cc66;
-    text-shadow: -2px -2px 0 #000000,  2px -2px 0 #000000, 
-                -2px  2px 0 #000000,  2px  2px 0 #000000, 
-                 3px  3px 0px #ffffff;
-}
-
-
-/* --- UNLOCKABLE SECRET GUESTS --- */
-
-/* Sandy Cheeks: Texas Oak Brown Text + Treedome Yellow Outline + Black Shadow */
-.char-sandy .card-label {
-    color: #d2b48c;
-    text-shadow: -2px -2px 0 #ffcc00,  2px -2px 0 #ffcc00, 
-                -2px  2px 0 #ffcc00,  2px  2px 0 #ffcc00, 
-                 3px  3px 0px #000000;
-}
-
-/* Amy Rose: Sweet Rose Pink Text + Headband Crimson Outline + Black Shadow */
-.char-amy .card-label {
-    color: #ff69b4;
-    text-shadow: -2px -2px 0 #cc0033,  2px -2px 0 #cc0033, 
-                -2px  2px 0 #cc0033,  2px  2px 0 #cc0033, 
-                 3px  3px 0px #000000;
-}
-
-/* Rouge the Bat: Heart Lavender Text + Eyes Jade Green Outline + Black Shadow */
-.char-rouge .card-label {
-    color: #e0b0ff;
-    text-shadow: -2px -2px 0 #2ecc71,  2px -2px 0 #2ecc71, 
-                -2px  2px 0 #2ecc71,  2px  2px 0 #2ecc71, 
-                 3px  3px 0px #000000;
-}
-
-/* Cream the Rabbit: Soft Vanilla Beige Text + Tie Sky Blue Outline + Black Shadow */
-.char-cream .card-label {
-    color: #f5f5dc;
-    text-shadow: -2px -2px 0 #3498db,  2px -2px 0 #3498db, 
-                -2px  2px 0 #3498db,  2px  2px 0 #3498db, 
-                 3px  3px 0px #000000;
-}
-
-/* Mighty the Armadillo: Shell Crimson Orange Text + Heavy Matte Black Outline + White Drop Shadow */
-.char-mighty .card-label {
-    color: #ff4500;
-    text-shadow: -2px -2px 0 #000000,  2px -2px 0 #000000, 
-                -2px  2px 0 #000000,  2px  2px 0 #000000, 
-                 3px  3px 0px #ffffff;
-}
-
-/* Hatsune Miku: Digital Leek Teal Text + Neon Vocaloid Pink Outline + Black Shadow */
-.char-miku .card-label {
-    color: #33ccbf;
-    text-shadow: -2px -2px 0 #ff66cc,  2px -2px 0 #ff66cc, 
-                -2px  2px 0 #ff66cc,  2px  2px 0 #ff66cc, 
-                 3px  3px 0px #000000;
-}
-
-/* Timmy Turner: Fairy Magic Pink Text + Wand Neon Green Outline + Black Shadow */
-.char-timmy .card-label {
-    color: #ff66cc;
-    text-shadow: -2px -2px 0 #76ff03,  2px -2px 0 #76ff03, 
-                -2px  2px 0 #76ff03,  2px  2px 0 #76ff03, 
-                 3px  3px 0px #000000;
-}
-
-
-/* --- THE UNHOLY ALLIANCE VILLAINS --- */
-
-/* Dr. Eggman: Eggman Empire Red Text + Mechanical Caution Yellow Outline + Black Shadow */
-.char-eggman .card-label {
-    color: #ff1111;
-    text-shadow: -2px -2px 0 #ffff00,  2px -2px 0 #ffff00, 
-                -2px  2px 0 #ffff00,  2px  2px 0 #ffff00, 
-                 3px  3px 0px #000000;
-}
-
-/* Plankton: Deep Sea Green Text + Single Eye Red Outline + Black Shadow */
-.char-plankton .card-label {
-    color: #006400;
-    text-shadow: -2px -2px 0 #ff3333,  2px -2px 0 #ff3333, 
-                -2px  2px 0 #ff3333,  2px  2px 0 #ff3333, 
-                 3px  3px 0px #000000;
-}
-
-/* Mojo Jojo: Evil Mind Purple Text + Brain Helmet White Outline + Black Shadow */
-.char-mojojojo .card-label {
-    color: #8b5cf6;
-    text-shadow: -2px -2px 0 #ffffff,  2px -2px 0 #ffffff, 
-                -2px  2px 0 #ffffff,  2px  2px 0 #ffffff, 
-                 3px  3px 0px #000000;
-}
-/* ==========================================================================
-   OFFICIAL COPYRIGHT FOOTER STYLE
-   ========================================================================== */
+/* --- Trademark Attribution Footer Window --- */
 footer {
-    background-color: #04080e; /* Deep midnight void backdrop */
+    background-color: #04080e; 
     text-align: center;
     padding: 50px 20px;
-    margin-top: 80px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 5px solid #cc2222;
+    position: relative;
+    z-index: 3;
 }
 
-/* Bold Non-Profit Header */
 .footer-disclaimer-header {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     color: #e2e8f0;
     font-size: 0.95rem;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
     margin-bottom: 12px;
 }
 
-/* Tiny Legal Text Strings */
 .footer-legal-text {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    color: #64748b; /* Clean muted legal reading gray */
+    color: #64748b; 
     font-size: 0.82rem;
     line-height: 1.6;
     max-width: 850px;
-    margin: 0 auto;
+    margin: 10px auto 0 auto;
 }
+
+/* ==========================================================================
+   CHARACTER NAME HIGHLIGHT STYLING CODES (FOR REPLICATED BIO TEXT MARKS)
+   ========================================================================== */
+.txt-sonic { color: #1e90ff; font-weight: bold; text-shadow: 1px 1px 0px #000; }
+.txt-spongebob { color: #fff176; font-weight: bold; text-shadow: 1px 1px 0px #000; }
+.txt-ppg { color: #ff3366; font-weight: bold; text-shadow: 1px 1px 0px #000; }
+.txt-eggman { color: #ff1111; font-weight: bold; text-shadow: 1px 1px 0px #000; }
+.txt-plankton { color: #006400; font-weight: bold; text-shadow: 1px 1px 0px #000; }
+.txt-mojojojo { color: #8b5cf6; font-weight: bold; text-shadow: 1px 1px 0px #000; }
+
+/* ==========================================================================
+   INDIVIDUAL CHARACTER REPLICA TEXT LABELS
+   ========================================================================== */
+.char-sonic .card-label { color: #1e90ff; text-shadow: -2px -2px 0 #fcc117, 2px -2px 0 #fcc117, -2px 2px 0 #fcc117, 2px 2px 0 #fcc117, 3px 3px 0px #000; }
+.char-tails .card-label { color: #ffaa00; text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff, 3px 3px 0px #000; }
+.char-knuckles .card-label { color: #ff2222; text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff, 3px 3px 0px #000; }
+.char-shadow .card-label { color: #2b2b2b; text-shadow: -2px -2px 0 #ff0000, 2px -2px 0 #ff0000, -2px 2px 0 #ff0000, 2px 2px 0 #ff0000, 3px 3px 0px #000; }
+.char-spongebob .card-label { color: #fff176; text-shadow: -2px -2px 0 #ff8da1, 2px -2px 0 #ff8da1, -2px 2px 0 #ff8da1, 2px 2px 0 #ff8da1, 3px 3px 0px #000; }
+.char-patrick .card-label { color: #ff9999; text-shadow: -2px -2px 0 #99ff99, 2px -2px 0 #99ff99, -2px 2px 0 #99ff99, 2px 2px 0 #99ff99, 3px 3px 0px #000; }
+.char-squidward .card-label { color: #7fcdff; text-shadow: -2px -2px 0 #cc3333, 2px -2px 0 #cc3333, -2px 2px 0 #cc3333, 2px 2px 0 #cc3333, 3px 3px 0px #000; }
+.char-larry .card-label { color: #ff4500; text-shadow: -2px -2px 0 #ffff00, 2px -2px 0 #ffff00, -2px 2px 0 #ffff00, 2px 2px 0 #ffff00, 3px 3px 0px #000; }
+.char-blossom .card-label { color: #ff3366; text-shadow: -2px -2px 0 #ffaa00, 2px -2px 0 #ffaa00, -2px 2px 0 #ffaa00, 2px 2px 0 #ffaa00, 3px 3px 0px #000; }
+.char-bubbles .card-label { color: #33ccff; text-shadow: -2px -2px 0 #ffff33, 2px -2px 0 #ffff33, -2px 2px 0 #ffff33, 2px 2px 0 #ffff33, 3px 3px 0px #000; }
+.char-buttercup .card-label { color: #33cc66; text-shadow: -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000, 3px 3px 0px #ffffff; }
+.char-sandy .card-label { color: #d2b48c; text-shadow: -2px -2px 0 #ffcc00, 2px -2px 0 #ffcc00, -2px 2px 0 #ffcc00, 2px 2px 0 #ffcc00, 3px 3px 0px #000; }
+.char-amy .card-label { color: #ff69b4; text-shadow: -2px -2px 0 #cc0033, 2px -2px 0 #cc0033, -2px 2px 0 #cc0033, 2px 2px 0 #cc0033, 3px 3px 0px #000; }
+.char-rouge .card-label { color: #e0b0ff; text-shadow: -2px -2px 0 #2ecc71, 2px -2px 0 #2ecc71, -2px 2px 0 #2ecc71, 2px 2px 0 #2ecc71, 3px 3px 0px #000; }
+.char-cream .card-label { color: #f5f5dc; text-shadow: -2px -2px 0 #3498db, 2px -2px 0 #3498db, -2px 2px 0 #3498db, 2px 2px 0 #3498db, 3px 3px 0px #000; }
+.char-mighty .card-label { color: #ff4500; text-shadow: -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000, 3px 3px 0px #ffffff; }
+.char-miku .card-label { color: #33ccbf; text-shadow: -2px -2px 0 #ff66cc, 2px -2px 0 #ff66cc, -2px 2px 0 #ff66cc, 2px 2px 0 #ff66cc, 3px 3px 0px #000; }
+.char-timmy .card-label { color: #ff66cc; text-shadow: -2px -2px 0 #76ff03, 2px -2px 0 #76ff03, -2px 2px 0 #76ff03, 2px 2px 0 #76ff03, 3px 3px 0px #000; }
+.char-eggman .card-label { color: #ff1111; text-shadow: -2px -2px 0 #ffff00, 2px -2px 0 #ffff00, -2px 2px 0 #ffff00, 2px 2px 0 #ffff00, 3px 3px 0px #000; }
+.char-plankton .card-label { color: #006400; text-shadow: -2px -2px 0 #ff3333, 2px -2px 0 #ff3333, -2px 2px 0 #ff3333, 2px 2px 0 #ff3333, 3px 3px 0px #000; }
+.char-mojojojo .card-label { color: #8b5cf6; text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff, 2px 2px 0 #ffffff, 3px 3px 0px #000; }
