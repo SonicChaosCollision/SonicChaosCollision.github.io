@@ -94,53 +94,52 @@ p {
     margin-bottom: 50px; 
 }
 
-/* Category Headers */
+/* ==========================================================================
+   INDIVIDUAL LARGE GREEN BOX CHARACTER CARDS (MEGAMIX SITE ACCURATE)
+   ========================================================================== */
+
+/* Flat Section Headers */
 .megamix-category-title {
-    text-align: center;
     font-family: 'Impact', 'Arial Black', sans-serif;
     font-size: 2.2rem;
     text-transform: uppercase;
     color: #ffffff;
     letter-spacing: 2px;
-    margin: 40px 0 25px 0;
+    margin: 50px 0 20px 0;
     text-shadow: 3px 3px 0px #000;
 }
 
-/* ==========================================================================
-   INDIVIDUAL GREEN BOX CHARACTER COMPONENT
-   ========================================================================== */
-
-/* The outer grid that holds all the separate individual green boxes */
+/* Big Grid Layout Track */
 .exact-roster-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    /* Forces elements to render as large as possible across displays */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 30px;
-    justify-content: center;
-    padding: 20px 0;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
+    width: 100%;
 }
 
-/* THE GREEN BOX: Now wrapped around EACH individual character */
+/* THE GREEN BOX: The standalone frame for EACH individual slot */
 .individual-character-box {
     background-color: #0b1d12;   /* Deep retro zone green background */
     border: 4px solid #143521;    /* Muted forest green frame outline */
     border-radius: 8px;
-    width: 280px;                 /* Slightly wider to give text room inside the green box */
-    padding: 20px;
+    padding: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.6);
     box-sizing: border-box;
+    width: 100%;
     
-    /* Animation Core Setup for scroll reveal */
+    /* Scroll Animation Reveal Core Properties */
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
                 transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* Dynamic Animation Reveal Class */
+/* Active transition triggered dynamically via your scroll JS intercept */
 .individual-character-box.reveal-active {
     opacity: 1;
     transform: translateY(0);
@@ -148,71 +147,74 @@ p {
 
 .individual-character-box:hover {
     transform: translateY(-5px);
-    border-color: #1c4d30; /* Brightens the green border slightly on hover */
+    border-color: #1d4d31;
 }
 
-/* INNER BLACK WINDOW: The vertical narrow rectangle with the RED outline */
+/* INNER BLACK WINDOW: The vertical frame with the bold RED outline */
 .narrow-character-card {
     background-color: #05080c;   /* Matte black inner frame */
     border: 4px solid #cc2222;    /* BOLD RED OUTLINE WINDOW */
     border-radius: 4px;
-    width: 100%;                  /* Fills up the green box container completely */
-    padding: 15px;
+    width: 100%;                  /* Expands completely inside the large green wrapper */
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: 4px 4px 0px #000000;
     box-sizing: border-box;
+    min-height: 400px;            /* Guarantees clean spacing proportions */
 }
 
-/* Strict Image Sizing Window */
+/* Image Scaler (Prevents image blowouts while keeping art spacious) */
 .card-avatar {
     width: 100%;
-    height: 150px;             
+    height: 180px;             
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .card-avatar img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain;
+    object-fit: contain;       /* Protects original pixel sizing proportions */
 }
 
-/* Centered Text Name Component with Multi-Tone Outline & Shadow */
+/* Centered Name Tag Component with Multi-Tone Outline and Drop Shadow */
 .card-label {
     text-align: center;
     font-family: 'Impact', 'Arial Black', sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.5rem;         /* Enlarged typography to balance wide box footprint */
     text-transform: uppercase;
-    margin: 5px 0 12px 0;
+    margin: 5px 0 15px 0;
     line-height: 1.1;
     letter-spacing: 0.5px;
 }
 
-/* Character Bio text wrapper */
+/* Character Biography Reading Block */
 .card-bio {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
     color: #94a3b8; 
-    font-size: 0.85rem;
-    line-height: 1.5;
+    font-size: 0.95rem;        
+    line-height: 1.6;
     text-align: center;
-    margin: 0 0 10px 0;
+    margin: 0;
+    padding: 0;
 }
 
-/* Locked status text tag */
+/* Lock text element formatting */
 .card-status-tag {
     font-family: 'Impact', sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: #cc2222;
     text-transform: uppercase;
     margin-top: auto;
-    padding-top: 5px;
+    padding-top: 15px;
     letter-spacing: 1px;
 }
+
 
 /* ==========================================================================
    STORY CROSSOVER DIMENSION THEME COLOR-CODING (OUTLINE & TEXT SETUPS)
