@@ -300,3 +300,181 @@ footer p {
     grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
   }
 }
+
+/* ==========================================
+   MEGAMIX STYLE CHARACTER CARDS
+   ========================================== */
+
+.character-card {
+  background-color: var(--card-bg, #61ab8b);
+  border: 4px solid var(--card-border, #cc1100);
+  border-radius: 6px;
+  padding: 25px 20px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.character-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+}
+
+/* Character Artwork */
+.character-card .card-img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  margin: 0 auto 20px auto;
+  display: block;
+  filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.3));
+}
+
+/* Styled Character Name Title */
+.character-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #111;
+  margin-bottom: 18px;
+  letter-spacing: 2px;
+  text-shadow: 
+    2px 2px 0px #fff,
+    -2px -2px 0px #fff,
+    2px -2px 0px #fff,
+    -2px 2px 0px #fff,
+    4px 4px 0px #000;
+}
+
+/* Description Text Box */
+.character-card p {
+  color: #0d1117;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* ==========================================
+   CHARACTER COLOR THEMES (ALL 23 CHARACTERS)
+   ========================================== */
+
+/* --- MAIN PLAYABLE --- */
+.character-card.sonic {
+  --card-bg: #61ab8b;
+  --card-border: #cc1100;
+}
+
+.character-card.tails {
+  --card-bg: #e6a13b;
+  --card-border: #1155cc;
+}
+
+.character-card.knuckles {
+  --card-bg: #d64040;
+  --card-border: #00aa55;
+}
+
+.character-card.shadow {
+  --card-bg: #3a3d40;
+  --card-border: #e62222;
+}
+
+.character-card.spongebob {
+  --card-bg: #f5e050;
+  --card-border: #1e88e5;
+}
+
+.character-card.patrick {
+  --card-bg: #f48fb1;
+  --card-border: #7cb342;
+}
+
+.character-card.squidward {
+  --card-bg: #80cbc4;
+  --card-border: #5c6bc0;
+}
+
+.character-card.larry {
+  --card-bg: #e53935;
+  --card-border: #fdd835;
+}
+
+.character-card.blossom {
+  --card-bg: #ff8a80;
+  --card-border: #ff6d00;
+}
+
+.character-card.bubbles {
+  --card-bg: #80d8ff;
+  --card-border: #f48fb1;
+}
+
+.character-card.buttercup {
+  --card-bg: #a7ffeb;
+  --card-border: #2e7d32;
+}
+
+/* --- UNLOCKABLES --- */
+.character-card.sandy {
+  --card-bg: #d7ccc8;
+  --card-border: #f57c00;
+}
+
+.character-card.amy {
+  --card-bg: #ff80ab;
+  --card-border: #ffd54f;
+}
+
+.character-card.rouge {
+  --card-bg: #ce93d8;
+  --card-border: #00e676;
+}
+
+.character-card.cream {
+  --card-bg: #ffe082;
+  --card-border: #ff80ab;
+}
+
+.character-card.mighty {
+  --card-bg: #ef5350;
+  --card-border: #424242;
+}
+
+.character-card.miku {
+  --card-bg: #4dd0e1;
+  --card-border: #ff4081;
+}
+
+.character-card.timmy {
+  --card-bg: #f48fb1;
+  --card-border: #ffee58;
+}
+
+.character-card.lincoln {
+  --card-bg: #e0e0e0;
+  --card-border: #ff9800;
+}
+
+.character-card.lola {
+  --card-bg: #f8bbd0;
+  --card-border: #d81b60;
+}
+
+/* --- UNHOLY ALLIANCE --- */
+.character-card.robotnik {
+  --card-bg: #e53935;
+  --card-border: #fdd835;
+}
+
+.character-card.plankton {
+  --card-bg: #2e7d32;
+  --card-border: #d81b60;
+}
+
+.character-card.mojojojo {
+  --card-bg: #5e35b1;
+  --card-border: #76ff03;
+}
