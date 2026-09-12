@@ -1,6 +1,3 @@
-/* ==========================================
-   RESET & VARIABLES
-   ========================================== */
 * {
   margin: 0;
   padding: 0;
@@ -9,472 +6,143 @@
 
 :root {
   --bg-color: #0b0d14;
-  --panel-bg: rgba(20, 24, 38, 0.88);
-  --panel-border: rgba(255, 255, 255, 0.1);
-  --primary-color: #0088ff;
-  --primary-hover: #0066cc;
-  --unlock-accent: #e5a93c;
-  --villain-accent: #e63946;
-  --text-main: #f0f4f8;
-  --text-muted: #9aa8ba;
+  --card-bg-green: #61ab8b;   /* Megamix signature bright green background */
+  --card-red-border: #cc1100; /* Sharp red outer line */
   --font-heading: 'Rubik', sans-serif;
   --font-body: 'Montserrat', sans-serif;
-  --border-radius: 12px;
 }
 
 body {
   background-color: var(--bg-color);
-  background-image: 
-    radial-gradient(circle at 50% 0%, rgba(0, 136, 255, 0.18), transparent 70%),
-    linear-gradient(to bottom, #07080d, #0b0d14);
-  color: var(--text-main);
-  font-family: var(--font-body);
-  line-height: 1.6;
-  min-height: 100vh;
-}
-
-/* ==========================================
-   LAYOUT & CONTAINER
-   ========================================== */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px 60px 20px;
-}
-
-.content-block {
-  background: var(--panel-bg);
-  border: 1px solid var(--panel-border);
-  border-radius: var(--border-radius);
-  padding: 35px;
-  margin-bottom: 40px;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-.villains-block {
-  border-color: rgba(230, 57, 70, 0.3);
-  background: rgba(30, 15, 20, 0.88);
-}
-
-/* SECTION TITLES */
-.section-title {
-  font-family: var(--font-heading);
-  font-size: 1.8rem;
   color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 25px;
-  border-bottom: 3px solid var(--primary-color);
-  display: inline-block;
-  padding-bottom: 5px;
+  font-family: var(--font-body);
+  overflow-x: hidden;
 }
 
-.title-unlockable {
-  border-bottom-color: var(--unlock-accent);
-}
-
-.title-villains {
-  border-bottom-color: var(--villain-accent);
-}
-
-/* ==========================================
-   HERO SECTION
-   ========================================== */
+/* HERO SECTION */
 .hero {
   position: relative;
-  min-height: 65vh;
+  min-height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 60px 20px;
-  background: url('assets/hero-bg.jpg') center/cover no-repeat;
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(to bottom, rgba(11, 13, 20, 0.4), var(--bg-color));
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 800px;
+  padding: 40px 20px;
 }
 
 .logo {
   max-width: 100%;
-  width: 500px;
+  width: 420px;
   height: auto;
-  margin-bottom: 25px;
-  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.7));
+  margin-bottom: 20px;
 }
 
-.tagline {
-  font-size: 1.15rem;
-  color: var(--text-main);
-  margin-bottom: 30px;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+/* MAIN CARD CONTAINER */
+.character-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px 20px 100px 20px;
 }
 
-/* BUTTONS */
-.cta-buttons {
+.character-feed {
   display: flex;
-  justify-content: center;
-  gap: 18px;
-  margin-bottom: 30px;
-  flex-wrap: wrap;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 14px 32px;
-  border-radius: 50px;
-  font-family: var(--font-heading);
-  font-weight: 900;
-  text-decoration: none;
-  font-size: 1rem;
-  letter-spacing: 1px;
-  transition: all 0.25s ease;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-}
-
-.btn-primary {
-  background-color: var(--primary-color);
-  color: #fff;
-}
-
-.btn-primary:hover {
-  background-color: var(--primary-hover);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0, 136, 255, 0.4);
-}
-
-.btn-secondary {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.btn-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.25);
-  transform: translateY(-3px);
-}
-
-/* SOCIAL ICONS */
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.social-links a {
-  color: var(--text-muted);
-  font-size: 1.5rem;
-  transition: color 0.2s, transform 0.2s;
-}
-
-.social-links a:hover {
-  color: var(--primary-color);
-  transform: scale(1.15);
+  flex-direction: column;
+  gap: 50px;
 }
 
 /* ==========================================
-   CHARACTER GRID & CARDS
+   MEGAMIX VERTICAL CARD ARCHITECTURE
    ========================================== */
-.grid {
-  display: grid;
-  gap: 20px;
-}
-
-.character-grid {
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-}
-
-.card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
-}
-
-.card-img {
-  width: 100%;
-  height: 150px;
-  object-fit: contain;
-  margin-bottom: 15px;
-  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5));
-}
-
-.card h3 {
-  font-family: var(--font-heading);
-  color: #fff;
-  font-size: 1.15rem;
-  margin-bottom: 8px;
-}
-
-.card p {
-  color: var(--text-muted);
-  font-size: 0.88rem;
-  line-height: 1.4;
-}
-
-/* CARD HOVER & ACCENTS */
-.card:hover {
-  transform: translateY(-5px);
-  border-color: var(--primary-color);
-  box-shadow: 0 8px 20px rgba(0, 136, 255, 0.2);
-}
-
-.villains-block .card:hover {
-  border-color: var(--villain-accent);
-  box-shadow: 0 8px 20px rgba(230, 57, 70, 0.25);
-}
-
-/* ==========================================
-   FOOTER
-   ========================================== */
-footer {
-  text-align: center;
-  padding: 40px 20px;
-  background-color: #050608;
-  border-top: 1px solid var(--panel-border);
-  color: var(--text-muted);
-  font-size: 0.85rem;
-}
-
-footer p {
-  margin-bottom: 10px;
-}
-
-.disclaimer {
-  max-width: 800px;
-  margin: 0 auto 15px auto;
-  font-size: 0.78rem;
-  opacity: 0.7;
-}
-
-.footer-links a {
-  color: var(--text-main);
-  text-decoration: none;
-  margin: 0 5px;
-  transition: color 0.2s;
-}
-
-.footer-links a:hover {
-  color: var(--primary-color);
-}
-
-/* ==========================================
-   RESPONSIVE DESIGN
-   ========================================== */
-@media (max-width: 600px) {
-  .hero-content {
-    padding: 0 10px;
-  }
-
-  .logo {
-    width: 320px;
-  }
-
-  .cta-buttons {
-    flex-direction: column;
-  }
-
-  .btn {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .content-block {
-    padding: 20px;
-  }
-
-  .character-grid {
-    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
-  }
-}
-
-/* ==========================================
-   MEGAMIX STYLE CHARACTER CARDS
-   ========================================== */
-
 .character-card {
-  background-color: var(--card-bg, #61ab8b);
-  border: 4px solid var(--card-border, #cc1100);
-  border-radius: 6px;
-  padding: 25px 20px;
+  position: relative;
+  background-color: var(--card-bg-green);
+  border: 4px solid var(--card-red-border);
+  border-radius: 0px; /* Sharp pointed edges */
+  padding: 30px 25px;
   text-align: center;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+  
+  /* Scroll Animation Defaults (Hidden initial state) */
+  opacity: 0;
+  transform: translateY(60px) scale(0.95);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-.character-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+/* Visible class toggled by JS when scrolling */
+.character-card.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
-/* Character Artwork */
-.character-card .card-img {
+/* Character Image Box */
+.card-art-box {
   width: 100%;
-  max-width: 220px;
-  height: auto;
-  margin: 0 auto 20px auto;
-  display: block;
-  filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.3));
+  margin-bottom: 15px;
 }
 
-/* Styled Character Name Title */
-.character-card h3 {
+.card-art-box img {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.4));
+}
+
+/* ==========================================
+   CHARACTER NAME TEXT (OUTLINE + BLACK SHADOW)
+   ========================================== */
+.character-name {
   font-family: var(--font-heading);
-  font-size: 1.8rem;
+  font-size: 2.8rem;
   font-weight: 900;
   text-transform: uppercase;
-  color: #111;
-  margin-bottom: 18px;
   letter-spacing: 2px;
+  margin-bottom: 20px;
+  color: var(--name-color, #1155cc); /* Custom color per character */
+  
+  /* Text outline with thick black drop shadow */
   text-shadow: 
-    2px 2px 0px #fff,
-    -2px -2px 0px #fff,
-    2px -2px 0px #fff,
-    -2px 2px 0px #fff,
-    4px 4px 0px #000;
+    -2px -2px 0 #000,  
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000,
+     4px  5px 0px #000;
 }
 
-/* Description Text Box */
-.character-card p {
-  color: #0d1117;
+/* BIO TEXT */
+.character-bio {
+  color: #0b0d14;
   font-family: var(--font-body);
-  font-size: 0.92rem;
-  font-weight: 600;
-  line-height: 1.5;
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.6;
   text-align: left;
 }
 
 /* ==========================================
-   CHARACTER COLOR THEMES (ALL 23 CHARACTERS)
+   CHARACTER-SPECIFIC TEXT COLORS
    ========================================== */
-
-/* --- MAIN PLAYABLE --- */
-.character-card.sonic {
-  --card-bg: #61ab8b;
-  --card-border: #cc1100;
-}
-
-.character-card.tails {
-  --card-bg: #e6a13b;
-  --card-border: #1155cc;
-}
-
-.character-card.knuckles {
-  --card-bg: #d64040;
-  --card-border: #00aa55;
-}
-
-.character-card.shadow {
-  --card-bg: #3a3d40;
-  --card-border: #e62222;
-}
-
-.character-card.spongebob {
-  --card-bg: #f5e050;
-  --card-border: #1e88e5;
-}
-
-.character-card.patrick {
-  --card-bg: #f48fb1;
-  --card-border: #7cb342;
-}
-
-.character-card.squidward {
-  --card-bg: #80cbc4;
-  --card-border: #5c6bc0;
-}
-
-.character-card.larry {
-  --card-bg: #e53935;
-  --card-border: #fdd835;
-}
-
-.character-card.blossom {
-  --card-bg: #ff8a80;
-  --card-border: #ff6d00;
-}
-
-.character-card.bubbles {
-  --card-bg: #80d8ff;
-  --card-border: #f48fb1;
-}
-
-.character-card.buttercup {
-  --card-bg: #a7ffeb;
-  --card-border: #2e7d32;
-}
-
-/* --- UNLOCKABLES --- */
-.character-card.sandy {
-  --card-bg: #d7ccc8;
-  --card-border: #f57c00;
-}
-
-.character-card.amy {
-  --card-bg: #ff80ab;
-  --card-border: #ffd54f;
-}
-
-.character-card.rouge {
-  --card-bg: #ce93d8;
-  --card-border: #00e676;
-}
-
-.character-card.cream {
-  --card-bg: #ffe082;
-  --card-border: #ff80ab;
-}
-
-.character-card.mighty {
-  --card-bg: #ef5350;
-  --card-border: #424242;
-}
-
-.character-card.miku {
-  --card-bg: #4dd0e1;
-  --card-border: #ff4081;
-}
-
-.character-card.timmy {
-  --card-bg: #f48fb1;
-  --card-border: #ffee58;
-}
-
-.character-card.lincoln {
-  --card-bg: #e0e0e0;
-  --card-border: #ff9800;
-}
-
-.character-card.lola {
-  --card-bg: #f8bbd0;
-  --card-border: #d81b60;
-}
-
-/* --- UNHOLY ALLIANCE --- */
-.character-card.robotnik {
-  --card-bg: #e53935;
-  --card-border: #fdd835;
-}
-
-.character-card.plankton {
-  --card-bg: #2e7d32;
-  --card-border: #d81b60;
-}
-
-.character-card.mojojojo {
-  --card-bg: #5e35b1;
-  --card-border: #76ff03;
-}
+.character-card.sonic { --name-color: #0033cc; }
+.character-card.tails { --name-color: #ff9900; }
+.character-card.knuckles { --name-color: #cc0000; }
+.character-card.shadow { --name-color: #222222; }
+.character-card.spongebob { --name-color: #e6b800; }
+.character-card.patrick { --name-color: #ff6699; }
+.character-card.squidward { --name-color: #008080; }
+.character-card.larry { --name-color: #dd2200; }
+.character-card.blossom { --name-color: #ff3300; }
+.character-card.bubbles { --name-color: #0099ff; }
+.character-card.buttercup { --name-color: #009933; }
+.character-card.sandy { --name-color: #8b4513; }
+.character-card.amy { --name-color: #ff3399; }
+.character-card.rouge { --name-color: #9900cc; }
+.character-card.cream { --name-color: #ffaa00; }
+.character-card.mighty { --name-color: #cc0000; }
+.character-card.miku { --name-color: #00cccc; }
+.character-card.timmy { --name-color: #ff0066; }
+.character-card.lincoln { --name-color: #666666; }
+.character-card.lola { --name-color: #cc0066; }
+.character-card.robotnik { --name-color: #bb0000; }
+.character-card.plankton { --name-color: #006600; }
+.character-card.mojojojo { --name-color: #4b0082; }
