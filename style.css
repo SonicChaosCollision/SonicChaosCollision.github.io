@@ -20,6 +20,37 @@ body {
 }
 
 /* ==========================================
+   SCROLLING SAWTOOTH BORDER PATTERN
+   ========================================== */
+.scrolling-border {
+  width: 100%;
+  height: 24px; /* Adjust height to match your pixel art border size */
+  background-image: url('Untitled1937_20260912164242.png'); /* Path to your repeating zig-zag tile */
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  position: relative;
+  z-index: 10;
+  
+  /* Infinite horizontal scrolling animation */
+  animation: scrollBorder 12s linear infinite;
+}
+
+/* Flips the bottom border upside down if using a single pattern image */
+.border-bottom {
+  transform: rotate(180deg);
+}
+
+/* Keyframe movement driving the continuous loop */
+@keyframes scrollBorder {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -400px 0; /* Adjust pixel offset based on pattern width */
+  }
+}
+
+/* ==========================================
    HERO SECTION & SCROLLING BACKGROUND
    ========================================== */
 .hero-section {
