@@ -19,22 +19,171 @@ body {
   overflow-x: hidden;
 }
 
-/* HERO SECTION */
-.hero {
+/* ==========================================
+   HERO SECTION & SCROLLING BACKGROUND
+   ========================================== */
+.hero-section {
   position: relative;
-  min-height: 45vh;
+  width: 100%;
+  height: 80vh;
+  min-height: 500px;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 40px 20px;
 }
 
-.logo {
-  max-width: 100%;
-  width: 420px;
+/* Infinite Scrolling Pixel Background */
+.scrolling-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: url('assets/bg-pixel.png') repeat-x center bottom;
+  background-size: auto 100%;
+  animation: scrollBackground 20s linear infinite;
+  z-index: 1;
+}
+
+@keyframes scrollBackground {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.hero-logo {
+  width: 100%;
+  max-width: 450px;
   height: auto;
-  margin-bottom: 20px;
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.6));
+}
+
+/* Rounded Megamix Style Download Button */
+.download-btn {
+  display: inline-block;
+  padding: 18px 60px;
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #ffffff;
+  text-decoration: none;
+  background: linear-gradient(180deg, #8b9bb4 0%, #475877 50%, #29354a 100%);
+  border: 4px solid #1a2232;
+  border-radius: 40px;
+  box-shadow: inset 0 4px 6px rgba(255, 255, 255, 0.4), 0 8px 20px rgba(0, 0, 0, 0.7);
+  letter-spacing: 3px;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.download-btn:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* ==========================================
+   STORY SECTION
+   ========================================== */
+.story-section {
+  background-color: #2b5bc7; /* Classic Sonic Blue Background */
+  padding: 60px 20px;
+  color: #ffffff;
+}
+
+.story-container {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.story-text {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.8;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* TV Frame Screenshot Box */
+.tv-frame {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 10px auto;
+  background: #111;
+  border: 8px solid #222;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+.tv-screenshot {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================
+   STORY HIGHLIGHT TEXT (MEGAMIX STYLE)
+   ========================================== */
+.highlight {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 1.35rem;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 0 4px;
+  
+  /* Thick Outline & Offset Black Drop Shadow */
+  -webkit-text-stroke: 1.5px var(--hl-outline, #000);
+  color: var(--hl-color, #fff);
+  text-shadow: 3px 3px 0px #000000;
+}
+
+/* Individual Story Highlights */
+.sonic-text {
+  --hl-color: #ff9900;
+  --hl-outline: #0022cc;
+}
+
+.eggman-text {
+  --hl-color: #ff2200;
+  --hl-outline: #ffffff;
+}
+
+.chaotix-text {
+  --hl-color: #33cc55;
+  --hl-outline: #003300;
+}
+
+.mighty-text {
+  --hl-color: #cc0000;
+  --hl-outline: #000000;
+}
+
+.ray-text {
+  --hl-color: #ffaa00;
+  --hl-outline: #880000;
+}
+
+.knuckles-text {
+  --hl-color: #ff2222;
+  --hl-outline: #00aa33;
+}
+
+.shadow-text {
+  --hl-color: #cc0000;
+  --hl-outline: #000000;
 }
 
 /* MAIN CARD CONTAINER */
