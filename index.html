@@ -1,312 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sonic the Hedgehog: Chaos Collision</title>
-    <!-- Cache-busting parameter avoids stale iPhone Safari styling glitches -->
-    <link rel="stylesheet" href="style.css?v=2.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sonic Megamix Mania</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome for Social Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Google Fonts for Retro/Modern Aesthetic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&family=Rubik:wght@700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-     <!-- ==========================================================================
-         FULL-WIDTH SCROLLING HEADER: Logo sits at absolute top with scrolling bg behind everything
-         ========================================================================== -->
-    <header class="scrolling-stage-backdrop">
-        <div class="container header-content-wrapper">
-            
-            <!-- Large Logo sitting at the absolute top -->
-            <img src="Untitled1924_20260909224644.png" alt="Sonic Crossover Collision Logo" class="megamix-main-logo">
-            
-            <!-- Download button directly underneath -->
-            <a href="#" class="header-download-button">Download Mod Build</a>
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <img src="assets/logo.png" alt="Sonic Megamix Mania Logo" class="logo" />
+      <p class="tagline">
+        Sonic Megamix Mania is a fan-made modification for Sonic Mania Plus that aims to carry the torch of the discontinued ROM hack known as "Sonic the Hedgehog Megamix".
+      </p>
+      
+      <div class="cta-buttons">
+        <a href="#download" class="btn btn-primary"><i class="fa-solid fa-download"></i> DOWNLOAD</a>
+        <a href="#trailer" class="btn btn-secondary"><i class="fa-solid fa-play"></i> WATCH</a>
+      </div>
 
-            <!-- Trailer Video Component sits above the story -->
-            <div class="megamix-trailer-wrapper">
-                <iframe 
-                    src="https://youtube.com" 
-                    title="Sonic Crossover Collision - Official Trailer" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                 iframe>
-            </div>
-
-            <!-- Game Story Synopsis Card sits over the scrolling backdrop -->
-            <section class="story-synopsis-card">
-                <h2>The Dimensional Anomaly</h2>
-                <p>A strange dimensional disturbance has thrown the worlds of <span class="txt-sonic">Sonic the Hedgehog</span>, <span class="txt-spongebob">SpongeBob SquarePants</span>, and <span class="txt-ppg">The Powerpuff Girls</span> into a chaotic collision! As familiar dimensions become fused together, Sonic and his new allies must work together to uncover the source of the disturbance and put an end to the chaos.</p>
-                <p>But with <span class="txt-eggman">Dr. Eggman</span>, <span class="txt-plankton">Plankton</span>, and <span class="txt-mojojojo">Mojo Jojo</span> joining forces, the heroes will have to face a threat unlike anything they've encountered before. Across strange new worlds filled with familiar faces, deadly enemies, and unexpected challenges, they'll need to collect the Chaos Emeralds, Secret Formula, and Chemical X samples before their enemies can use the dimensional chaos for their own purposes.</p>
-                <h5 class="story-tagline">The collision has begun. Three worlds. One adventure.</h5>
-            </section>
-
-        </div> <!-- Closes upper inner constrained box -->
-    </header> <!-- Closes full-width scrolling block right at the first divider -->
-
-
-    <!-- ==========================================================================
-         FULL-WIDTH LABYRINTH CANVAS: Spans completely to the edges of the page view
-         ========================================================================== -->
-    <div class="labyrinth-matrix-canvas">
-        <div class="container">
+      <div class="social-links">
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" aria-label="Bluesky"><i class="fa-solid fa-square-rss"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+      </div>
     </div>
+  </header>
 
-            <!-- CATEGORY HEADER 1 -->
-            <h3 class="megamix-category-title">Main Playable Characters</h3>
-            <div class="exact-roster-grid">
-                
-                <!-- Individual standalone large character boxes go here... -->
-                <div class="individual-character-box">
-                    <div class="narrow-character-card char-sonic">
-                        <div class="card-avatar"><img src="sonic_20260910142141.png" alt="Sonic"></div>
-                        <h4 class="card-label">Sonic the<br>Hedgehog</h4>
-                        <p class="card-bio">Armed with his Super Peel Out and Jump Dash, Sonic races into the dimensional rift to grab the Chaos Emeralds first.</p>
-                    </div>
+  <!-- MAIN CONTENT -->
+  <main class="container">
 
-            <!-- Individual Giant Box 2: Miles "Tails" Prower -->
-            <div class="individual-character-box char-tails">
-                <div class="card-avatar"><img src="tails_20260910152010.png" alt="Tails"></div>
-                <h4 class="card-label">Tails</h4>
-                <p class="card-bio">Utilizing his flight and mechanical tools, Tails builds gadgets to track the origins of the strange world collision.</p>
-            </div>
+    <!-- STORY SECTION -->
+    <section class="content-block story-section">
+      <h2 class="section-title">THE STORY</h2>
+      <p>
+        5 months have passed since Sonic the Hedgehog's previous plight against the nefarious Dr. Eggman. Ever since their first conflict the two sides have been battling constantly, with victory being just out of Eggman's grasp.
+      </p>
+      <p>
+        However, after years of fighting, Eggman had vanished after the incident on Space Colony ARK, leaving the world safely in Sonic's hands... or so it was thought.
+      </p>
+    </section>
 
-            <!-- Individual Giant Box 3: Knuckles the Echidna -->
-            <div class="individual-character-box char-knuckles">
-                <div class="card-avatar"><img src="knuckles_20260910152106.png" alt="Knuckles"></div>
-                <h4 class="card-label">Knuckles</h4>
-                <p class="card-bio">Breaking open walls with his fists, Knuckles tracks down missing fragments of the Master Emerald across new landscapes.</p>
-            </div>
-
-            <!-- Individual Giant Box 4: Shadow the Hedgehog -->
-            <div class="individual-character-box char-shadow">
-                <div class="card-avatar"><img src="shadow_20260910152116.png" alt="Shadow"></div>
-                <h4 class="card-label">Shadow</h4>
-                <p class="card-bio">Harnessing Chaos energy and dual thrusters, Shadow tracks Eggman and his new sinister allies with ruthless intent.</p>
-            </div>
-
-            <!-- Individual Giant Box 5: SpongeBob SquarePants -->
-            <div class="individual-character-box char-spongebob">
-                <div class="card-avatar"><img src="spongebob_20260910174742.png" alt="SpongeBob"></div>
-                <h4 class="card-label">SpongeBob</h4>
-                <p class="card-bio">Equipped with bubble-bounce attacks and quick karate chops, SpongeBob steps out of the sea to rescue the Secret Formula.</p>
-            </div>
-
-            <!-- Individual Giant Box 6: Patrick Star -->
-            <div class="individual-character-box char-patrick">
-                <div class="card-avatar"><img src="patrick_20260910174848.png" alt="Patrick"></div>
-                <h4 class="card-label">Patrick</h4>
-                <p class="card-bio">Providing pure physical muscle to the team, Patrick can lift and hurl heavy level blocks directly into robotic enemies.</p>
-            </div>
-
-            <!-- Individual Giant Box 7: Squidward Tentacles -->
-            <div class="individual-character-box char-squidward">
-                <div class="card-avatar"><img src="squidward_20260910174920.png" alt="Squidward"></div>
-                <h4 class="card-label">Squidward</h4>
-                <p class="card-bio">Attacking using powerful sound waves from his clarinet, Squidward fights solely to fix his universe and get his quiet back.</p>
-            </div>
-
-            <!-- Individual Giant Box 8: Larry the Lobster -->
-            <div class="individual-character-box char-larry">
-                <div class="card-avatar"><img src="larry_20260910175237.png" alt="Larry"></div>
-                <h4 class="card-label">Larry</h4>
-                <p class="card-bio">Charging straight through hazardous traps with armored beach-guard tackles, this powerhouse clears paths forward.</p>
-            </div>
-
-            <!-- Individual Giant Box 9: Blossom Utonium -->
-            <div class="individual-character-box char-blossom">
-                <div class="card-avatar"><img src="blossom_20260910175403.png" alt="Blossom"></div>
-                <h4 class="card-label">Blossom</h4>
-                <p class="card-bio">Leading the Townsville heroes with careful analytical flight and ice breath, Blossom tracks the combined villain grid.</p>
-            </div>
-
-            <!-- Individual Giant Box 10: Bubbles Utonium -->
-            <div class="individual-character-box char-bubbles">
-                <div class="card-avatar"><img src="bubbles_20260910175443.png" alt="Bubbles"></div>
-                <h4 class="card-label">Bubbles</h4>
-                <p class="card-bio">Unleashing massive sonic scream blasts and high-speed flight maneuvers, Bubbles moves through layout dangers with joy.</p>
-            </div>
-
-            <!-- Individual Giant Box 11: Buttercup Utonium -->
-            <div class="individual-character-box char-buttercup">
-                <div class="card-avatar"><img src="buttercup_20260910175516.png" alt="Buttercup"></div>
-                <h4 class="card-label">Buttercup</h4>
-                <p class="card-bio">Operating as the ultimate team brawler, Buttercup uses close-quarters energy punches to smash boss mechanics instantly.</p>
-            </div>
-
-        </div> <!-- End Main Playable Grid Track -->
-
-        <!-- ==========================================================================
-             SECTION 2: UNLOCKABLE CHARACTERS
-             ========================================================================== -->
-        <h3 class="megamix-category-title">Unlockable Characters</h3>
-        <div class="exact-roster-grid">
-            
-            <!-- Individual Giant Box 12: Sandy Cheeks -->
-            <div class="individual-character-box char-sandy">
-                <div class="card-avatar"><img src="sandy_20260910175605.png" alt="Sandy"></div>
-                <h4 class="card-label">Sandy</h4>
-                <p class="card-bio">Deploys an underwater rope-lasso and quick flying kicks to swing and bounce smoothly over massive floor gaps.</p>
-                <div class="card-status-tag">Locked</div>
-            </div>
-
-            <!-- Individual Giant Box 13: Amy Rose -->
-            <div class="individual-character-box char-amy">
-                <div class="card-avatar"><img src="amy_20260910152131.png" alt="Amy"></div>
-                <h4 class="card-label">Amy</h4>
-                <p class="card-bio">Swings her heavy signature Piko Piko Hammer to launch high vertical jumps and crush fortified metal platforms.</p>
-                <div class="card-status-tag">Locked</div>
-            </div>
-
-            <!-- Individual Giant Box 14: Rouge the Bat -->
-            <div class="individual-character-box char-rouge">
-                <div class="card-avatar"><img src="rouge_20260910152155.png" alt="Rouge"></div>
-                <h4 class="card-label">Rouge</h4>
-                <p class="card-bio">Flaps to high areas with steady continuous flight loops while scanning ground maps for hidden item pick-ups.</p>
-                <div class="card-status-tag">Locked</div>
-            </div>
-
-            <!-- Individual Giant Box 15: Cream the Rabbit -->
-            <div class="individual-character-box char-cream">
-                <div class="card-avatar"><img src="cream_20260910152205.png" alt="Cream"></div>
-                <h4 class="card-label">Cream</h4>
-                <p class="card-bio">Commands Cheese the Chao to safely neutralize robotic patrols from a distance while executing basic hover floats.</p>
-                <div class="card-status-tag">Locked</div>
-            </div>
-
-            <!-- Individual Giant Box 16: Mighty the Armadillo -->
-            <div class="individual-character-box char-mighty">
-                <div class="card-avatar"><img src="mighty_20260910152230.png" alt="Mighty"></div>
-                <h4 class="card-label">Mighty</h4>
-                <p class="card-bio">Bounces off floor spikes harmlessly with his hard outer armor shell and drops heavy down-slams to break open floors.</p>
-                <div class="card-status-tag">Locked</div>
-            </div>
-
-            <!-- Individual Giant Box 17: Hatsune Miku -->
-            <div class="individual-character-box char-miku">
-                <div class="card-avatar"><img src="miku_20260910180506.png" alt="Hatsune Miku"></div>
-                <h4 class="card-label">Hatsune<br>Miku</h4>
-                <p class="card-bio">A cross-dimensional digital superstar guest who uses singing audio pulses and rhythmic dashes to bypass hazards.</p>
-                <div class="card-status-tag">Locked</div>
-            </div>
-
-            <!-- Individual Giant Box 18: Timmy Turner -->
-            <div class="individual-character-box char-timmy">
-                <div class="card-avatar"><img src="timmy_20260910174701.png" alt="Timmy Turner"></div>
-                <h4 class="card-label">Timmy</h4>
-                <p class="card-bio">Supported by hidden fairy wishes that temporarily transform spike pits and hazards into harmless platforms.</p>
-                <div class="card-status-tag">Locked</div>
-            </div>
-
-            <!-- Individual Giant Box 22: Lincoln Loud -->
-            <div class="individual-character-box">
-                <div class="narrow-character-card char-lincoln">
-                    <div class="card-avatar"><img src="lincoln.png" alt="Lincoln Loud"></div>
-                    <h4 class="card-label">Lincoln<br>Loud</h4>
-                    <p class="card-bio">Utilizing his strategic comic-book planning and rapid sibling-assist summons, Lincoln finds unique ways to navigate complex platforming hazards.</p>
-                    <div class="card-status-tag">Locked</div>
-                </div>
-            </div>
-
-            <!-- Individual Giant Box 23: Lola Loud -->
-            <div class="individual-character-box">
-                <div class="narrow-character-card char-lola">
-                    <div class="card-avatar"><img src="lola.png" alt="Lola Loud"></div>
-                    <h4 class="card-label">Lola<br>Loud</h4>
-                    <p class="card-bio">Driving a fast, high-velocity pink pageant kart to smash through badnik guards, Lola brings a fierce, unstoppable attitude to the frontline.</p>
-                    <div class="card-status-tag">Locked</div>
-                </div>
-            </div>
-
-        </div> <!-- End Unlockables Grid Track -->
-
-        <!-- ==========================================================================
-             SECTION 3: THE UNHOLY ALLIANCE
-             ========================================================================== -->
-        <h3 class="megamix-category-title" style="color: #ef4444;">The Unholy Alliance</h3>
-        <div class="exact-roster-grid">
-            
-            <!-- Individual Giant Box 19: Dr. Eggman -->
-            <div class="individual-character-box char-eggman">
-                <div class="card-avatar"><img src="eggman_20260911121635.png" alt="Dr. Eggman"></div>
-                <h4 class="card-label">Dr. Robotnik</h4>
-                <p class="card-bio">Using reality rifts to power up a brand-new mechanical army, he aims to map out and industrialize all three fused worlds.</p>
-            </div>
-
-            <!-- Individual Giant Box 20: Plankton -->
-            <div class="individual-character-box char-plankton">
-                <div class="card-avatar"><img src="plankton_20260911121605.png" alt="Plankton"></div>
-                <h4 class="card-label">Plankton</h4>
-                <p class="card-bio">Utilizing technology from badnik blueprints to replicate complex weapon armor layers and finally steal the Krabby Patty recipe.</p>
-            </div>
-
-            <!-- Individual Giant Box 21: Mojo Jojo -->
-            <div class="individual-character-box char-mojojojo">
-                <div class="card-avatar"><img src="mojojojo_20260911121521.png" alt="Mojo Jojo"></div>
-                <h4 class="card-label">Mojo<br>Jojo</h4>
-                <p class="card-bio">Synthesizing Chemical X streams into Badnik cores to create highly destructive mutant constructs capable of crushing Townsville.</p>
-            </div>
-
-        </div> <!-- End Roster Grid -->
-        </div> <!-- End lower inner constrained container -->
-    </div> <!-- End full-width Labyrinth backdrop layout canvas wrapper -->
-
-        <!-- DOWNLOAD SECTION -->
-        <section>
-            <h2>Get the Demo Build</h2>
-            <div class="download-card">
-                <h3>Harmony Engine Crossover Alpha Build</h3>
-                <p>Play through the initial Zone Acts featuring custom multi-engine mechanical layouts. Built for native execution on systems running GameMaker runtime tools.</p>
-                <a href="#" class="btn-action">Download Windows Executable</a>
-            </div>
-        </section>
-
-  <!-- Script Tracking: Adds and Removes the visibility class depending on scroll direction -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const scrollTracker = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        // Triggers when scrolling DOWN: Card enters the screen view
-                        entry.target.classList.add("reveal-active");
-                    } else {
-                        // Triggers when scrolling UP: Card leaves the screen view, hiding it again
-                        entry.target.classList.remove("reveal-active");
-                    }
-                });
-            }, {
-                root: null,          
-                threshold: 0.05       // Triggers as soon as 5% of the massive box clips onto the screen
-            });
-
-            // Target the large individual green box modules directly
-            const characterBoxes = document.querySelectorAll(".individual-character-box");
-            characterBoxes.forEach(box => scrollTracker.observe(box));
-        });
-    </script>
-
-<!-- ==========================================================================
-         EXACT MEGAMIX STYLE LEGAL COPYRIGHT FOOTER
-         ========================================================================== -->
-    <footer>
-        <p class="footer-disclaimer-header">Sonic the Hedgehog: Chaos Collision is a non-profit fan game.</p>
+    <!-- CHARACTERS SECTION -->
+    <section class="content-block">
+      <h2 class="section-title">PLAYABLE CHARACTERS</h2>
+      <div class="grid character-grid">
         
-        <!-- Sonic segment matches Megamix Mania's wording verbatim -->
-        <p class="footer-legal-text">
-            Sonic the Hedgehog is a registered trademark of SEGA Holdings Co., Ltd. This project is not affiliated with, endorsed by, or licensed by SEGA. All Sonic characters, assets, and related intellectual property belong to SEGA.
-        </p>
-        
-        <!-- SpongeBob Trademark Attribution -->
-        <p class="footer-legal-text" style="margin-top: 10px;">
-            SpongeBob SquarePants is a registered trademark of Viacom International Inc. Created by Stephen Hillenburg. This project is not affiliated with, endorsed by, or licensed by Nickelodeon or Paramount Skydance. All SpongeBob characters and related intellectual property belong to Viacom International Inc.
-        </p>
-        
-        <!-- Powerpuff Girls Trademark Attribution -->
-        <p class="footer-legal-text" style="margin-top: 10px;">
-            The Powerpuff Girls is a registered trademark of Cartoon Network, Inc. Created by Craig McCracken. This project is not affiliated with, endorsed by, or licensed by Cartoon Network or Warner Bros. Discovery. All Powerpuff Girls characters and related intellectual property belong to Cartoon Network.
-        </p>
+        <div class="card character-card sonic">
+          <img src="assets/sonic.png" alt="Sonic" class="card-img" />
+          <h3>Sonic</h3>
+          <p>Carefree and relaxed, but will never tolerate injustice. He is always running all over the world at supersonic speeds.</p>
+        </div>
 
-        <!-- Final structural non-profit stamp -->
-        <p class="footer-legal-text" style="margin-top: 15px; color: #475569;">
-            This is a free, fan-made creation developed using the Harmony Engine framework. No monetization or profit is generated from this project.
-        </p>
-    </footer>
+        <div class="card character-card tails">
+          <img src="assets/tails.png" alt="Tails" class="card-img" />
+          <h3>Tails</h3>
+          <p>Sonic's faithful sidekick. Uses his two tails to fly like a helicopter and has a brilliant knack for machinery.</p>
+        </div>
+
+        <div class="card character-card knuckles">
+          <img src="assets/knuckles.png" alt="Knuckles" class="card-img" />
+          <h3>Knuckles</h3>
+          <p>The hot-tempered guardian of the Master Emerald on Angel Island, equipped with fierce, powerful fists.</p>
+        </div>
+
+        <div class="card character-card shadow">
+          <img src="assets/shadow.png" alt="Shadow" class="card-img" />
+          <h3>Shadow</h3>
+          <p>The ultimate life form. Reawakened without any recollection of his past, driven by pure intuition and vengeance.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ZONES SECTION -->
+    <section class="content-block">
+      <h2 class="section-title">FEATURED ZONES</h2>
+      <div class="grid zone-grid">
+
+        <div class="card zone-card">
+          <div class="zone-thumb">
+            <img src="assets/zone-sunny-shores.png" alt="Sunny Shores Zone" />
+          </div>
+          <h3>Sunny Shores</h3>
+          <p>Dash through soft sand and lush grass in this ideal vacation spot turned battleground!</p>
+        </div>
+
+        <div class="card zone-card">
+          <div class="zone-thumb">
+            <img src="assets/zone-dark-fortress.png" alt="Dark Fortress Zone" />
+          </div>
+          <h3>Dark Fortress</h3>
+          <p>A tranquil, mysterious, yet dangerous castle lost in time. Beware of ancient traps guarding its secrets.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- GAME MODES SECTION -->
+    <section class="content-block">
+      <div class="grid modes-grid">
+        <div class="card mode-card">
+          <h3>CLASSIC MODE</h3>
+          <p>Re-experience the ROM hack that started it all! Play through faithful remakes of original zones complete with 3 acts each.</p>
+        </div>
+        <div class="card mode-card">
+          <h3>CHALLENGE MODE</h3>
+          <p>13 unique challenge acts featuring twisted layouts, fast-paced gauntlets, and abstract obstacles.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Sonic Megamix Mania is a non-profit fan game.</p>
+    <p class="disclaimer">
+      Sonic the Hedgehog is a registered trademark of SEGA Holdings Co., Ltd. This project is not affiliated with, endorsed by, or licensed by SEGA.
+    </p>
+    <div class="footer-links">
+      <a href="#">Full Credits</a> • 
+      <a href="#">Twitter</a> • 
+      <a href="#">Bluesky</a> • 
+      <a href="#">YouTube</a> • 
+      <a href="#">Discord</a>
+    </div>
+  </footer>
+
+</body>
+</html>
