@@ -323,6 +323,8 @@ footer {
 .char-mighty .card-label { color: #ff4500; text-shadow: -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000, 3px 3px 0px #ffffff; }
 .char-miku .card-label { color: #33ccbf; text-shadow: -2px -2px 0 #ff66cc, 2px -2px 0 #ff66cc, -2px 2px 0 #ff66cc, 2px 2px 0 #ff66cc, 3px 3px 0px #000; }
 .char-timmy .card-label { color: #ff66cc; text-shadow: -2px -2px 0 #76ff03, 2px -2px 0 #76ff03, -2px 2px 0 #76ff03, 2px 2px 0 #76ff03, 3px 3px 0px #000; }
+.char-lincoln .card-label { color: #ffffff; text-shadow: -2px -2px 0 #ff6600,  2px -2px 0 #ff6600, -2px  2px 0 #ff6600,  2px  2px 0 #ff6600, 3px  3px 0px #000000; }
+.char-lola .card-label { color: #ff69b4; text-shadow: -2px -2px 0 #fcc117,  2px -2px 0 #fcc117, -2px  2px 0 #fcc117,  2px  2px 0 #fcc117, 3px  3px 0px #000; }
 .char-eggman .card-label { color: #ff1111; text-shadow: -2px -2px 0 #ffff00, 2px -2px 0 #ffff00, -2px 2px 0 #ffff00, 2px 2px 0 #ffff00, 3px 3px 0px #000; }
 .char-plankton .card-label { color: #006400; text-shadow: -2px -2px 0 #ff3333, 2px -2px 0 #ff3333, -2px 2px 0 #ff3333, 2px 2px 0 #ff3333, 3px 3px 0px #000; }
 .char-mojojojo .card-label { color: #8b5cf6; text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff, 2px 2px 0 #ffffff, 3px 3px 0px #000; }
