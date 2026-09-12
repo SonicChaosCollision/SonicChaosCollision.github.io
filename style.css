@@ -101,10 +101,11 @@ body {
 
 .story-container {
   max-width: 700px;
-  margin: 0 auto;
+  margin: 0 auto; /* Centers the container horizontally */
   display: flex;
   flex-direction: column;
   gap: 35px;
+  text-align: left; /* Keeps story text readable while container is centered */
 }
 
 .story-text {
@@ -186,19 +187,19 @@ body {
   --hl-outline: #000000;
 }
 
-/* MAIN CARD CONTAINER */
 .character-container {
   width: 100%;
-  margin: 0 auto;
-  padding: 20px 20px 120px 20px;
+  max-width: 1000px; /* Gives plenty of room for centered cards */
+  margin: 0 auto;    /* Centers the main area */
+  padding: 40px 20px 120px 20px;
 }
 
-/* Spaced out vertically */
 .character-feed {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 90px; /* Distinct spacing between each card */
+  align-items: center; /* Centers every card horizontally */
+  width: 100%;
+  gap: 90px;
 }
 
 /* ==========================================
@@ -207,13 +208,15 @@ body {
 .character-card {
   position: relative;
   width: 100%;
-  max-width: 440px; /* Narrow vertical proportions */
-  background-color: var(--card-bg-green);
-  border: 5px solid var(--card-red-border);
+  max-width: 420px; /* Sets the exact narrow vertical width */
+  margin: 0 auto;   /* Backup horizontal centering */
+  background-color: var(--card-bg-green, #61ab8b);
+  border: 5px solid var(--card-red-border, #cc1100);
   border-radius: 0px; /* Pointy, sharp corners */
   padding: 35px 25px;
   text-align: center;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+}
   
   /* Scroll Animation Initial State */
   opacity: 0;
