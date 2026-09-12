@@ -1,330 +1,293 @@
-/* ==========================================================================
-   HARMONY MASTER SHEET - CORE RETRO LAYOUT PARAMS
-   ========================================================================== */
-
-:root {
-    --bg-dark: #070c14;          
-    --sonic-blue: #0054a6;       
-    --sonic-gold: #fcc117;       
-    --text-white: #ffffff;
-    --text-muted: #94a3b8;
+/* ==========================================
+   RESET & VARIABLES
+   ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+:root {
+  --bg-color: #0d0e15;
+  --panel-bg: rgba(22, 25, 38, 0.85);
+  --panel-border: rgba(255, 255, 255, 0.1);
+  --primary-color: #0088ff;
+  --primary-hover: #0066cc;
+  --accent-gold: #ffcc00;
+  --text-main: #f0f4f8;
+  --text-muted: #9aa8ba;
+  --font-heading: 'Rubik', sans-serif;
+  --font-body: 'Montserrat', sans-serif;
+  --border-radius: 12px;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    background-color: var(--bg-dark);
-    color: var(--text-white);
-    line-height: 1.7;
-    padding-bottom: 0;
+  background-color: var(--bg-color);
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(0, 136, 255, 0.15), transparent 70%),
+    linear-gradient(to bottom, #090a0f, #0d0e15);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  min-height: 100vh;
 }
 
-/* --- Root Constraints --- */
+/* ==========================================
+   LAYOUT & CONTAINER
+   ========================================== */
 .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-    width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px 60px 20px;
 }
 
-/* --------------------------------------------------------------------------
-   FULL-WIDTH BACKDROP STAGES (SCROLLING LEVEL STAGE)
-   -------------------------------------------------------------------------- */
-.scrolling-stage-backdrop {
-    width: 100%;                  /* Forces it out to the margins of the screen layout */
-    margin: 0;
-    padding: 40px 0;              /* Extends the space to create the first divider zone */
-    position: relative;
-    overflow: hidden;
-    border-bottom: 5px solid #cc2222; /* Red divider separator link edge */
-
-    background-image: url('IMG_4396.gif'); 
-    background-repeat: repeat-x;
-    background-position: 0 0;
-    animation: loopLevelScroll 25s linear infinite;
+.content-block {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--border-radius);
+  padding: 35px;
+  margin-bottom: 40px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-.header-content-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;          /* Centers your massive logo layout items */
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--primary-color);
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
-/* Background Loop Logic */
-@keyframes loopLevelScroll {
-    from { background-position: 0 0; }
-    to { background-position: -1000px 0; }
+/* ==========================================
+   HERO SECTION
+   ========================================== */
+.hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+  background: url('assets/hero-bg.jpg') center/cover no-repeat;
 }
 
-/* Large Logo sitting at the absolute top of your page wrapper */
-.megamix-main-logo {
-    max-width: 750px;             /* Boosted dimension size to lock down top tracking space */
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    filter: drop-shadow(0px 8px 0px rgba(0,0,0,1)); 
-    margin-top: 10px;             /* Places it tightly at the absolute top margin line */
-    margin-bottom: 30px;
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to bottom, rgba(13, 14, 21, 0.4), var(--bg-color));
 }
 
-/* --------------------------------------------------------------------------
-   FULL-WIDTH LABYRINTH BRICK EDGE STAGE
-   -------------------------------------------------------------------------- */
-.labyrinth-matrix-canvas {
-    width: 100%;                  /* Stretches to screen frame edges instantly */
-    padding: 60px 0;
-    position: relative;
-    background-image: url('IMG_4395.png'); 
-    background-repeat: repeat;    /* Seamless tile grid arrangement */
-    background-position: center;
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
 }
 
-/* --- Responsive Trailer Container with 2D Drop Shadow --- */
-.megamix-trailer-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 800px;            /* Gives the video frame a wide, high-impact presence */
-    margin: 0 auto 50px auto;    /* Centers it and forces spacing above the story text */
-    aspect-ratio: 16 / 9;        /* Locks it to standard widescreen proportions */
-    background-color: #000;
-    border: 4px solid #cc2222;   /* Matching retro red border accent */
-    
-    /* 🛠️ EXACT SOLID RETRO BLACK DROP SHADOW (Hard-edged) */
-    box-shadow: 8px 8px 0px #000000; 
+.logo {
+  max-width: 100%;
+  width: 450px;
+  height: auto;
+  margin-bottom: 25px;
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.6));
 }
 
-/* Forces the embedded video to fit perfectly tight inside the shadow card boundaries */
-.megamix-trailer-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.tagline {
+  font-size: 1.15rem;
+  color: var(--text-main);
+  margin-bottom: 30px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
 }
 
-
-/* Header Direct Download Block Button Configuration */
-.header-download-button {
-    display: inline-block;
-    background-color: #cc2222; /* High-contrast retro button face red */
-    color: var(--text-white);
-    font-family: 'Impact', 'Arial Black', sans-serif;
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 1px;
-    padding: 16px 45px;
-    border: 4px solid var(--text-white);
-    box-shadow: 6px 6px 0px #000000;
-    transition: transform 0.1s ease, box-shadow 0.1s ease;
+/* BUTTONS */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
 }
 
-.header-download-button:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 8px 8px 0px #000000;
-    background-color: #e52e2e;
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-family: var(--font-heading);
+  font-weight: 900;
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
-/* --------------------------------------------------------------------------
-   STORY SYNOPSIS SECTION & TYPOGRAPHY HIGHLIGHT TARGETS
-   -------------------------------------------------------------------------- */
-.story-synopsis-card {
-    background-color: rgba(5, 8, 12, 0.9); /* Opaque overlay shielding text from the image layer */
-    border: 4px solid #cc2222;
-    padding: 35px;
-    margin: 40px auto;
-    box-shadow: 6px 6px 0px #000000;
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #fff;
 }
 
-.story-synopsis-card h2 {
-    font-family: 'Impact', sans-serif;
-    font-size: 2rem;
-    color: var(--text-white);
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 0px #000;
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 136, 255, 0.4);
 }
 
-.story-synopsis-card p {
-    font-size: 1.1rem;
-    color: #e2e8f0;
-    line-height: 1.6;
-    margin-bottom: 20px;
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.story-tagline {
-    font-family: 'Impact', sans-serif;
-    font-size: 1.4rem;
-    color: var(--sonic-gold);
-    text-transform: uppercase;
-    text-align: center;
-    margin-top: 25px;
-    text-shadow: 2px 2px 0px #000;
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-3px);
 }
 
-/* Flat Category Structural Title */
-.megamix-category-title {
-    text-align: center;
-    font-family: 'Impact', 'Arial Black', sans-serif;
-    font-size: 2.4rem;
-    text-transform: uppercase;
-    color: #ffffff;
-    letter-spacing: 2px;
-    margin: 0 0 35px 0;
-    text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000, 5px 5px 0px #000;
+/* SOCIAL ICONS */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
-/* Grid parameters */
-.exact-roster-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-    gap: 35px;
-    width: 100%;
+.social-links a {
+  color: var(--text-muted);
+  font-size: 1.5rem;
+  transition: color 0.2s, transform 0.2s;
 }
 
-/* THE GIANT CHARACTER CARD: Green background, bold red outline */
-.individual-character-box {
-    background-color: #7dbd9c;   /* Deep retro zone green background */
-    border: 5px solid #d91015;    /* Bold red outline */
-    border-radius: 0;             /* Pointed edges */
-    padding: 30px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 6px 6px 0px #000000; 
-    box-sizing: border-box;
-    width: 100%;
-    min-height: 480px;            /* Guarantees wide, tall boxes for huge images and text */
-    
-    /* 🛠️ ENABLES THE HIDDEN ANIMATION STATE: */
-    opacity: 0;                   /* Starts completely invisible */
-    transform: translateY(40px);  /* Starts slightly shifted down */
-    
-    /* Smoothly transitions opacity and height when the trigger updates */
-    transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
-                transform 0.6s cubic-bezier(0.25, 1, 0.5, 1),
-                border-color 0.15s ease;
+.social-links a:hover {
+  color: var(--primary-color);
+  transform: scale(1.15);
 }
 
-/* 🛠️ TRIGGERS VISIBILITY WHEN ACTIVE: */
-.individual-character-box.reveal-active {
-    opacity: 1 !important;        /* Becomes fully visible */
-    transform: translateY(0) !important; /* Snaps perfectly into place */
+/* ==========================================
+   GRIDS & CARDS
+   ========================================== */
+.grid {
+  display: grid;
+  gap: 20px;
 }
 
-/* Keeps the hover scale active only after it reveals itself */
-.individual-character-box.reveal-active:hover {
-    transform: translateY(-5px) !important;
-    border-color: #fcc117; 
+.character-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-.card-avatar {
-    width: 100%;
-    height: 220px;             
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    margin-bottom: 20px;
+.zone-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
-.card-avatar img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;       
+.modes-grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-.card-label {
-    text-align: center;
-    font-family: 'Impact', 'Arial Black', sans-serif;
-    font-size: 1.7rem;         
-    text-transform: uppercase;
-    margin: 5px 0 15px 0;
-    line-height: 1.1;
-    letter-spacing: 0.5px;
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
-.card-bio {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    color: #e2e8f0;            
-    font-size: 1.05rem;        
-    line-height: 1.6;
-    text-align: center;
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary-color);
 }
 
-.card-status-tag {
-    font-family: 'Impact', sans-serif;
-    font-size: 0.95rem;
-    color: #ff4d4d;            
-    text-transform: uppercase;
-    margin-top: auto;
-    padding-top: 15px;
+.card h3 {
+  font-family: var(--font-heading);
+  color: #fff;
+  margin-bottom: 10px;
 }
 
-/* --- Trademark Attribution Footer Window --- */
+.card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* ZONE CARDS SPECIFIC */
+.zone-thumb {
+  width: 100%;
+  height: 160px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.zone-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.zone-card:hover .zone-thumb img {
+  transform: scale(1.08);
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
 footer {
-    background-color: #04080e; 
-    text-align: center;
-    padding: 50px 20px;
-    border-top: 5px solid #cc2222;
-    position: relative;
-    z-index: 3;
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #07080b;
+  border-top: 1px solid var(--panel-border);
+  color: var(--text-muted);
+  font-size: 0.85rem;
 }
 
-.footer-disclaimer-header {
-    color: #e2e8f0;
-    font-size: 0.95rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 12px;
+footer p {
+  margin-bottom: 10px;
 }
 
-.footer-legal-text {
-    color: #64748b; 
-    font-size: 0.82rem;
-    line-height: 1.6;
-    max-width: 850px;
-    margin: 10px auto 0 auto;
+.disclaimer {
+  max-width: 700px;
+  margin: 0 auto 15px auto;
+  font-size: 0.78rem;
+  opacity: 0.7;
 }
 
-/* ==========================================================================
-   CHARACTER NAME HIGHLIGHT STYLING CODES (FOR REPLICATED BIO TEXT MARKS)
-   ========================================================================== */
-.txt-sonic { color: #1e90ff; font-weight: bold; text-shadow: 1px 1px 0px #000; }
-.txt-spongebob { color: #fff176; font-weight: bold; text-shadow: 1px 1px 0px #000; }
-.txt-ppg { color: #ff3366; font-weight: bold; text-shadow: 1px 1px 0px #000; }
-.txt-eggman { color: #ff1111; font-weight: bold; text-shadow: 1px 1px 0px #000; }
-.txt-plankton { color: #006400; font-weight: bold; text-shadow: 1px 1px 0px #000; }
-.txt-mojojojo { color: #8b5cf6; font-weight: bold; text-shadow: 1px 1px 0px #000; }
+.footer-links a {
+  color: var(--text-main);
+  text-decoration: none;
+  margin: 0 5px;
+  transition: color 0.2s;
+}
 
-/* ==========================================================================
-   INDIVIDUAL CHARACTER REPLICA TEXT LABELS
-   ========================================================================== */
-.char-sonic .card-label { color: #1e90ff; text-shadow: -2px -2px 0 #fcc117, 2px -2px 0 #fcc117, -2px 2px 0 #fcc117, 2px 2px 0 #fcc117, 3px 3px 0px #000; }
-.char-tails .card-label { color: #ffaa00; text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff, 3px 3px 0px #000; }
-.char-knuckles .card-label { color: #ff2222; text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff, 3px 3px 0px #000; }
-.char-shadow .card-label { color: #2b2b2b; text-shadow: -2px -2px 0 #ff0000, 2px -2px 0 #ff0000, -2px 2px 0 #ff0000, 2px 2px 0 #ff0000, 3px 3px 0px #000; }
-.char-spongebob .card-label { color: #fff176; text-shadow: -2px -2px 0 #ff8da1, 2px -2px 0 #ff8da1, -2px 2px 0 #ff8da1, 2px 2px 0 #ff8da1, 3px 3px 0px #000; }
-.char-patrick .card-label { color: #ff9999; text-shadow: -2px -2px 0 #99ff99, 2px -2px 0 #99ff99, -2px 2px 0 #99ff99, 2px 2px 0 #99ff99, 3px 3px 0px #000; }
-.char-squidward .card-label { color: #7fcdff; text-shadow: -2px -2px 0 #cc3333, 2px -2px 0 #cc3333, -2px 2px 0 #cc3333, 2px 2px 0 #cc3333, 3px 3px 0px #000; }
-.char-larry .card-label { color: #ff4500; text-shadow: -2px -2px 0 #ffff00, 2px -2px 0 #ffff00, -2px 2px 0 #ffff00, 2px 2px 0 #ffff00, 3px 3px 0px #000; }
-.char-blossom .card-label { color: #ff3366; text-shadow: -2px -2px 0 #ffaa00, 2px -2px 0 #ffaa00, -2px 2px 0 #ffaa00, 2px 2px 0 #ffaa00, 3px 3px 0px #000; }
-.char-bubbles .card-label { color: #33ccff; text-shadow: -2px -2px 0 #ffff33, 2px -2px 0 #ffff33, -2px 2px 0 #ffff33, 2px 2px 0 #ffff33, 3px 3px 0px #000; }
-.char-buttercup .card-label { color: #33cc66; text-shadow: -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000, 3px 3px 0px #ffffff; }
-.char-sandy .card-label { color: #d2b48c; text-shadow: -2px -2px 0 #ffcc00, 2px -2px 0 #ffcc00, -2px 2px 0 #ffcc00, 2px 2px 0 #ffcc00, 3px 3px 0px #000; }
-.char-amy .card-label { color: #ff69b4; text-shadow: -2px -2px 0 #cc0033, 2px -2px 0 #cc0033, -2px 2px 0 #cc0033, 2px 2px 0 #cc0033, 3px 3px 0px #000; }
-.char-rouge .card-label { color: #e0b0ff; text-shadow: -2px -2px 0 #2ecc71, 2px -2px 0 #2ecc71, -2px 2px 0 #2ecc71, 2px 2px 0 #2ecc71, 3px 3px 0px #000; }
-.char-cream .card-label { color: #f5f5dc; text-shadow: -2px -2px 0 #3498db, 2px -2px 0 #3498db, -2px 2px 0 #3498db, 2px 2px 0 #3498db, 3px 3px 0px #000; }
-.char-mighty .card-label { color: #ff4500; text-shadow: -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000, 3px 3px 0px #ffffff; }
-.char-miku .card-label { color: #33ccbf; text-shadow: -2px -2px 0 #ff66cc, 2px -2px 0 #ff66cc, -2px 2px 0 #ff66cc, 2px 2px 0 #ff66cc, 3px 3px 0px #000; }
-.char-timmy .card-label { color: #ff66cc; text-shadow: -2px -2px 0 #76ff03, 2px -2px 0 #76ff03, -2px 2px 0 #76ff03, 2px 2px 0 #76ff03, 3px 3px 0px #000; }
-.char-lincoln .card-label { color: #ffffff; text-shadow: -2px -2px 0 #ff6600,  2px -2px 0 #ff6600, -2px  2px 0 #ff6600,  2px  2px 0 #ff6600, 3px  3px 0px #000000; }
-.char-lola .card-label { color: #ff69b4; text-shadow: -2px -2px 0 #fcc117,  2px -2px 0 #fcc117, -2px  2px 0 #fcc117,  2px  2px 0 #fcc117, 3px  3px 0px #000; }
-.char-eggman .card-label { color: #ff1111; text-shadow: -2px -2px 0 #ffff00, 2px -2px 0 #ffff00, -2px 2px 0 #ffff00, 2px 2px 0 #ffff00, 3px 3px 0px #000; }
-.char-plankton .card-label { color: #006400; text-shadow: -2px -2px 0 #ff3333, 2px -2px 0 #ff3333, -2px 2px 0 #ff3333, 2px 2px 0 #ff3333, 3px 3px 0px #000; }
-.char-mojojojo .card-label { color: #8b5cf6; text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff, 2px 2px 0 #ffffff, 3px 3px 0px #000; }
+.footer-links a:hover {
+  color: var(--primary-color);
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+@media (max-width: 600px) {
+  .hero-content {
+    padding: 0 10px;
+  }
+
+  .logo {
+    width: 280px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .content-block {
+    padding: 20px;
+  }
+}
