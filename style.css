@@ -40,7 +40,7 @@ body {
   left: 0;
   width: 200%;
   height: 100%;
-  background: url('assets/bg-pixel.png') repeat-x center bottom;
+  background: url('IMG_4396.gif') repeat-x center bottom;
   background-size: auto 100%;
   animation: scrollBackground 20s linear infinite;
   z-index: 1;
