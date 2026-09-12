@@ -94,7 +94,7 @@ body {
 }
 
 /* ==========================================
-   CHARACTER NAME TEXT (STYLED OUTLINE + DROP SHADOW)
+   CHARACTER NAME TEXT (CUSTOM COLOR + CUSTOM OUTLINE + DROP SHADOW)
    ========================================== */
 .character-name {
   font-family: var(--font-heading);
@@ -103,15 +103,157 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 20px;
-  color: var(--name-color, #0033cc);
   
-  /* Black text outline + drop shadow */
-  text-shadow: 
-    -2px -2px 0 #000,  
-     2px -2px 0 #000,
-    -2px  2px 0 #000,
-     2px  2px 0 #000,
-     4px  5px 0px #000;
+  /* Applies character fill color */
+  color: var(--name-color, #ffffff);
+  
+  /* Creates the crisp text outline using the custom outline variable */
+  -webkit-text-stroke: 2px var(--outline-color, #000000);
+  
+  /* Black 3D drop shadow behind the outlined text */
+  text-shadow: 4px 5px 0px #000000;
+}
+
+/* ==========================================
+   CHARACTER CUSTOM COLOR + OUTLINE PAIRS
+   ========================================== */
+
+/* Sonic: Blue Text, Yellow Outline */
+.character-card.sonic {
+  --name-color: #0055ff;
+  --outline-color: #ffe600;
+}
+
+/* Tails: Orange Text, Blue Outline */
+.character-card.tails {
+  --name-color: #ff9900;
+  --outline-color: #0044cc;
+}
+
+/* Knuckles: Red Text, Green Outline */
+.character-card.knuckles {
+  --name-color: #e60000;
+  --outline-color: #00cc44;
+}
+
+/* Shadow: Dark Charcoal Text, Red Outline */
+.character-card.shadow {
+  --name-color: #222222;
+  --outline-color: #ff1a1a;
+}
+
+/* SpongeBob: Yellow Text, Blue Outline */
+.character-card.spongebob {
+  --name-color: #fff01f;
+  --outline-color: #0088ff;
+}
+
+/* Patrick: Pink Text, Lime Green Outline */
+.character-card.patrick {
+  --name-color: #ff77a8;
+  --outline-color: #88d000;
+}
+
+/* Squidward: Teal Text, Purple Outline */
+.character-card.squidward {
+  --name-color: #00b3a3;
+  --outline-color: #8a2be2;
+}
+
+/* Larry: Red Text, Yellow Outline */
+.character-card.larry {
+  --name-color: #ee2200;
+  --outline-color: #ffea00;
+}
+
+/* Blossom: Pink/Orange Text, Dark Red Outline */
+.character-card.blossom {
+  --name-color: #ff3366;
+  --outline-color: #990026;
+}
+
+/* Bubbles: Light Blue Text, Dark Blue Outline */
+.character-card.bubbles {
+  --name-color: #33ccff;
+  --outline-color: #0033aa;
+}
+
+/* Buttercup: Bright Green Text, Dark Green Outline */
+.character-card.buttercup {
+  --name-color: #00e64d;
+  --outline-color: #005511;
+}
+
+/* Sandy: Brown Text, Pink Outline */
+.character-card.sandy {
+  --name-color: #8b4513;
+  --outline-color: #ff66cc;
+}
+
+/* Amy: Pink Text, Yellow Outline */
+.character-card.amy {
+  --name-color: #ff4081;
+  --outline-color: #ffeb3b;
+}
+
+/* Rouge: Purple Text, Cyan Outline */
+.character-card.rouge {
+  --name-color: #aa00cc;
+  --outline-color: #00e5ff;
+}
+
+/* Cream: Cream/Peach Text, Pink Outline */
+.character-card.cream {
+  --name-color: #ffcc66;
+  --outline-color: #ff3388;
+}
+
+/* Mighty: Red Text, Dark Grey Outline */
+.character-card.mighty {
+  --name-color: #dd0000;
+  --outline-color: #333333;
+}
+
+/* Miku: Cyan Text, Hot Pink Outline */
+.character-card.miku {
+  --name-color: #00e5ee;
+  --outline-color: #ff007f;
+}
+
+/* Timmy: Pink Text, Yellow Outline */
+.character-card.timmy {
+  --name-color: #ff3399;
+  --outline-color: #ffff00;
+}
+
+/* Lincoln: Orange Text, White Outline */
+.character-card.lincoln {
+  --name-color: #ff6600;
+  --outline-color: #ffffff;
+}
+
+/* Lola: Pink Text, Magenta Outline */
+.character-card.lola {
+  --name-color: #ff66b2;
+  --outline-color: #99004d;
+}
+
+/* Robotnik: Red Text, Yellow Outline */
+.character-card.robotnik {
+  --name-color: #cc0000;
+  --outline-color: #ffd700;
+}
+
+/* Plankton: Dark Green Text, Pink Outline */
+.character-card.plankton {
+  --name-color: #00802b;
+  --outline-color: #ff0066;
+}
+
+/* Mojo Jojo: Purple Text, Bright Lime Outline */
+.character-card.mojojojo {
+  --name-color: #6600cc;
+  --outline-color: #66ff00;
 }
 
 /* BIO TEXT */
@@ -124,32 +266,7 @@ body {
   text-align: left;
 }
 
-/* ==========================================
-   CHARACTER-SPECIFIC NAME COLORS
-   ========================================== */
-.character-card.sonic { --name-color: #0033cc; }
-.character-card.tails { --name-color: #ff9900; }
-.character-card.knuckles { --name-color: #cc0000; }
-.character-card.shadow { --name-color: #222222; }
-.character-card.spongebob { --name-color: #e6b800; }
-.character-card.patrick { --name-color: #ff6699; }
-.character-card.squidward { --name-color: #008080; }
-.character-card.larry { --name-color: #dd2200; }
-.character-card.blossom { --name-color: #ff3300; }
-.character-card.bubbles { --name-color: #0099ff; }
-.character-card.buttercup { --name-color: #009933; }
-.character-card.sandy { --name-color: #8b4513; }
-.character-card.amy { --name-color: #ff3399; }
-.character-card.rouge { --name-color: #9900cc; }
-.character-card.cream { --name-color: #ffaa00; }
-.character-card.mighty { --name-color: #cc0000; }
-.character-card.miku { --name-color: #00cccc; }
-.character-card.timmy { --name-color: #ff0066; }
-.character-card.lincoln { --name-color: #666666; }
-.character-card.lola { --name-color: #cc0066; }
-.character-card.robotnik { --name-color: #bb0000; }
-.character-card.plankton { --name-color: #006600; }
-.character-card.mojojojo { --name-color: #4b0082; }
+
 
 footer {
   text-align: center;
