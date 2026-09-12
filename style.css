@@ -24,50 +24,64 @@ body {
     padding-bottom: 0;
 }
 
+/* --- Root Constraints --- */
 .container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
-    position: relative;
-    z-index: 2; /* Keeps all page cards floating on top of level backgrounds */
+    width: 100%;
 }
 
 /* --------------------------------------------------------------------------
-   HERO HEADER AREA: SCROLLING PANORAMA BACKGROUND STAGE
+   FULL-WIDTH BACKDROP STAGES (SCROLLING LEVEL STAGE)
    -------------------------------------------------------------------------- */
-header {
-    text-align: center;
-    padding: 60px 20px;
+.scrolling-stage-backdrop {
+    width: 100%;                  /* Forces it out to the margins of the screen layout */
+    margin: 0;
+    padding: 40px 0;              /* Extends the space to create the first divider zone */
     position: relative;
     overflow: hidden;
-    border-bottom: 5px solid #cc2222;
-    min-height: 480px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    border-bottom: 5px solid #cc2222; /* Red divider separator link edge */
 
-    /* 🛠️ SCROLLING LEVEL BANNER BACKGROUND: Set your looping landscape here */
     background-image: url('IMG_4396.gif'); 
     background-repeat: repeat-x;
     background-position: 0 0;
-    animation: loopLevelScroll 25s linear infinite; /* Seamless infinite horizontal scroll loop */
+    animation: loopLevelScroll 25s linear infinite;
 }
 
-/* Background Scrolling Animation Logic */
+.header-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;          /* Centers your massive logo layout items */
+}
+
+/* Background Loop Logic */
 @keyframes loopLevelScroll {
     from { background-position: 0 0; }
     to { background-position: -1000px 0; }
 }
 
-/* Logo Image Container - Scaled up to match the giant website proportions */
+/* Large Logo sitting at the absolute top of your page wrapper */
 .megamix-main-logo {
-    max-width: 600px; /* 🛠️ Drastically increased from 450px so it sits incredibly large at the top */
+    max-width: 750px;             /* Boosted dimension size to lock down top tracking space */
     width: 100%;
     height: auto;
     object-fit: contain;
     filter: drop-shadow(0px 8px 0px rgba(0,0,0,1)); 
+    margin-top: 10px;             /* Places it tightly at the absolute top margin line */
     margin-bottom: 30px;
+}
+
+/* --------------------------------------------------------------------------
+   FULL-WIDTH LABYRINTH BRICK EDGE STAGE
+   -------------------------------------------------------------------------- */
+.labyrinth-matrix-canvas {
+    width: 100%;                  /* Stretches to screen frame edges instantly */
+    padding: 60px 0;
+    position: relative;
+    background-image: url('IMG_4395.png'); 
+    background-repeat: repeat;    /* Seamless tile grid arrangement */
+    background-position: center;
 }
 
 /* --- Responsive Trailer Container with 2D Drop Shadow --- */
@@ -151,21 +165,6 @@ header {
     text-align: center;
     margin-top: 25px;
     text-shadow: 2px 2px 0px #000;
-}
-
-/* --------------------------------------------------------------------------
-   ROSTER CANVAS WRAPPER: RETRO LABYRINTH BRICK BACKGROUND ZONE
-   -------------------------------------------------------------------------- */
-.labyrinth-matrix-canvas {
-    width: 100%;
-    padding: 60px 0;
-    position: relative;
-
-    /* 🛠️ LABYRINTH SECTION BACKGROUND: Set your custom brick texture graphic here */
-    background-image: url('IMG_4395.png'); 
-    background-repeat: repeat; /* Tiles your game asset smoothly infinitely */
-    background-position: center;
-    border-top: 5px solid #cc2222;
 }
 
 /* Flat Category Structural Title */
