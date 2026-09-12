@@ -6,7 +6,7 @@
 
 :root {
   --bg-color: #0b0d14;
-  --card-bg-green: #61ab8b;   /* Megamix signature bright green background */
+  --card-bg-green: #61ab8b;   /* Megamix bright green card background */
   --card-red-border: #cc1100; /* Sharp red outer line */
   --font-heading: 'Rubik', sans-serif;
   --font-body: 'Montserrat', sans-serif;
@@ -22,7 +22,7 @@ body {
 /* HERO SECTION */
 .hero {
   position: relative;
-  min-height: 50vh;
+  min-height: 45vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,36 +39,40 @@ body {
 
 /* MAIN CARD CONTAINER */
 .character-container {
-  max-width: 600px;
+  width: 100%;
   margin: 0 auto;
-  padding: 20px 20px 100px 20px;
+  padding: 20px 20px 120px 20px;
 }
 
+/* Spaced out vertically */
 .character-feed {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  align-items: center;
+  gap: 90px; /* Distinct spacing between each card */
 }
 
 /* ==========================================
-   MEGAMIX VERTICAL CARD ARCHITECTURE
+   NARROW VERTICAL RECTANGLE CARD ARCHITECTURE
    ========================================== */
 .character-card {
   position: relative;
+  width: 100%;
+  max-width: 440px; /* Narrow vertical proportions */
   background-color: var(--card-bg-green);
-  border: 4px solid var(--card-red-border);
-  border-radius: 0px; /* Sharp pointed edges */
-  padding: 30px 25px;
+  border: 5px solid var(--card-red-border);
+  border-radius: 0px; /* Pointy, sharp corners */
+  padding: 35px 25px;
   text-align: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
   
-  /* Scroll Animation Defaults (Hidden initial state) */
+  /* Scroll Animation Initial State */
   opacity: 0;
   transform: translateY(60px) scale(0.95);
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-/* Visible class toggled by JS when scrolling */
+/* Active class toggled by JS when scrolling into view */
 .character-card.visible {
   opacity: 1;
   transform: translateY(0) scale(1);
@@ -77,20 +81,20 @@ body {
 /* Character Image Box */
 .card-art-box {
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .card-art-box img {
   width: 100%;
-  max-width: 260px;
+  max-width: 250px;
   height: auto;
   display: block;
   margin: 0 auto;
-  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.35));
 }
 
 /* ==========================================
-   CHARACTER NAME TEXT (OUTLINE + BLACK SHADOW)
+   CHARACTER NAME TEXT (STYLED OUTLINE + DROP SHADOW)
    ========================================== */
 .character-name {
   font-family: var(--font-heading);
@@ -99,9 +103,9 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 20px;
-  color: var(--name-color, #1155cc); /* Custom color per character */
+  color: var(--name-color, #0033cc);
   
-  /* Text outline with thick black drop shadow */
+  /* Black text outline + drop shadow */
   text-shadow: 
     -2px -2px 0 #000,  
      2px -2px 0 #000,
@@ -114,14 +118,14 @@ body {
 .character-bio {
   color: #0b0d14;
   font-family: var(--font-body);
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 500;
   line-height: 1.6;
   text-align: left;
 }
 
 /* ==========================================
-   CHARACTER-SPECIFIC TEXT COLORS
+   CHARACTER-SPECIFIC NAME COLORS
    ========================================== */
 .character-card.sonic { --name-color: #0033cc; }
 .character-card.tails { --name-color: #ff9900; }
@@ -146,3 +150,11 @@ body {
 .character-card.robotnik { --name-color: #bb0000; }
 .character-card.plankton { --name-color: #006600; }
 .character-card.mojojojo { --name-color: #4b0082; }
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #050608;
+  color: #8a98a8;
+  font-size: 0.85rem;
+}
