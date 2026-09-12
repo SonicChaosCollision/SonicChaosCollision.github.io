@@ -124,10 +124,10 @@ body {
   --outline-color: #ffe600;
 }
 
-/* Tails: Orange Text, Blue Outline */
+/* Tails: Orange Text, Maroon Outline */
 .character-card.tails {
   --name-color: #ff9900;
-  --outline-color: #0044cc;
+  --outline-color: #af0702;
 }
 
 /* Knuckles: Red Text, Green Outline */
@@ -238,10 +238,10 @@ body {
   --outline-color: #99004d;
 }
 
-/* Robotnik: Red Text, Yellow Outline */
+/* Robotnik: Red Text, White Outline */
 .character-card.robotnik {
   --name-color: #cc0000;
-  --outline-color: #ffd700;
+  --outline-color: #ffffff;
 }
 
 /* Plankton: Dark Green Text, Pink Outline */
