@@ -162,7 +162,7 @@ header {
     position: relative;
 
     /* 🛠️ LABYRINTH SECTION BACKGROUND: Set your custom brick texture graphic here */
-    background-image: url('IMG_4394.jpeg'); 
+    background-image: url('IMG_4395.png'); 
     background-repeat: repeat; /* Tiles your game asset smoothly infinitely */
     background-position: center;
     border-top: 5px solid #cc2222;
