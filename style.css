@@ -48,7 +48,7 @@ header {
     align-items: center;
 
     /* 🛠️ SCROLLING LEVEL BANNER BACKGROUND: Set your looping landscape here */
-    background-image: url('hero-level-bg.png'); 
+    background-image: url('IMG_4396.gif'); 
     background-repeat: repeat-x;
     background-position: 0 0;
     animation: loopLevelScroll 25s linear infinite; /* Seamless infinite horizontal scroll loop */
