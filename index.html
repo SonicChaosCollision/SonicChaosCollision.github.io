@@ -9,41 +9,43 @@
 </head>
 <body>
 
-    <!-- Header Block Container (Houses Logo at the absolute top) -->
-    <header>
-        <!-- 🛠️ Enlarged Logo placement -->
-        <img src="Untitled1924_20260909224644.png" alt="Sonic Chaos Collision Logo" class="megamix-main-logo">
-        
-        <!-- Primary Action Download Button sitting directly underneath the main logo -->
-        <a href="#" class="header-download-button">Download Mod Build</a>
-    </header>
+    <!-- ==========================================================================
+         FULL-WIDTH SCROLLING HEADER: Logo sits at absolute top with scrolling bg behind everything
+         ========================================================================== -->
+    <header class="scrolling-stage-backdrop">
+        <div class="container header-content-wrapper">
+            
+            <!-- Large Logo sitting at the absolute top -->
+            <img src="Untitled1924_20260909224644.png" alt="Sonic Crossover Collision Logo" class="megamix-main-logo">
+            
+            <!-- Download button directly underneath -->
+            <a href="#" class="header-download-button">Download Mod Build</a>
 
-    <div class="container">
-        
-        <!-- ==========================================================================
-             TRAILER VIDEO COMPONENT (With Retro Black Drop Shadow)
-             ========================================================================== -->
-        <div class="megamix-trailer-wrapper">
-            <!-- Replace 'VIDEO_ID' with your actual YouTube video link ID -->
-            <iframe 
-                src="https://youtube.com" 
-                title="Sonic Crossover Collision - Official Trailer" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
-        </div>
+            <!-- Trailer Video Component sits above the story -->
+            <div class="megamix-trailer-wrapper">
+                <iframe 
+                    src="https://youtube.com" 
+                    title="Sonic the Hedgehog: Chaos Collision - Official Trailer" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                 iframe>
+            </div>
 
-        <!-- Section: Game Story Synopsis -->
-        <section class="story-synopsis-card">
-            <h2>The Dimensional Anomaly</h2>
-            <p>A strange dimensional disturbance has thrown the worlds of <span class="txt-sonic">Sonic the Hedgehog</span>, <span class="txt-spongebob">SpongeBob SquarePants</span>, and <span class="txt-ppg">The Powerpuff Girls</span> into a chaotic collision! As familiar dimensions become fused together, Sonic and his new allies must work together to uncover the source of the disturbance and put an end to the chaos.</p>
-            <p>But with <span class="txt-eggman">Dr. Eggman</span>, <span class="txt-plankton">Plankton</span>, and <span class="txt-mojojojo">Mojo Jojo</span> joining forces, the heroes will have to face a threat unlike anything they've encountered before. Across strange new worlds filled with familiar faces, deadly enemies, and unexpected challenges, they'll need to collect the Chaos Emeralds, Secret Formula, and Chemical X samples before their enemies can use the dimensional chaos for their own purposes.</p>
-            <h5 class="story-tagline">The collision has begun. Three worlds. One adventure.</h5>
-        </section>
+            <!-- Game Story Synopsis Card sits over the scrolling backdrop -->
+            <section class="story-synopsis-card">
+                <h2>The Dimensional Anomaly</h2>
+                <p>A strange dimensional disturbance has thrown the worlds of <span class="txt-sonic">Sonic the Hedgehog</span>, <span class="txt-spongebob">SpongeBob SquarePants</span>, and <span class="txt-ppg">The Powerpuff Girls</span> into a chaotic collision! As familiar dimensions become fused together, Sonic and his new allies must work together to uncover the source of the disturbance and put an end to the chaos.</p>
+                <p>But with <span class="txt-eggman">Dr. Eggman</span>, <span class="txt-plankton">Plankton</span>, and <span class="txt-mojojojo">Mojo Jojo</span> joining forces, the heroes will have to face a threat unlike anything they've encountered before. Across strange new worlds filled with familiar faces, deadly enemies, and unexpected challenges, they'll need to collect the Chaos Emeralds, Secret Formula, and Chemical X samples before their enemies can use the dimensional chaos for their own purposes.</p>
+                <h5 class="story-tagline">The collision has begun. Three worlds. One adventure.</h5>
+            </section>
+
+        </div> <!-- Closes upper inner constrained box -->
+    </header> <!-- Closes full-width scrolling block right at the first divider -->
+
 
     <!-- ==========================================================================
-         CANVAS STAGE: SEPARATE TILED BRICK LABYRINTH STAGE BACKGROUND
+         FULL-WIDTH LABYRINTH CANVAS: Spans completely to the edges of the page view
          ========================================================================== -->
     <div class="labyrinth-matrix-canvas">
         <div class="container">
