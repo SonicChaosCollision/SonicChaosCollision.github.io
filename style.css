@@ -24,7 +24,7 @@ body {
    ========================================== */
 .scrolling-border {
   width: 100%;
-  height: 24px; /* Adjust height to match your pixel art border size */
+  height: 72px; /* Adjust height to match your pixel art border size */
   background-image: url('Untitled1937_20260912164242.png'); /* Path to your repeating zig-zag tile */
   background-repeat: repeat-x;
   background-size: auto 100%;
