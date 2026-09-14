@@ -215,7 +215,7 @@ body {
    ========================================== */
 /* Base Character Tag Style (Matches Megamix Mania Styling) */
 .char-tag {
-  font-family: 'Press Start 2P', 'Impact', sans-serif;
+  font-family: var
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 1px;
