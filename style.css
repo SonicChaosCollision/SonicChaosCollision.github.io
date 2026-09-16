@@ -535,6 +535,12 @@ body {
   --outline-color: #ffffff;
 }
 
+/* Lola: Pink Text, Magenta Outline */
+.character-card.lola {
+  --name-color: #ff66b2;
+  --outline-color: #99004d;
+}
+
 /* Robotnik: Red Text, White Outline */
 .character-card.robotnik {
   --name-color: #cc0000;
