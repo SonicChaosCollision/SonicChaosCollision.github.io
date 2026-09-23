@@ -481,24 +481,6 @@ body {
   --outline-color: #ffea00;
 }
 
-/* Blossom: Pink/Orange Text, Dark Red Outline */
-.character-card.blossom {
-  --name-color: #ff3366;
-  --outline-color: #990026;
-}
-
-/* Bubbles: Light Blue Text, Dark Blue Outline */
-.character-card.bubbles {
-  --name-color: #33ccff;
-  --outline-color: #0033aa;
-}
-
-/* Buttercup: Bright Green Text, Dark Green Outline */
-.character-card.buttercup {
-  --name-color: #00e64d;
-  --outline-color: #005511;
-}
-
 /* Amy: Pink Text, Yellow Outline */
 .character-card.amy {
   --name-color: #ff4081;
@@ -523,10 +505,10 @@ body {
   --outline-color: #ff007f;
 }
 
-/* Timmy: Pink Text, Yellow Outline */
-.character-card.timmy {
-  --name-color: #ff3399;
-  --outline-color: #ffff00;
+/* Dora: Orange Text, Lavender Outline */
+.character-card.dora {
+  --name-color: #ff6600;
+  --outline-color: #ac70c2;
 }
 
 /* Lincoln: Orange Text, White Outline */
@@ -535,29 +517,6 @@ body {
   --outline-color: #ffffff;
 }
 
-/* Lola: Pink Text, Magenta Outline */
-.character-card.lola {
-  --name-color: #ff66b2;
-  --outline-color: #99004d;
-}
-
-/* Robotnik: Red Text, White Outline */
-.character-card.robotnik {
-  --name-color: #cc0000;
-  --outline-color: #ffffff;
-}
-
-/* Plankton: Dark Green Text, Pink Outline */
-.character-card.plankton {
-  --name-color: #00802b;
-  --outline-color: #ff0066;
-}
-
-/* Mojo Jojo: Purple Text, Bright Lime Outline */
-.character-card.mojojojo {
-  --name-color: #6600cc;
-  --outline-color: #66ff00;
-}
 
 /* BIO TEXT */
 .character-bio {
