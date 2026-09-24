@@ -215,7 +215,7 @@ body {
    ========================================== */
 /* Base Character Tag Style (Matches Megamix Mania Styling) */
 .char-tag {
-  font-family: var
+  font-family: 'Montserrat', 'Arial Black', sans-serif;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -254,7 +254,7 @@ body {
     5px 5px 0px #000;
 }
 
-/* SpongeBob (Yellow text, Dark Orange outline) */
+/* SpongeBob (Yellow text, Dark Amber outline) */
 .char-tag.spongebob {
   color: #FACC15;
   text-shadow: 
@@ -270,46 +270,6 @@ body {
     5px 5px 0px #000;
 }
 
-/* Professor Utonium (White text, Slate Gray outline) */
-.char-tag.utonium {
-  color: #FFFFFF;
-  text-shadow: 
-    -2px -2px 0 #475569, 2px -2px 0 #475569, -2px 2px 0 #475569, 2px 2px 0 #475569,
-    5px 5px 0px #000;
-}
-
-/* The Powerpuff Girls (Hot Pink text, Dark Magenta outline) */
-.char-tag.powerpuff-girls {
-  color: #EC4899;
-  text-shadow: 
-    -2px -2px 0 #831843, 2px -2px 0 #831843, -2px 2px 0 #831843, 2px 2px 0 #831843,
-    5px 5px 0px #000;
-}
-
-/* Blossom (Bright Pink/Orange text, Deep Red outline) */
-.char-tag.blossom {
-  color: #FB7185;
-  text-shadow: 
-    -2px -2px 0 #9F1239, 2px -2px 0 #9F1239, -2px 2px 0 #9F1239, 2px 2px 0 #9F1239,
-    5px 5px 0px #000;
-}
-
-/* Bubbles (Light Cyan text, Deep Blue outline) */
-.char-tag.bubbles {
-  color: #38BDF8;
-  text-shadow: 
-    -2px -2px 0 #0369A1, 2px -2px 0 #0369A1, -2px 2px 0 #0369A1, 2px 2px 0 #0369A1,
-    5px 5px 0px #000;
-}
-
-/* Buttercup (Lime Green text, Dark Forest Green outline) */
-.char-tag.buttercup {
-  color: #4ADE80;
-  text-shadow: 
-    -2px -2px 0 #14532D, 2px -2px 0 #14532D, -2px 2px 0 #14532D, 2px 2px 0 #14532D,
-    5px 5px 0px #000;
-}
-
 /* Plankton (Teal text, Dark Green outline) */
 .char-tag.plankton {
   color: #2DD4BF;
@@ -318,11 +278,35 @@ body {
     5px 5px 0px #000;
 }
 
-/* Mojo Jojo (Purple text, Dark Indigo outline) */
-.char-tag.mojo {
-  color: #C084FC;
+/* Hatsune Miku (Cyan text, Deep Teal outline) */
+.char-tag.miku {
+  color: #38BDF8;
   text-shadow: 
-    -2px -2px 0 #312E81, 2px -2px 0 #312E81, -2px 2px 0 #312E81, 2px 2px 0 #312E81,
+    -2px -2px 0 #0369A1, 2px -2px 0 #0369A1, -2px 2px 0 #0369A1, 2px 2px 0 #0369A1,
+    5px 5px 0px #000;
+}
+
+/* Ristar (Gold Star text, Dark Ruby outline) */
+.char-tag.ristar {
+  color: #FDE047;
+  text-shadow: 
+    -2px -2px 0 #991B1B, 2px -2px 0 #991B1B, -2px 2px 0 #991B1B, 2px 2px 0 #991B1B,
+    5px 5px 0px #000;
+}
+
+/* Dora the Explorer (Magenta text, Dark Purple outline) */
+.char-tag.dora {
+  color: #EC4899;
+  text-shadow: 
+    -2px -2px 0 #831843, 2px -2px 0 #831843, -2px 2px 0 #831843, 2px 2px 0 #831843,
+    5px 5px 0px #000;
+}
+
+/* Lincoln Loud (Ace Savvy White text, Slate Gray outline) */
+.char-tag.lincoln {
+  color: #FFFFFF;
+  text-shadow: 
+    -2px -2px 0 #475569, 2px -2px 0 #475569, -2px 2px 0 #475569, 2px 2px 0 #475569,
     5px 5px 0px #000;
 }
 
@@ -339,14 +323,6 @@ body {
   color: #F59E0B;
   text-shadow: 
     -2px -2px 0 #78350F, 2px -2px 0 #78350F, -2px 2px 0 #78350F, 2px 2px 0 #78350F,
-    5px 5px 0px #000;
-}
-
-/* Chemical X (Violet text, Deep Purple outline) */
-.char-tag.chemical-x {
-  color: #C084FC;
-  text-shadow: 
-    -2px -2px 0 #581C87, 2px -2px 0 #581C87, -2px 2px 0 #581C87, 2px 2px 0 #581C87,
     5px 5px 0px #000;
 }
 
