@@ -197,13 +197,13 @@ body {
 .megamix-story-container p, 
 .story-block {
   color: #ffffff;
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 1.15rem;
-  font-weight: 600;
-  line-height: 1.7;
-  margin-top: 0;
-  margin-bottom: 24px; /* Creates clean space between paragraphs */
-  display: block;
+  /* Uses Jost (Google's Futura alternative), falling back to Futura or Century Gothic */
+  font-family: 'Jost', 'Futura', 'Century Gothic', sans-serif; 
+  font-size: 1.25rem;
+  font-weight: 500; /* Medium weight matches the screenshot weight closely */
+  line-height: 1.65;
+  margin-bottom: 28px;
+  letter-spacing: 0.5px;
 }
 
 /* Base Tag Styling: Heavy 3D Black Block Shadow */
