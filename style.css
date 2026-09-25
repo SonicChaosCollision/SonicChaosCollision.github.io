@@ -47,12 +47,20 @@ body {
   to { background-position: -1000px bottom; } /* Adjust speed/length based on your image size */
 }
 
-/* Top Logo */
+/* Scaled Logo to match Megamix layout proportions */
 .hero-logo {
-  max-width: 90%;
-  width: 480px;
+  width: 100%;
+  max-width: 320px; /* Reduced max width to keep it compact on desktop */
   height: auto;
-  filter: drop-shadow(0 8px 0px rgba(0,0,0,0.5));
+  margin-top: 10px;
+  filter: drop-shadow(0 6px 0px rgba(0, 0, 0, 0.6));
+}
+
+/* Mobile tweak so it doesn't crowd small screens */
+@media (max-width: 480px) {
+  .hero-logo {
+    max-width: 240px; 
+  }
 }
 
 /* Download Button (Matching that metallic blue retro look) */
