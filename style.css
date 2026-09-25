@@ -49,11 +49,12 @@ body {
 
 /* Scaled Logo to match Megamix layout proportions */
 .hero-logo {
-  width: 100%;
-  max-width: 320px; /* Reduced max width to keep it compact on desktop */
-  height: auto;
-  margin-top: 10px;
-  filter: drop-shadow(0 6px 0px rgba(0, 0, 0, 0.6));
+  width: 85vw;          /* Takes up 85% of the viewport width */
+  max-width: 500px;     /* Prevents it from getting absurdly huge on 4K desktop screens */
+  height: auto;         /* Preserves aspect ratio automatically */
+  display: block;
+  margin: 10px auto 0;  /* Centers the logo */
+  filter: drop-shadow(0 4px 0px rgba(0, 0, 0, 0.5));
 }
 
 /* Mobile tweak so it doesn't crowd small screens */
