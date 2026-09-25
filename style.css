@@ -193,54 +193,56 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* Base Body Text */
+/* Paragraph Spacing Fix */
+.megamix-story-container p, 
 .story-block {
   color: #ffffff;
   font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   font-weight: 600;
-  line-height: 1.6;
-  margin-bottom: 28px;
-  letter-spacing: 0.5px;
+  line-height: 1.7;
+  margin-top: 0;
+  margin-bottom: 24px; /* Creates clean space between paragraphs */
+  display: block;
 }
 
-/* Common Heavy Block Shadow Tag Styling */
+/* Base Tag Styling with Heavy Black 3D Outline */
 .tag {
   font-weight: 900;
   text-transform: uppercase;
-  display: inline-block;
-  padding: 0 4px;
+  display: inline;
+  padding: 0 2px;
   text-shadow: 
     2px 2px 0px #000000,
     3px 3px 0px #000000,
     4px 4px 0px #000000;
 }
 
-/* --- SEGA / GUEST CHARACTER COLORS --- */
-.tag-sonic     { color: #4381ff; }
-.tag-tails     { color: #ffaa00; }
-.tag-knuckles  { color: #22cc44; }
-.tag-shadow    { color: #ff2222; }
-.tag-eggman    { color: #ff0000; }
-.tag-amy       { color: #ff66cc; }
-.tag-mighty    { color: #ee3322; }
-.tag-chaotix   { color: #9933ff; }
-.tag-ristar    { color: #ffcc00; }
-.tag-miku      { color: #39c5bb; }
+/* Sega / Guest Tag Colors */
+.tag-sonic     { color: #4381ff !important; }
+.tag-tails     { color: #ffaa00 !important; }
+.tag-knuckles  { color: #22cc44 !important; }
+.tag-shadow    { color: #ff2222 !important; }
+.tag-eggman    { color: #ff0000 !important; }
+.tag-amy       { color: #ff66cc !important; }
+.tag-mighty    { color: #ee3322 !important; }
+.tag-chaotix   { color: #9933ff !important; }
+.tag-ristar    { color: #ffcc00 !important; }
+.tag-miku      { color: #39c5bb !important; }
 
-/* --- NICK / NOGGIN CHARACTER COLORS --- */
-.tag-spongebob { color: #fff000; }
-.tag-patrick   { color: #ff88aa; }
-.tag-squidward { color: #55d4c4; }
-.tag-larry     { color: #e63946; }
-.tag-sandy     { color: #d2a679; }
-.tag-dora      { color: #ff6600; }
-.tag-lincoln   { color: #ffffff; }
+/* Nick / Noggin Tag Colors */
+.tag-spongebob { color: #fff000 !important; }
+.tag-patrick   { color: #ff88aa !important; }
+.tag-squidward { color: #55d4c4 !important; }
+.tag-larry     { color: #e63946 !important; }
+.tag-sandy     { color: #d2a679 !important; }
+.tag-dora      { color: #ff6600 !important; }
+.tag-lincoln   { color: #ffffff !important; }
 .tag-lola      { 
-  color: #ff69b4; 
+  color: #ff69b4 !important; 
   text-shadow: 
     2px 2px 0px #2a002a,
-    3px 3px 0px #ffd700;
+    3px 3px 0px #ffd700 !important;
 }
 
 .character-container {
