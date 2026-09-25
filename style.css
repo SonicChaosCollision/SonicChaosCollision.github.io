@@ -206,45 +206,116 @@ body {
   display: block;
 }
 
-/* Base Tag Styling with Heavy Black 3D Outline */
+/* Base Tag Styling: Heavy 3D Black Block Shadow */
 .tag {
   font-weight: 900;
+  font-family: Arial Black, sans-serif;
   text-transform: uppercase;
-  display: inline;
-  padding: 0 2px;
+  display: inline-block;
+  padding: 0 3px;
+  
+  /* Solid Black 3D Block Shadow */
   text-shadow: 
-    2px 2px 0px #000000,
     3px 3px 0px #000000,
-    4px 4px 0px #000000;
+    4px 4px 0px #000000,
+    5px 5px 0px #000000;
 }
 
-/* Sega / Guest Tag Colors */
-.tag-sonic     { color: #4381ff !important; }
-.tag-tails     { color: #ffaa00 !important; }
-.tag-knuckles  { color: #22cc44 !important; }
-.tag-shadow    { color: #ff2222 !important; }
-.tag-eggman    { color: #ff0000 !important; }
-.tag-amy       { color: #ff66cc !important; }
-.tag-mighty    { color: #ee3322 !important; }
-.tag-chaotix   { color: #9933ff !important; }
-.tag-ristar    { color: #ffcc00 !important; }
-.tag-miku      { color: #39c5bb !important; }
-
-/* Nick / Noggin Tag Colors */
-.tag-spongebob { color: #fff000 !important; }
-.tag-patrick   { color: #ff88aa !important; }
-.tag-squidward { color: #55d4c4 !important; }
-.tag-larry     { color: #e63946 !important; }
-.tag-sandy     { color: #d2a679 !important; }
-.tag-dora      { color: #ff6600 !important; }
-.tag-lincoln   { color: #ffffff !important; }
-.tag-lola      { 
-  color: #ff69b4 !important; 
-  text-shadow: 
-    2px 2px 0px #2a002a,
-    3px 3px 0px #ffd700 !important;
+/* --- SEGA / GUEST CHARACTERS (Main Color + Unique Outline) --- */
+.tag-sonic {
+  color: #4381ff !important;            /* Sonic Blue Text */
+  -webkit-text-stroke: 1.5px #002288;   /* Dark Cobalt Blue Outline */
 }
 
+.tag-tails {
+  color: #ffaa00 !important;            /* Amber Yellow Text */
+  -webkit-text-stroke: 1.5px #ff5500;   /* Orange-Red Outline */
+}
+
+.tag-knuckles {
+  color: #ff2222 !important;            /* Knuckles Red Text */
+  -webkit-text-stroke: 1.5px #22cc44;   /* Green Outline (Matches Screenshot 3) */
+}
+
+.tag-shadow {
+  color: #dc0000 !important;            /* Crimson Red Text */
+  -webkit-text-stroke: 1.5px #ffd700;   /* Gold Accent Outline */
+}
+
+.tag-eggman {
+  color: #ffffff !important;            /* White Text */
+  background-color: #ff0000;            /* Solid Red Box (Matches Screenshot 1) */
+  padding: 1px 6px;
+  border-radius: 2px;
+  -webkit-text-stroke: 0px;
+}
+
+.tag-amy {
+  color: #ff66cc !important;            /* Hot Pink Text */
+  -webkit-text-stroke: 1.5px #ffffff;   /* Pure White Outline */
+}
+
+.tag-mighty {
+  color: #ee3322 !important;            /* Armadillo Red Text */
+  -webkit-text-stroke: 1.5px #000000;   /* Black Shell Outline */
+}
+
+.tag-chaotix {
+  color: #9933ff !important;            /* Purple Text */
+  -webkit-text-stroke: 1.5px #22cc44;   /* Bright Green Outline (Matches Screenshot 2) */
+}
+
+.tag-ristar {
+  color: #ffcc00 !important;            /* Star Yellow Text */
+  -webkit-text-stroke: 1.5px #ff0055;   /* Magenta/Red Outline */
+}
+
+.tag-miku {
+  color: #39c5bb !important;            /* Hatsune Teal Text */
+  -webkit-text-stroke: 1.5px #ff66cc;   /* Pink Accent Outline */
+}
+
+
+/* --- NICK / NOGGIN CHARACTERS (Main Color + Unique Outline) --- */
+.tag-spongebob {
+  color: #fff000 !important;            /* Sponge Yellow Text */
+  -webkit-text-stroke: 1.5px #ff6600;   /* Bright Orange Outline */
+}
+
+.tag-patrick {
+  color: #ff88aa !important;            /* Starfish Pink Text */
+  -webkit-text-stroke: 1.5px #88cc00;   /* Short-Green Outline */
+}
+
+.tag-squidward {
+  color: #55d4c4 !important;            /* Teal Text */
+  -webkit-text-stroke: 1.5px #8800cc;   /* Shirt Purple Outline */
+}
+
+.tag-larry {
+  color: #e63946 !important;            /* Lobster Crimson Text */
+  -webkit-text-stroke: 1.5px #fff000;   /* Gold/Yellow Outline */
+}
+
+.tag-sandy {
+  color: #d2a679 !important;            /* Pecan Brown Text */
+  -webkit-text-stroke: 1.5px #ff3399;   /* Treedome Flower Pink Outline */
+}
+
+.tag-dora {
+  color: #ff6600 !important;            /* Explorer Orange Text */
+  -webkit-text-stroke: 1.5px #ffcc00;   /* Backpack Yellow Outline */
+}
+
+.tag-lincoln {
+  color: #ffffff !important;            /* Hair White Text */
+  -webkit-text-stroke: 1.5px #ffaa00;   /* Orange Polo Accent Outline */
+}
+
+.tag-lola {
+  color: #ff69b4 !important;            /* Pageant Pink Text */
+  -webkit-text-stroke: 1.5px #ffd700;   /* Tiara Gold Outline */
+}
 .character-container {
   width: 100%;
   max-width: 1000px; /* Gives plenty of room for centered cards */
