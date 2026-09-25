@@ -493,6 +493,12 @@ body {
   --outline-color: #ffffff;
 }
 
+/* Lola: Hot Pink Text, Tiara Gold Outline */
+.character-card.lola {
+  --name-color: #ff69b4;
+  --outline-color: #ffd700;
+}
+
 
 /* BIO TEXT */
 .character-bio {
