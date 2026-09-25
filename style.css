@@ -183,155 +183,64 @@ body {
   color: #ffffff;
 }
 
-.story-container {
-  max-width: 700px;
-  margin: 0 auto; /* Centers the container horizontally */
-  display: flex;
-  flex-direction: column;
-  gap: 35px;
-  text-align: left; /* Keeps story text readable while container is centered */
-}
-
-.story-text {
-  font-family: var(--font-body);
-  font-size: 1.25rem;
-  font-weight: 600;
-  line-height: 1.8;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-/* TV Frame Screenshot Box */
-.tv-frame {
-  position: relative;
-  width: 100%;
-  max-width: 500px;
-  margin: 10px auto;
-  background: #111;
-  border: 8px solid #222;
+/* Megamix Blue Container */
+.megamix-story-container {
+  background-color: #2b5bc7; /* Exact royal blue background from screenshots */
+  padding: 40px 30px;
+  max-width: 800px;
+  margin: 0 auto;
   border-radius: 8px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-.tv-screenshot {
-  width: 100%;
-  height: auto;
-  display: block;
+/* Base Body Text */
+.story-block {
+  color: #ffffff;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-bottom: 28px;
+  letter-spacing: 0.5px;
 }
 
-/* ==========================================
-   STORY HIGHLIGHT TEXT (MEGAMIX STYLE)
-   ========================================== */
-/* Base Character Tag Style (Matches Megamix Mania Styling) */
-.char-tag {
-  font-family: 'Montserrat', 'Arial Black', sans-serif;
+/* Common Heavy Block Shadow Tag Styling */
+.tag {
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 1px;
   display: inline-block;
-  padding: 0 2px;
+  padding: 0 4px;
+  text-shadow: 
+    2px 2px 0px #000000,
+    3px 3px 0px #000000,
+    4px 4px 0px #000000;
 }
 
-/* 
-  Each character tag below uses:
-  1. Main Text Color (color)
-  2. Darker/Contrast Outline (-2px/2px shifts)
-  3. Solid Black Offset Drop Shadow (5px 5px 0px #000)
-*/
+/* --- SEGA / GUEST CHARACTER COLORS --- */
+.tag-sonic     { color: #4381ff; }
+.tag-tails     { color: #ffaa00; }
+.tag-knuckles  { color: #22cc44; }
+.tag-shadow    { color: #ff2222; }
+.tag-eggman    { color: #ff0000; }
+.tag-amy       { color: #ff66cc; }
+.tag-mighty    { color: #ee3322; }
+.tag-chaotix   { color: #9933ff; }
+.tag-ristar    { color: #ffcc00; }
+.tag-miku      { color: #39c5bb; }
 
-/* Sonic (Blue text, Dark Navy outline) */
-.char-tag.sonic {
-  color: #3B82F6;
+/* --- NICK / NOGGIN CHARACTER COLORS --- */
+.tag-spongebob { color: #fff000; }
+.tag-patrick   { color: #ff88aa; }
+.tag-squidward { color: #55d4c4; }
+.tag-larry     { color: #e63946; }
+.tag-sandy     { color: #d2a679; }
+.tag-dora      { color: #ff6600; }
+.tag-lincoln   { color: #ffffff; }
+.tag-lola      { 
+  color: #ff69b4; 
   text-shadow: 
-    -2px -2px 0 #1E3A8A, 2px -2px 0 #1E3A8A, -2px 2px 0 #1E3A8A, 2px 2px 0 #1E3A8A,
-    5px 5px 0px #000;
-}
-
-/* Eggman (Red text, Dark Crimson outline) */
-.char-tag.eggman {
-  color: #EF4444;
-  text-shadow: 
-    -2px -2px 0 #7F1D1D, 2px -2px 0 #7F1D1D, -2px 2px 0 #7F1D1D, 2px 2px 0 #7F1D1D,
-    5px 5px 0px #000;
-}
-
-/* Chaotix (Purple text, Dark Violet outline) */
-.char-tag.chaotix {
-  color: #A855F7;
-  text-shadow: 
-    -2px -2px 0 #581C87, 2px -2px 0 #581C87, -2px 2px 0 #581C87, 2px 2px 0 #581C87,
-    5px 5px 0px #000;
-}
-
-/* SpongeBob (Yellow text, Dark Amber outline) */
-.char-tag.spongebob {
-  color: #FACC15;
-  text-shadow: 
-    -2px -2px 0 #B45309, 2px -2px 0 #B45309, -2px 2px 0 #B45309, 2px 2px 0 #B45309,
-    5px 5px 0px #000;
-}
-
-/* Sandy (Orange/Brown text, Dark Brown outline) */
-.char-tag.sandy {
-  color: #F97316;
-  text-shadow: 
-    -2px -2px 0 #7C2D12, 2px -2px 0 #7C2D12, -2px 2px 0 #7C2D12, 2px 2px 0 #7C2D12,
-    5px 5px 0px #000;
-}
-
-/* Plankton (Teal text, Dark Green outline) */
-.char-tag.plankton {
-  color: #2DD4BF;
-  text-shadow: 
-    -2px -2px 0 #134E4A, 2px -2px 0 #134E4A, -2px 2px 0 #134E4A, 2px 2px 0 #134E4A,
-    5px 5px 0px #000;
-}
-
-/* Hatsune Miku (Cyan text, Deep Teal outline) */
-.char-tag.miku {
-  color: #38BDF8;
-  text-shadow: 
-    -2px -2px 0 #0369A1, 2px -2px 0 #0369A1, -2px 2px 0 #0369A1, 2px 2px 0 #0369A1,
-    5px 5px 0px #000;
-}
-
-/* Ristar (Gold Star text, Dark Ruby outline) */
-.char-tag.ristar {
-  color: #FDE047;
-  text-shadow: 
-    -2px -2px 0 #991B1B, 2px -2px 0 #991B1B, -2px 2px 0 #991B1B, 2px 2px 0 #991B1B,
-    5px 5px 0px #000;
-}
-
-/* Dora the Explorer (Magenta text, Dark Purple outline) */
-.char-tag.dora {
-  color: #EC4899;
-  text-shadow: 
-    -2px -2px 0 #831843, 2px -2px 0 #831843, -2px 2px 0 #831843, 2px 2px 0 #831843,
-    5px 5px 0px #000;
-}
-
-/* Lincoln Loud (Ace Savvy White text, Slate Gray outline) */
-.char-tag.lincoln {
-  color: #FFFFFF;
-  text-shadow: 
-    -2px -2px 0 #475569, 2px -2px 0 #475569, -2px 2px 0 #475569, 2px 2px 0 #475569,
-    5px 5px 0px #000;
-}
-
-/* Chaos Emeralds (Cyan text, Deep Teal outline) */
-.char-tag.chaos-emeralds {
-  color: #22D3EE;
-  text-shadow: 
-    -2px -2px 0 #164E63, 2px -2px 0 #164E63, -2px 2px 0 #164E63, 2px 2px 0 #164E63,
-    5px 5px 0px #000;
-}
-
-/* Secret Formula (Gold text, Dark Amber outline) */
-.char-tag.secret-formula {
-  color: #F59E0B;
-  text-shadow: 
-    -2px -2px 0 #78350F, 2px -2px 0 #78350F, -2px 2px 0 #78350F, 2px 2px 0 #78350F,
-    5px 5px 0px #000;
+    2px 2px 0px #2a002a,
+    3px 3px 0px #ffd700;
 }
 
 .character-container {
