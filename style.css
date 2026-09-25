@@ -209,7 +209,7 @@ body {
 /* Base Tag Styling: Heavy 3D Black Block Shadow */
 .tag {
   font-weight: 900;
-  font-family: Arial Black, sans-serif;
+  font-family: Montserrat, sans-serif;
   text-transform: uppercase;
   display: inline-block;
   padding: 0 3px;
@@ -244,10 +244,7 @@ body {
 
 .tag-eggman {
   color: #ffffff !important;            /* White Text */
-  background-color: #ff0000;            /* Solid Red Box (Matches Screenshot 1) */
-  padding: 1px 6px;
-  border-radius: 2px;
-  -webkit-text-stroke: 0px;
+  -webkit-text-stroke: 1.5px; #ff0000   /* Solid Red Text */
 }
 
 .tag-amy {
