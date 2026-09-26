@@ -33,17 +33,16 @@ img {
 .character-card {
   position: relative;
   width: 100%;
-  max-width: 420px; /* Sets the exact narrow vertical width */
-  margin: 0 auto;   /* Backup horizontal centering */
+  max-width: 420px;
+  margin: 0 auto;
   background-color: var(--card-bg-green, #61ab8b);
   border: 5px solid var(--card-red-border, #cc1100);
-  border-radius: 0px; /* Pointy, sharp corners */
+  border-radius: 0px;
   padding: 35px 25px;
   text-align: center;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
-}
-  
-  /* Scroll Animation Initial State */
+
+  /* Scroll Animation Initial State (Fixed placement inside class) */
   opacity: 0;
   transform: translateY(60px) scale(0.95);
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
@@ -78,7 +77,7 @@ img {
   mix-blend-mode: normal !important;
 }
 
-/* Base Body/Bio Color (Forces crisp readable light-gray/off-white) */
+/* Base Body/Bio Color */
 .character-card .character-bio,
 .card-description {
   color: #e0e6ff !important;
@@ -87,11 +86,8 @@ img {
 }
 
 /* ==========================================
-   CHARACTER NAME TEXT (CUSTOM COLOR + CUSTOM OUTLINE + DROP SHADOW)
+   CHARACTER NAME TEXT (CUSTOM COLOR + OUTLINE + DROP SHADOW)
    ========================================== */
-/* Clean Card Headers (Fixes Text Bleed & Overlap) */
-/* --- CHARACTER CARD HEADERS (NAMES) --- */
-/* --- CHARACTER CARD HEADER BASE SETUP --- */
 .character-card .character-name,
 .card-title {
   font-family: 'Jost', 'Futura-ExtraBold', 'Impact', sans-serif !important;
@@ -103,7 +99,6 @@ img {
   display: block;
   margin-bottom: 12px;
   
-  /* Prevents WebKit engine from defaulting text fill to white */
   -webkit-text-fill-color: initial !important;
   -webkit-text-stroke: 0px !important;
   
@@ -115,7 +110,6 @@ img {
    SEGA & GUEST CHARACTERS
    ========================================================================== */
 
-/* SONIC THE HEDGEHOG (Blue Fill + Gold Outline) */
 .card-sonic .character-name {
   color: #2b60ff !important;
   -webkit-text-fill-color: #2b60ff !important;
@@ -124,7 +118,6 @@ img {
     -1px  1px 0 #ffcc00, 1px  1px 0 #ffcc00 !important;
 }
 
-/* MILES "TAILS" PROWER (Amber Fill + Red-Orange Outline) */
 .card-tails .character-name {
   color: #ffaa00 !important;
   -webkit-text-fill-color: #ffaa00 !important;
@@ -133,7 +126,6 @@ img {
     -1px  1px 0 #ff4400, 1px  1px 0 #ff4400 !important;
 }
 
-/* KNUCKLES THE ECHIDNA (Red Fill + Bright Green Outline) */
 .card-knuckles .character-name {
   color: #ff2222 !important;
   -webkit-text-fill-color: #ff2222 !important;
@@ -142,7 +134,6 @@ img {
     -1px  1px 0 #22cc44, 1px  1px 0 #22cc44 !important;
 }
 
-/* SHADOW THE HEDGEHOG (Crimson Fill + Gold Outline) */
 .card-shadow .character-name {
   color: #dc0000 !important;
   -webkit-text-fill-color: #dc0000 !important;
@@ -151,7 +142,6 @@ img {
     -1px  1px 0 #ffd700, 1px  1px 0 #ffd700 !important;
 }
 
-/* DR. EGGMAN (Red Fill + White Outline) */
 .card-eggman .character-name {
   color: #ff0000 !important;
   -webkit-text-fill-color: #ff0000 !important;
@@ -160,7 +150,6 @@ img {
     -1px  1px 0 #ffffff, 1px  1px 0 #ffffff !important;
 }
 
-/* AMY ROSE (Pink Fill + White Outline) */
 .card-amy .character-name {
   color: #ff66cc !important;
   -webkit-text-fill-color: #ff66cc !important;
@@ -169,7 +158,6 @@ img {
     -1px  1px 0 #ffffff, 1px  1px 0 #ffffff !important;
 }
 
-/* MIGHTY THE ARMADILLO (Red-Orange Fill + Black Outline) */
 .card-mighty .character-name {
   color: #ee3322 !important;
   -webkit-text-fill-color: #ee3322 !important;
@@ -178,7 +166,6 @@ img {
     -1px  1px 0 #000000, 1px  1px 0 #000000 !important;
 }
 
-/* THE CHAOTIX (Purple Fill + Bright Green Outline) */
 .card-chaotix .character-name {
   color: #9933ff !important;
   -webkit-text-fill-color: #9933ff !important;
@@ -187,7 +174,6 @@ img {
     -1px  1px 0 #22cc44, 1px  1px 0 #22cc44 !important;
 }
 
-/* RISTAR (Star Yellow Fill + Magenta Outline) */
 .card-ristar .character-name {
   color: #ffcc00 !important;
   -webkit-text-fill-color: #ffcc00 !important;
@@ -196,7 +182,6 @@ img {
     -1px  1px 0 #ff0055, 1px  1px 0 #ff0055 !important;
 }
 
-/* HATSUNE MIKU (Teal Fill + Hot Pink Outline) */
 .card-miku .character-name {
   color: #39c5bb !important;
   -webkit-text-fill-color: #39c5bb !important;
@@ -205,12 +190,10 @@ img {
     -1px  1px 0 #ff66cc, 1px  1px 0 #ff66cc !important;
 }
 
-
 /* ==========================================================================
    NICK & NOGGIN CHARACTERS
    ========================================================================== */
 
-/* SPONGEBOB SQUAREPANTS (Sponge Yellow Fill + Orange Outline) */
 .card-spongebob .character-name {
   color: #fff000 !important;
   -webkit-text-fill-color: #fff000 !important;
@@ -219,7 +202,6 @@ img {
     -1px  1px 0 #ff6600, 1px  1px 0 #ff6600 !important;
 }
 
-/* PATRICK STAR (Starfish Pink Fill + Lime Green Outline) */
 .card-patrick .character-name {
   color: #ff88aa !important;
   -webkit-text-fill-color: #ff88aa !important;
@@ -228,7 +210,6 @@ img {
     -1px  1px 0 #88cc00, 1px  1px 0 #88cc00 !important;
 }
 
-/* SQUIDWARD TENTACLES (Cyan Fill + Purple Outline) */
 .card-squidward .character-name {
   color: #55d4c4 !important;
   -webkit-text-fill-color: #55d4c4 !important;
@@ -237,7 +218,6 @@ img {
     -1px  1px 0 #8800cc, 1px  1px 0 #8800cc !important;
 }
 
-/* LARRY THE LOBSTER (Crimson Fill + Gold Outline) */
 .card-larry .character-name {
   color: #e63946 !important;
   -webkit-text-fill-color: #e63946 !important;
@@ -246,7 +226,6 @@ img {
     -1px  1px 0 #fff000, 1px  1px 0 #fff000 !important;
 }
 
-/* SANDY CHEEKS (Pecan Brown Fill + Treedome Pink Outline) */
 .card-sandy .character-name {
   color: #d2a679 !important;
   -webkit-text-fill-color: #d2a679 !important;
@@ -255,7 +234,6 @@ img {
     -1px  1px 0 #ff3399, 1px  1px 0 #ff3399 !important;
 }
 
-/* DORA THE EXPLORER (Explorer Orange Fill + Backpack Yellow Outline) */
 .card-dora .character-name {
   color: #ff6600 !important;
   -webkit-text-fill-color: #ff6600 !important;
@@ -264,7 +242,6 @@ img {
     -1px  1px 0 #ffcc00, 1px  1px 0 #ffcc00 !important;
 }
 
-/* LINCOLN LOUD (White Fill + Orange Polo Outline) */
 .card-lincoln .character-name {
   color: #ffffff !important;
   -webkit-text-fill-color: #ffffff !important;
@@ -273,7 +250,6 @@ img {
     -1px  1px 0 #ffaa00, 1px  1px 0 #ffaa00 !important;
 }
 
-/* LOLA LOUD (Pageant Pink Fill + Tiara Gold Outline) */
 .card-lola .character-name {
   color: #ff69b4 !important;
   -webkit-text-fill-color: #ff69b4 !important;
@@ -281,6 +257,7 @@ img {
     -1px -1px 0 #ffd700, 1px -1px 0 #ffd700,
     -1px  1px 0 #ffd700, 1px  1px 0 #ffd700 !important;
 }
+
 /* --- CHARACTER CARD BIO TEXT --- */
 .character-card .character-bio,
 .card-description {
@@ -289,7 +266,7 @@ img {
   font-size: 1.05rem;
   line-height: 1.5;
   color: #ffffff !important;
-  text-shadow: 1px 1px 2px #000000; /* Subtle shadow to keep bio text easy to read */
+  text-shadow: 1px 1px 2px #000000;
 }
 
 body {
