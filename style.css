@@ -480,27 +480,30 @@ body {
    INLINE TAG BASE CLASS & CHARACTER PALETTES
    ========================================================================== */
 
-/* Shared structural rules for the base .tag class */
+/* Outer Tag Wrapper - Keep strictly inline */
 .tag {
-  font-size: 1.1rem !important; /* ~17.6px */
-  padding: 4px 10px;
-  display: inline-block;
-  margin: 0 2px;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  text-shadow: none !important;
+  filter: none !important;
+  background: none !important;
+  border: none !important;
 }
 
+/* Inner Text Tag - Prevent mid-name wrapping and double-rendering */
 .character-name-inline {
-  font-family: 'Futura-Bold', 'Futura Extra Bold', 'Futura', 'Jost', sans-serif !important;
+  font-family: 'Futura-ExtraBold', 'Futura-Bold', 'Futura', 'Jost', sans-serif !important;
   font-weight: 900 !important;
-  font-size: 1.3em !important;            /* Scales up name text relative to paragraph body */
-  letter-spacing: 0.8px !important;       /* Adds slight breathing room for readability */
-  -webkit-text-stroke-width: 1.5px !important; /* Sharpens the outer line border */
-  display: inline-block;
-  margin: 0 1px;
+  font-size: 1.15em !important;            /* Scaled slightly for better line rhythm */
+  letter-spacing: 0.5px !important;
   text-transform: uppercase;
+  display: inline;                        /* Changed from inline-block to prevent breaking */
+  white-space: nowrap;                    /* Keeps the character's full name together on one line */
   
-  /* Single crisp stroke & block shadow setup */
+  /* Single crisp stroke & black block shadow */
   text-shadow: none !important;
-  -webkit-text-stroke-width: 1px !important;
+  -webkit-text-stroke-width: 1.5px !important;
   paint-order: stroke fill !important;
   -webkit-paint-order: stroke fill !important;
   filter: drop-shadow(2px 2px 0px #000000) !important;
