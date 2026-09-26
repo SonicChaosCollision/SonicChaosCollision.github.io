@@ -224,7 +224,7 @@ body {
 /* Import Google Font for the character names */
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@900&display=swap');
 
-/* Base Tag Styling with ONE Single Solid Black Shadow */
+/* Base Tag Styling with Pure 100% Solid Black Drop Shadow */
 .tag {
   font-family: 'Jost', 'Futura-ExtraBold', 'Impact', sans-serif !important;
   font-weight: 900 !important;
@@ -233,27 +233,30 @@ body {
   padding: 0 2px;
   letter-spacing: 0.5px;
   
-  /* FIXED: Exactly ONE single crisp offset shadow down and to the right */
-  text-shadow: 4px 4px 0px #000000 !important;
+  /* Clears old text-shadow blur */
+  text-shadow: none !important;
   
-  /* Prevents the stroke from eating into the inside of the letters */
+  /* Renders a single, sharp 100% pitch-black offset shadow */
+  filter: drop-shadow(3px 3px 0px #000000) !important;
+  
+  /* Keeps the text outline crisp and behind the fill */
   paint-order: stroke fill;
 }
 
 /* --- SEGA / GUEST CHARACTERS --- */
 .tag-sonic {
   color: #2b60ff !important;
-  -webkit-text-stroke: 1px #ffcc00; /* Crisp Yellow/Gold Outline */
+  -webkit-text-stroke: 1px #ffcc00;
 }
 
 .tag-tails {
   color: #ffaa00 !important;
-  -webkit-text-stroke: 1px #ff4400; /* Orange/Red Outline */
+  -webkit-text-stroke: 1px #ff4400;
 }
 
 .tag-knuckles {
-  color: #ff2222 !important; /* Fixed to Red Fill */
-  -webkit-text-stroke: 1px #22cc44; /* Green Accent Outline */
+  color: #ff2222 !important;
+  -webkit-text-stroke: 1px #22cc44;
 }
 
 .tag-shadow {
@@ -262,11 +265,8 @@ body {
 }
 
 .tag-eggman {
-  color: #ff0000 !important;             /* Red Text Fill */
-  -webkit-text-stroke: 1px #ffffff;     /* White Accent Outline */
-  background-color: transparent !important; /* Removes the box */
-  padding: 0 2px;
-  border-radius: 0;
+  color: #ff0000 !important;
+  -webkit-text-stroke: 1px #ffffff;
 }
 
 .tag-amy {
@@ -331,9 +331,8 @@ body {
 }
 
 .tag-lola {
-  color: #ff69b4 !important; /* Hot Pink Fill */
-  -webkit-text-stroke: 1px #ffd700; /* Tiara Gold Outline */
-  text-shadow: 4px 4px 0px #000000 !important; /* Single Black Shadow */
+  color: #ff69b4 !important;
+  -webkit-text-stroke: 1px #ffd700;
 }
 
 .character-container {
