@@ -27,85 +27,102 @@ img {
   --font-body: 'Jost', 'Futura', 'Century Gothic', sans-serif;
 }
 
-/* ==========================================
-   NARROW VERTICAL RECTANGLE CARD ARCHITECTURE
-   ========================================== */
+/* ==========================================================================
+   CARD CONTAINER (TALL TRADING-CARD PROPORTIONS + SCROLL DIRECTION BEHAVIOR)
+   ========================================================================== */
 .character-card {
   position: relative;
   width: 100%;
-  max-width: 420px;
+  max-width: 320px;            /* Narrower width for tall trading card ratio */
   margin: 0 auto;
-  background-color: var(--card-bg-green, #61ab8b);
-  border: 5px solid var(--card-red-border, #cc1100);
-  border-radius: 0px;
-  padding: 35px 25px;
+  background-color: #6aab8e;    /* Muted sage-green card body background */
+  border: 4px solid #cc0000;    /* Solid red outer border */
+  border-radius: 0px;          /* Sharp 90-degree corners */
+  padding: 24px 18px 20px 18px; /* Tighter padding to match reference margins */
   text-align: center;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+  box-sizing: border-box;
 
-  /* Scroll Animation Initial State (Fixed placement inside class) */
-  opacity: 0;
-  transform: translateY(60px) scale(0.95);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  /* Smooth state transition */
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
+  will-change: transform, opacity, visibility;
 }
 
-/* Active class toggled by JS when scrolling into view */
-.character-card.visible {
+/* --------------------------------------------------------------------------
+   SCROLL DIRECTION STATES
+   -------------------------------------------------------------------------- */
+
+/* Default Visible State (or when scrolling DOWN) */
+.character-card,
+.character-card.scroll-down {
   opacity: 1;
+  visibility: visible;
   transform: translateY(0) scale(1);
 }
 
-/* Character Image Box */
+/* Hidden State (when scrolling UP) */
+.character-card.scroll-up {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-30px) scale(0.95); /* Slides upward and fades out */
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   ARTWORK BOX (LARGE PROPORTIONAL CHARACTER SPRITE)
+   ========================================================================== */
 .card-art-box {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-art-box img {
-  width: 100%;
-  max-width: 250px;
+  width: 85%;                  /* Matches character image scale */
+  max-width: 240px;
   height: auto;
   display: block;
   margin: 0 auto;
-  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.35));
+  filter: drop-shadow(0px 8px 12px rgba(0, 0, 0, 0.4));
 }
 
-/* Force reset on all card children so custom colors can render */
-.character-card, 
-.character-card *,
-.card-description {
-  -webkit-text-fill-color: initial !important;
-  mix-blend-mode: normal !important;
-}
-
-/* Base Body/Bio Color */
+/* ==========================================================================
+   BIO TEXT (CENTERED JUSTIFICATION & SOLID BLACK)
+   ========================================================================== */
 .character-card .character-bio,
 .card-description {
-  color: #e0e6ff !important;
   font-family: 'Jost', sans-serif !important;
-  font-weight: 500 !important;
+  font-weight: 500;
+  font-size: 0.95rem;          /* Sized to fit comfortably */
+  line-height: 1.45;           /* Matches reference leading */
+  color: #000000 !important;   /* Solid black bio text */
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 4px;
+  -webkit-text-fill-color: #000000 !important;
+  text-shadow: none !important;
 }
 
-/* ==========================================
-   CHARACTER NAME TEXT (CUSTOM COLOR + OUTLINE + DROP SHADOW)
-   ========================================== */
-/* --- CHARACTER CARD HEADER BASE SETUP --- */
-/* --- CHARACTER CARD HEADER BASE SETUP --- */
-/* --- BASE HEADER SETUP (Eliminates Duplicate Text Ghosting) --- */
+/* ==========================================================================
+   CHARACTER NAME HEADER BASE SETUP
+   ========================================================================== */
 .character-card .character-name,
 .card-title {
   font-family: 'Jost', 'Futura-ExtraBold', 'Impact', sans-serif !important;
   font-weight: 900 !important;
-  font-size: 2.2rem;
+  font-size: 2.1rem;
   text-transform: uppercase;
-  letter-spacing: 1.5px !important;
-  line-height: 1.2 !important;
+  letter-spacing: 1px !important;
+  line-height: 1.1 !important;
   display: block;
-  margin-bottom: 12px;
+  margin-top: 0;
+  margin-bottom: 22px;          /* Gap between header and bio text */
   
-  /* CRITICAL: Kills the text-shadow duplicate layer */
+  /* Clears text-shadow overlap duplicate */
   text-shadow: none !important;
   
-  /* Renders clean stroke around fill without double rendering */
+  /* Clean 1.5px stroke around fill */
   -webkit-text-stroke-width: 1.5px !important;
   paint-order: stroke fill !important;
   -webkit-paint-order: stroke fill !important;
@@ -146,6 +163,13 @@ img {
   -webkit-text-stroke-color: #ffd700 !important;
 }
 
+/* DR. EGGMAN */
+.card-eggman .character-name {
+  color: #ff0000 !important;
+  -webkit-text-fill-color: #ff0000 !important;
+  -webkit-text-stroke-color: #ffffff !important;
+}
+
 /* AMY ROSE */
 .card-amy .character-name {
   color: #ff66cc !important;
@@ -158,6 +182,13 @@ img {
   color: #ee3322 !important;
   -webkit-text-fill-color: #ee3322 !important;
   -webkit-text-stroke-color: #000000 !important;
+}
+
+/* THE CHAOTIX */
+.card-chaotix .character-name {
+  color: #9933ff !important;
+  -webkit-text-fill-color: #9933ff !important;
+  -webkit-text-stroke-color: #22cc44 !important;
 }
 
 /* RISTAR */
@@ -173,7 +204,6 @@ img {
   -webkit-text-fill-color: #39c5bb !important;
   -webkit-text-stroke-color: #ff66cc !important;
 }
-
 
 /* ==========================================================================
    NICK & NOGGIN CHARACTERS
@@ -207,6 +237,13 @@ img {
   -webkit-text-stroke-color: #fff000 !important;
 }
 
+/* SANDY CHEEKS */
+.card-sandy .character-name {
+  color: #d2a679 !important;
+  -webkit-text-fill-color: #d2a679 !important;
+  -webkit-text-stroke-color: #ff3399 !important;
+}
+
 /* DORA THE EXPLORER */
 .card-dora .character-name {
   color: #ff6600 !important;
@@ -226,16 +263,6 @@ img {
   color: #ff69b4 !important;
   -webkit-text-fill-color: #ff69b4 !important;
   -webkit-text-stroke-color: #ffd700 !important;
-}
-
-/* --- CHARACTER CARD BIO TEXT --- */
-.character-card .character-bio,
-.card-description {
-  font-family: 'Jost', 'Futura', 'Century Gothic', sans-serif !important;
-  font-weight: 500;
-  font-size: 1.05rem;
-  line-height: 1.5;
-  color: #000000 !important;
 }
 
 body {
