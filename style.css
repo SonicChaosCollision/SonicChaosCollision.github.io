@@ -159,7 +159,7 @@ img {
 .card-shadow .character-name {
   color: #010000 !important;
   -webkit-text-fill-color: #010000 !important;
-  -webkit-text-stroke-color: #fd141f !important;
+  -webkit-text-stroke-color: #dc382f !important;
 }
 
 /* AMY ROSE */
@@ -503,15 +503,15 @@ body {
 }
 
 /* Individual character color rules target .tag-[character] */
-.tag-sonic .character-name-inline { color: #0200d0 !important; -webkit-text-fill-color: #0200d0 !important; -webkit-text-stroke-color: #ffcc00 !important; }
-.tag-tails .character-name-inline { color: #ffaa00 !important; -webkit-text-fill-color: #ffaa00 !important; -webkit-text-stroke-color: #ff4400 !important; }
-.tag-knuckles .character-name-inline { color: #ff2222 !important; -webkit-text-fill-color: #ff2222 !important; -webkit-text-stroke-color: #22cc44 !important; }
-.tag-shadow .character-name-inline { color: #dc0000 !important; -webkit-text-fill-color: #dc0000 !important; -webkit-text-stroke-color: #ffd700 !important; }
-.tag-eggman .character-name-inline { color: #ff0000 !important; -webkit-text-fill-color: #ff0000 !important; -webkit-text-stroke-color: #ffffff !important; }
-.tag-amy .character-name-inline { color: #ff66cc !important; -webkit-text-fill-color: #ff66cc !important; -webkit-text-stroke-color: #ffffff !important; }
-.tag-mighty .character-name-inline { color: #ee3322 !important; -webkit-text-fill-color: #ee3322 !important; -webkit-text-stroke-color: #000000 !important; }
-.tag-ray .character-name-inline { color: #ffcc00 !important; -webkit-text-fill-color: #ffcc00 !important; -webkit-text-stroke-color: #ff6600 !important; }
-.tag-chaotix .character-name-inline { color: #9933ff !important; -webkit-text-fill-color: #9933ff !important; -webkit-text-stroke-color: #22cc44 !important; }
+.tag-sonic .character-name-inline { color: #0200d0 !important; -webkit-text-fill-color: #0200d0 !important; -webkit-text-stroke-color: #f5a740 !important; }
+.tag-tails .character-name-inline { color: #ef8f00 !important; -webkit-text-fill-color: #ef8f00 !important; -webkit-text-stroke-color: #ad0401 !important; }
+.tag-knuckles .character-name-inline { color: #e81a3b !important; -webkit-text-fill-color: #e81a3b !important; -webkit-text-stroke-color: #3ba254 !important; }
+.tag-shadow .character-name-inline { color: #010000 !important; -webkit-text-fill-color: #010000 !important; -webkit-text-stroke-color: #dc382f !important; }
+.tag-eggman .character-name-inline { color: #af1211 !important; -webkit-text-fill-color: #af1211 !important; -webkit-text-stroke-color: #fffbff !important; }
+.tag-amy .character-name-inline { color: #fe4080 !important; -webkit-text-fill-color: #fe4080 !important; -webkit-text-stroke-color: #366b4a !important; }
+.tag-mighty .character-name-inline { color: #af1211 !important; -webkit-text-fill-color: #af1211 !important; -webkit-text-stroke-color: #260035 !important; }
+.tag-ray .character-name-inline { color: #f08e00 !important; -webkit-text-fill-color: #f08e00 !important; -webkit-text-stroke-color: #a70b10 !important; }
+.tag-chaotix .character-name-inline { color: #752fe0 !important; -webkit-text-fill-color: #752fe0 !important; -webkit-text-stroke-color: #5df487 !important; }
 .tag-ristar .character-name-inline { color: #ffcc00 !important; -webkit-text-fill-color: #ffcc00 !important; -webkit-text-stroke-color: #ff0055 !important; }
 .tag-miku .character-name-inline { color: #39c5bb !important; -webkit-text-fill-color: #39c5bb !important; -webkit-text-stroke-color: #ff66cc !important; }
 
