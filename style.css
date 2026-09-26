@@ -35,7 +35,7 @@ img {
 .character-card {
   position: relative;
   width: 100%;
-  max-width: 420px;
+  max-width: 480px;
   margin: 0 auto;
   background-color: #6aab8e;
   border: 5px solid #cc0000;
@@ -436,7 +436,7 @@ body {
 .megamix-story-container {
   background-color: #2b5bc7; /* Exact royal blue background from screenshots */
   padding: 40px 30px;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   border-radius: 8px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -450,9 +450,9 @@ body {
   font-family: 'Jost', 'Futura', 'Century Gothic', sans-serif; 
   font-size: 1.25rem;
   font-weight: 500; /* Medium weight matches the screenshot weight closely */
-  line-height: 1.65;
-  margin-bottom: 28px;
-  letter-spacing: 0.5px;
+  line-height: 1.85;
+  margin-bottom: 24px;
+  letter-spacing: 0.3px;
 }
 
 /* Base Tag Styling: Heavy 3D Black Block Shadow */
@@ -484,11 +484,15 @@ body {
 
 /* Shared structural rules for the base .tag class */
 .tag {
+  font-size: 1.1rem !important; /* ~17.6px */
+  padding: 4px 10px;
   display: inline-block;
+  margin: 0 2px;
 }
 
 .character-name-inline {
   font-family: 'Jost', sans-serif !important;
+  font-size: 1em
   font-weight: 900 !important;
   text-transform: uppercase;
   letter-spacing: 0.5px;
