@@ -89,6 +89,7 @@ img {
    CHARACTER NAME TEXT (CUSTOM COLOR + OUTLINE + DROP SHADOW)
    ========================================== */
 /* --- CHARACTER CARD HEADER BASE SETUP --- */
+/* --- CHARACTER CARD HEADER BASE SETUP --- */
 .character-card .character-name,
 .card-title {
   font-family: 'Jost', 'Futura-ExtraBold', 'Impact', sans-serif !important;
@@ -100,22 +101,22 @@ img {
   display: block;
   margin-bottom: 12px;
   
-  /* Clears strokes and drop-shadow filters to prevent double rendering */
-  -webkit-text-stroke: 0px !important;
+  /* CRITICAL: Kills double-rendering engines */
+  -webkit-text-stroke: 0px transparent !important;
   filter: none !important;
   -webkit-text-fill-color: initial !important;
 }
 
 /* ==========================================================================
-   SEGA & GUEST CHARACTERS (Single Outline + Single Pitch-Black Shadow)
+   SEGA & GUEST CHARACTERS (Single Crisp Pass)
    ========================================================================== */
 
 .card-sonic .character-name {
   color: #2b60ff !important;
   -webkit-text-fill-color: #2b60ff !important;
   text-shadow: 
-    -1px -1px 0 #ffcc00, 1px -1px 0 #ffcc00, -1px 1px 0 #ffcc00, 1px 1px 0 #ffcc00, /* 1px Outline */
-    4px 4px 0px #000000 !important;                                               /* Single Drop Shadow */
+    -1px -1px 0 #ffcc00, 1px -1px 0 #ffcc00, -1px 1px 0 #ffcc00, 1px 1px 0 #ffcc00,
+    3px 3px 0px #000000 !important;
 }
 
 .card-tails .character-name {
@@ -123,7 +124,7 @@ img {
   -webkit-text-fill-color: #ffaa00 !important;
   text-shadow: 
     -1px -1px 0 #ff4400, 1px -1px 0 #ff4400, -1px 1px 0 #ff4400, 1px 1px 0 #ff4400,
-    4px 4px 0px #000000 !important;
+    3px 3px 0px #000000 !important;
 }
 
 .card-knuckles .character-name {
@@ -131,7 +132,7 @@ img {
   -webkit-text-fill-color: #ff2222 !important;
   text-shadow: 
     -1px -1px 0 #22cc44, 1px -1px 0 #22cc44, -1px 1px 0 #22cc44, 1px 1px 0 #22cc44,
-    4px 4px 0px #000000 !important;
+    3px 3px 0px #000000 !important;
 }
 
 .card-shadow .character-name {
@@ -139,7 +140,7 @@ img {
   -webkit-text-fill-color: #dc0000 !important;
   text-shadow: 
     -1px -1px 0 #ffd700, 1px -1px 0 #ffd700, -1px 1px 0 #ffd700, 1px 1px 0 #ffd700,
-    4px 4px 0px #000000 !important;
+    3px 3px 0px #000000 !important;
 }
 
 .card-eggman .character-name {
@@ -147,7 +148,7 @@ img {
   -webkit-text-fill-color: #ff0000 !important;
   text-shadow: 
     -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff,
-    4px 4px 0px #000000 !important;
+    3px 3px 0px #000000 !important;
 }
 
 .card-amy .character-name {
@@ -155,7 +156,7 @@ img {
   -webkit-text-fill-color: #ff66cc !important;
   text-shadow: 
     -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff,
-    4px 4px 0px #000000 !important;
+    3px 3px 0px #000000 !important;
 }
 
 .card-mighty .character-name {
@@ -163,7 +164,7 @@ img {
   -webkit-text-fill-color: #ee3322 !important;
   text-shadow: 
     -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000,
-    4px 4px 0px #000000 !important;
+    3px 3px 0px #000000 !important;
 }
 
 .card-chaotix .character-name {
@@ -171,7 +172,7 @@ img {
   -webkit-text-fill-color: #9933ff !important;
   text-shadow: 
     -1px -1px 0 #22cc44, 1px -1px 0 #22cc44, -1px 1px 0 #22cc44, 1px 1px 0 #22cc44,
-    4px 4px 0px #000000 !important;
+    3px 3px 0px #000000 !important;
 }
 
 .card-ristar .character-name {
@@ -179,7 +180,7 @@ img {
   -webkit-text-fill-color: #ffcc00 !important;
   text-shadow: 
     -1px -1px 0 #ff0055, 1px -1px 0 #ff0055, -1px 1px 0 #ff0055, 1px 1px 0 #ff0055,
-    4px 4px 0px #000000 !important;
+    3px 3px 0px #000000 !important;
 }
 
 .card-miku .character-name {
@@ -187,7 +188,7 @@ img {
   -webkit-text-fill-color: #39c5bb !important;
   text-shadow: 
     -1px -1px 0 #ff66cc, 1px -1px 0 #ff66cc, -1px 1px 0 #ff66cc, 1px 1px 0 #ff66cc,
-    4px 4px 0px #000000 !important;
+    3px 3px 0px #000000 !important;
 }
 
 /* ==========================================================================
@@ -199,7 +200,7 @@ img {
   -webkit-text-fill-color: #fff000 !important;
   text-shadow: 
     -1px -1px 0 #ff6600, 1px -1px 0 #ff6600, -1px 1px 0 #ff6600, 1px 1px 0 #ff6600,
-    4px 4px 0px #000000 !important;
+    3px 3px 0px #000000 !important;
 }
 
 .card-patrick .character-name {
@@ -207,7 +208,7 @@ img {
   -webkit-text-fill-color: #ff88aa !important;
   text-shadow: 
     -1px -1px 0 #88cc00, 1px -1px 0 #88cc00, -1px 1px 0 #88cc00, 1px 1px 0 #88cc00,
-    4px 4px 0px #000000 !important;
+    3px 3px 0px #000000 !important;
 }
 
 .card-squidward .character-name {
@@ -215,7 +216,7 @@ img {
   -webkit-text-fill-color: #55d4c4 !important;
   text-shadow: 
     -1px -1px 0 #8800cc, 1px -1px 0 #8800cc, -1px 1px 0 #8800cc, 1px 1px 0 #8800cc,
-    4px 4px 0px #000000 !important;
+    3px 3px 0px #000000 !important;
 }
 
 .card-larry .character-name {
@@ -223,7 +224,7 @@ img {
   -webkit-text-fill-color: #e63946 !important;
   text-shadow: 
     -1px -1px 0 #fff000, 1px -1px 0 #fff000, -1px 1px 0 #fff000, 1px 1px 0 #fff000,
-    4px 4px 0px #000000 !important;
+    3px 3px 0px #000000 !important;
 }
 
 .card-sandy .character-name {
@@ -231,7 +232,7 @@ img {
   -webkit-text-fill-color: #d2a679 !important;
   text-shadow: 
     -1px -1px 0 #ff3399, 1px -1px 0 #ff3399, -1px 1px 0 #ff3399, 1px 1px 0 #ff3399,
-    4px 4px 0px #000000 !important;
+    3px 3px 0px #000000 !important;
 }
 
 .card-dora .character-name {
@@ -239,7 +240,7 @@ img {
   -webkit-text-fill-color: #ff6600 !important;
   text-shadow: 
     -1px -1px 0 #ffcc00, 1px -1px 0 #ffcc00, -1px 1px 0 #ffcc00, 1px 1px 0 #ffcc00,
-    4px 4px 0px #000000 !important;
+    3px 3px 0px #000000 !important;
 }
 
 .card-lincoln .character-name {
@@ -247,7 +248,7 @@ img {
   -webkit-text-fill-color: #ffffff !important;
   text-shadow: 
     -1px -1px 0 #ffaa00, 1px -1px 0 #ffaa00, -1px 1px 0 #ffaa00, 1px 1px 0 #ffaa00,
-    4px 4px 0px #000000 !important;
+    3px 3px 0px #000000 !important;
 }
 
 .card-lola .character-name {
@@ -255,7 +256,7 @@ img {
   -webkit-text-fill-color: #ff69b4 !important;
   text-shadow: 
     -1px -1px 0 #ffd700, 1px -1px 0 #ffd700, -1px 1px 0 #ffd700, 1px 1px 0 #ffd700,
-    4px 4px 0px #000000 !important;
+    3px 3px 0px #000000 !important;
 }
 
 /* --- CHARACTER CARD BIO TEXT --- */
@@ -266,7 +267,6 @@ img {
   font-size: 1.05rem;
   line-height: 1.5;
   color: #000000 !important;
-  text-shadow: 1px 1px 2px #000000;
 }
 
 body {
