@@ -394,6 +394,22 @@ body {
   filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.35));
 }
 
+/* Force reset on all card children so custom colors can render */
+.character-card, 
+.character-card *,
+.card-description {
+  -webkit-text-fill-color: initial !important;
+  mix-blend-mode: normal !important;
+}
+
+/* Base Body/Bio Color (Forces crisp readable light-gray/off-white) */
+.character-card .character-bio,
+.card-description {
+  color: #e0e6ff !important;
+  font-family: 'Jost', sans-serif !important;
+  font-weight: 500 !important;
+}
+
 /* ==========================================
    CHARACTER NAME TEXT (CUSTOM COLOR + CUSTOM OUTLINE + DROP SHADOW)
    ========================================== */
