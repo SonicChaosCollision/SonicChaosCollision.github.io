@@ -1,3 +1,17 @@
+/* Quick Reset Guardrails */
+body {
+  background-color: #2b5bc7 !important; /* Forces background blue */
+  color: #ffffff !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* Stops images from expanding beyond their containers */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 * {
   margin: 0;
   padding: 0;
