@@ -28,47 +28,42 @@ img {
 }
 
 /* ==========================================================================
-   CARD CONTAINER (MEGAMIX MANIA SITE LAYOUT & SIZING)
+   CARD CONTAINER SCROLL ANIMATION FIX
    ========================================================================== */
+
+/* 1. Set up transition properties on the base class */
 .character-card {
   position: relative;
   width: 100%;
-  
-  /* Matches official desktop card container scale */
-  max-width: 420px;            
+  max-width: 420px;
   margin: 0 auto;
-  
-  /* Official Megamix Mania green palette & red border */
-  background-color: #6aab8e;    
-  border: 5px solid #cc0000;    
-  border-radius: 0px;          
-  padding: 32px 28px 28px 28px; 
+  background-color: #6aab8e;
+  border: 5px solid #cc0000;
+  border-radius: 0px;
+  padding: 32px 28px 28px 28px;
   text-align: center;
   box-sizing: border-box;
 
-  /* Smooth scroll animation transitions */
-  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
-  will-change: transform, opacity, visibility;
+  /* Smooth performance-optimized transitions */
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out, visibility 0.4s !important;
+  will-change: transform, opacity;
 }
 
-/* --------------------------------------------------------------------------
-   SCROLL DIRECTION STATES (SHOW DOWN / HIDE UP)
-   -------------------------------------------------------------------------- */
-
-/* Default Visible State (Scrolling DOWN) */
-.character-card,
-.character-card.scroll-down {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0) scale(1);
+/* 2. Visible state (Scrolling DOWN or Default) */
+.character-card.scroll-down,
+.character-card:not(.scroll-up) {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) scale(1) !important;
+  pointer-events: auto !important;
 }
 
-/* Hidden State (Scrolling UP) */
+/* 3. Hidden state (Scrolling UP) */
 .character-card.scroll-up {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-30px) scale(0.95);
-  pointer-events: none;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transform: translateY(-40px) scale(0.95) !important;
+  pointer-events: none !important;
 }
 
 /* ==========================================================================
