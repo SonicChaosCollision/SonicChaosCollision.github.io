@@ -77,12 +77,11 @@ img {
 }
 
 .card-art-box img {
-  width: 85% !important; /* Scales artwork larger like target image */
-  max-width: 320px;
-  height: auto;
+  width: 95% !important;                  /* Expands artwork to fill nearly the full card width */
+  max-width: 380px !important;            /* Sets a larger frame cap for high-res art */
+  height: auto !important;
   display: block;
-  margin: 0 auto 16px auto;
-  filter: drop-shadow(0px 8px 12px rgba(0, 0, 0, 0.3));
+  margin: 0 auto 18px auto !important;
 }
 
 /* ==========================================================================
@@ -491,11 +490,13 @@ body {
 
 .character-name-inline {
   font-family: 'Jost', sans-serif !important;
-  font-size: 1em
   font-weight: 900 !important;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  font-size: 1.3em !important;            /* Scales up name text relative to paragraph body */
+  letter-spacing: 0.8px !important;       /* Adds slight breathing room for readability */
+  -webkit-text-stroke-width: 1.5px !important; /* Sharpens the outer line border */
   display: inline-block;
+  margin: 0 1px;
+  text-transform: uppercase;
   
   /* Single crisp stroke & block shadow setup */
   text-shadow: none !important;
