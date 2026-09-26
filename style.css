@@ -521,7 +521,7 @@ body {
 .tag-squidward .character-name-inline { color: #55d4c4 !important; -webkit-text-fill-color: #55d4c4 !important; -webkit-text-stroke-color: #8800cc !important; }
 .tag-sandy .character-name-inline { color: #d2a679 !important; -webkit-text-fill-color: #d2a679 !important; -webkit-text-stroke-color: #ff3399 !important; }
 .tag-dora .character-name-inline { color: #ff6600 !important; -webkit-text-fill-color: #ff6600 !important; -webkit-text-stroke-color: #ffcc00 !important; }
-.tag-lincoln .character-name-inline { color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; -webkit-text-stroke-color: #ffaa00 !important; }
+.tag-lincoln .character-name-inline { color: #ffaa00 !important; -webkit-text-fill-color: #ffaa00 !important; -webkit-text-stroke-color: #ffffff !important; }
 .tag-lola .character-name-inline { color: #ff69b4 !important; -webkit-text-fill-color: #ff69b4 !important; -webkit-text-stroke-color: #ffd700 !important; }
 
 .character-container {
