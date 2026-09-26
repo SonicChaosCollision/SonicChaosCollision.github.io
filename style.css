@@ -136,58 +136,44 @@ img {
 
 /* SONIC THE HEDGEHOG */
 .card-sonic .character-name {
-  color: #2b60ff !important;
-  -webkit-text-fill-color: #2b60ff !important;
-  -webkit-text-stroke-color: #ffcc00 !important;
+  color: #0200d0 !important;
+  -webkit-text-fill-color: #0200d0 !important;
+  -webkit-text-stroke-color: #f5a740 !important;
 }
 
 /* MILES "TAILS" PROWER */
 .card-tails .character-name {
-  color: #ffaa00 !important;
-  -webkit-text-fill-color: #ffaa00 !important;
-  -webkit-text-stroke-color: #ff4400 !important;
+  color: #ef8f00 !important;
+  -webkit-text-fill-color: #ef8f00 !important;
+  -webkit-text-stroke-color: #ad0401 !important;
 }
 
 /* KNUCKLES THE ECHIDNA */
 .card-knuckles .character-name {
-  color: #ff2222 !important;
-  -webkit-text-fill-color: #ff2222 !important;
-  -webkit-text-stroke-color: #22cc44 !important;
+  color: #e81a3b !important;
+  -webkit-text-fill-color: #e81a3b !important;
+  -webkit-text-stroke-color: #3ba254 !important;
 }
 
 /* SHADOW THE HEDGEHOG */
 .card-shadow .character-name {
-  color: #dc0000 !important;
-  -webkit-text-fill-color: #dc0000 !important;
-  -webkit-text-stroke-color: #ffd700 !important;
-}
-
-/* DR. EGGMAN */
-.card-eggman .character-name {
-  color: #ff0000 !important;
-  -webkit-text-fill-color: #ff0000 !important;
-  -webkit-text-stroke-color: #ffffff !important;
+  color: #010000 !important;
+  -webkit-text-fill-color: #010000 !important;
+  -webkit-text-stroke-color: #fd141f !important;
 }
 
 /* AMY ROSE */
 .card-amy .character-name {
-  color: #ff66cc !important;
-  -webkit-text-fill-color: #ff66cc !important;
-  -webkit-text-stroke-color: #ffffff !important;
+  color: #fe4080 !important;
+  -webkit-text-fill-color: #fe4080 !important;
+  -webkit-text-stroke-color: #366b4a !important;
 }
 
 /* MIGHTY THE ARMADILLO */
 .card-mighty .character-name {
-  color: #ee3322 !important;
-  -webkit-text-fill-color: #ee3322 !important;
-  -webkit-text-stroke-color: #000000 !important;
-}
-
-/* THE CHAOTIX */
-.card-chaotix .character-name {
-  color: #9933ff !important;
-  -webkit-text-fill-color: #9933ff !important;
-  -webkit-text-stroke-color: #22cc44 !important;
+  color: #af1211 !important;
+  -webkit-text-fill-color: #af1211 !important;
+  -webkit-text-stroke-color: #260035 !important;
 }
 
 /* RISTAR */
@@ -236,13 +222,6 @@ img {
   -webkit-text-stroke-color: #fff000 !important;
 }
 
-/* SANDY CHEEKS */
-.card-sandy .character-name {
-  color: #d2a679 !important;
-  -webkit-text-fill-color: #d2a679 !important;
-  -webkit-text-stroke-color: #ff3399 !important;
-}
-
 /* DORA THE EXPLORER */
 .card-dora .character-name {
   color: #ff6600 !important;
@@ -250,11 +229,11 @@ img {
   -webkit-text-stroke-color: #ffcc00 !important;
 }
 
-/* LINCOLN LOUD */
-.card-lincoln .character-name {
-  color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff !important;
-  -webkit-text-stroke-color: #ffaa00 !important;
+/* LINCOLN LOUD */ 
+.card-lincoln .character-name { 
+  color: #ffaa00 !important;
+  -webkit-text-fill-color: #ffaa00 !important;
+  -webkit-text-stroke-color: #ffffff !important;
 }
 
 /* LOLA LOUD */
