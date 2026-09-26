@@ -398,34 +398,29 @@ body {
    CHARACTER NAME TEXT (CUSTOM COLOR + CUSTOM OUTLINE + DROP SHADOW)
    ========================================== */
 /* Clean Card Headers (Fixes Text Bleed & Overlap) */
+/* --- CHARACTER CARD HEADERS (NAMES) --- */
 .character-card .character-name,
 .card-title {
   font-family: 'Jost', 'Futura-ExtraBold', 'Impact', sans-serif !important;
   font-weight: 900 !important;
   font-size: 1.8rem;
   text-transform: uppercase;
-  
-  /* Letter spacing prevents adjacent character strokes from touching */
-  letter-spacing: 1.5px !important;
-  
-  /* Line height prevents vertical bleeding into bio text above/below */
-  line-height: 1.2 !important;
-  
-  /* CRITICAL: Forces outline BEHIND text fill so it never bleeds inward */
-  paint-order: stroke fill !important;
-  -webkit-paint-order: stroke fill !important;
-  
-  /* Pure 100% Solid Black Shadow */
+  letter-spacing: 1px;
   text-shadow: none !important;
   filter: drop-shadow(4px 4px 0px #000000) !important;
-  
-  margin-bottom: 12px;
-  display: block;
+  paint-order: stroke fill;
+  margin-bottom: 10px;
 }
 
-/* Ensure stroke width stays crisp and clean across all card names */
-.character-card .character-name {
-  -webkit-text-stroke-width: 1.2px !important;
+/* --- CHARACTER CARD BIO TEXT --- */
+.character-card .character-bio,
+.card-description {
+  font-family: 'Jost', 'Futura', 'Century Gothic', sans-serif !important;
+  font-weight: 500;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: #ffffff !important;
+  text-shadow: 1px 1px 2px #000000; /* Subtle shadow to keep bio text easy to read */
 }
 
 /* ==========================================
