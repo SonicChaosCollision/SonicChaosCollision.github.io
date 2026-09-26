@@ -22,8 +22,9 @@ img {
   --bg-color: #0b0d14;
   --card-bg-green: #61ab8b;   /* Megamix bright green card background */
   --card-red-border: #cc1100; /* Sharp red outer line */
-  --font-heading: 'Rubik', sans-serif;
-  --font-body: 'Montserrat', sans-serif;
+  /* Replace Rubik and Montserrat with Jost */
+  --font-heading: 'Jost', 'Futura-ExtraBold', 'Impact', sans-serif;
+  --font-body: 'Jost', 'Futura', 'Century Gothic', sans-serif;
 }
 
 body {
