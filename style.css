@@ -444,7 +444,7 @@ body {
 /* Paragraph Spacing Fix */
 .megamix-story-container p, 
 .story-block p {
-  font-family: 'Jost', sans-serif !important;
+  font-family: 'Futura-Bold', 'Futura Extra Bold', 'Futura', 'Jost', sans-serif !important;
   font-size: 1.35rem !important; /* ~21.6px - matches right screenshot size */
   font-weight: 500 !important;
   line-height: 1.75 !important;
@@ -489,7 +489,7 @@ body {
 }
 
 .character-name-inline {
-  font-family: 'Jost', sans-serif !important;
+  font-family: 'Futura-Bold', 'Futura Extra Bold', 'Futura', 'Jost', sans-serif !important;
   font-weight: 900 !important;
   font-size: 1.3em !important;            /* Scales up name text relative to paragraph body */
   letter-spacing: 0.8px !important;       /* Adds slight breathing room for readability */
