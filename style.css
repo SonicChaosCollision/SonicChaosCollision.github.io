@@ -503,7 +503,7 @@ body {
 }
 
 /* Individual character color rules target .tag-[character] */
-.tag-sonic .character-name-inline { color: #2b60ff !important; -webkit-text-fill-color: #2b60ff !important; -webkit-text-stroke-color: #ffcc00 !important; }
+.tag-sonic .character-name-inline { color: #0200d0 !important; -webkit-text-fill-color: #0200d0 !important; -webkit-text-stroke-color: #ffcc00 !important; }
 .tag-tails .character-name-inline { color: #ffaa00 !important; -webkit-text-fill-color: #ffaa00 !important; -webkit-text-stroke-color: #ff4400 !important; }
 .tag-knuckles .character-name-inline { color: #ff2222 !important; -webkit-text-fill-color: #ff2222 !important; -webkit-text-stroke-color: #22cc44 !important; }
 .tag-shadow .character-name-inline { color: #dc0000 !important; -webkit-text-fill-color: #dc0000 !important; -webkit-text-stroke-color: #ffd700 !important; }
