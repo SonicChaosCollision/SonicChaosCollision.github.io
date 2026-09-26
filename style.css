@@ -90,173 +90,142 @@ img {
    ========================================== */
 /* --- CHARACTER CARD HEADER BASE SETUP --- */
 /* --- CHARACTER CARD HEADER BASE SETUP --- */
+/* --- BASE HEADER SETUP (Eliminates Duplicate Text Ghosting) --- */
 .character-card .character-name,
 .card-title {
   font-family: 'Jost', 'Futura-ExtraBold', 'Impact', sans-serif !important;
   font-weight: 900 !important;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   text-transform: uppercase;
-  letter-spacing: 1px !important;
+  letter-spacing: 1.5px !important;
   line-height: 1.2 !important;
   display: block;
   margin-bottom: 12px;
   
-  /* CRITICAL: Kills double-rendering engines */
-  -webkit-text-stroke: 0px transparent !important;
-  filter: none !important;
-  -webkit-text-fill-color: initial !important;
+  /* CRITICAL: Kills the text-shadow duplicate layer */
+  text-shadow: none !important;
+  
+  /* Renders clean stroke around fill without double rendering */
+  -webkit-text-stroke-width: 1.5px !important;
+  paint-order: stroke fill !important;
+  -webkit-paint-order: stroke fill !important;
+  
+  /* Single, crisp 4px solid black block shadow */
+  filter: drop-shadow(4px 4px 0px #000000) !important;
 }
 
 /* ==========================================================================
-   SEGA & GUEST CHARACTERS (Single Crisp Pass)
+   SEGA & GUEST CHARACTERS
    ========================================================================== */
 
+/* SONIC THE HEDGEHOG */
 .card-sonic .character-name {
   color: #2b60ff !important;
   -webkit-text-fill-color: #2b60ff !important;
-  text-shadow: 
-    -1px -1px 0 #ffcc00, 1px -1px 0 #ffcc00, -1px 1px 0 #ffcc00, 1px 1px 0 #ffcc00,
-    3px 3px 0px #000000 !important;
+  -webkit-text-stroke-color: #ffcc00 !important;
 }
 
+/* MILES "TAILS" PROWER */
 .card-tails .character-name {
   color: #ffaa00 !important;
   -webkit-text-fill-color: #ffaa00 !important;
-  text-shadow: 
-    -1px -1px 0 #ff4400, 1px -1px 0 #ff4400, -1px 1px 0 #ff4400, 1px 1px 0 #ff4400,
-    3px 3px 0px #000000 !important;
+  -webkit-text-stroke-color: #ff4400 !important;
 }
 
+/* KNUCKLES THE ECHIDNA */
 .card-knuckles .character-name {
   color: #ff2222 !important;
   -webkit-text-fill-color: #ff2222 !important;
-  text-shadow: 
-    -1px -1px 0 #22cc44, 1px -1px 0 #22cc44, -1px 1px 0 #22cc44, 1px 1px 0 #22cc44,
-    3px 3px 0px #000000 !important;
+  -webkit-text-stroke-color: #22cc44 !important;
 }
 
+/* SHADOW THE HEDGEHOG */
 .card-shadow .character-name {
   color: #dc0000 !important;
   -webkit-text-fill-color: #dc0000 !important;
-  text-shadow: 
-    -1px -1px 0 #ffd700, 1px -1px 0 #ffd700, -1px 1px 0 #ffd700, 1px 1px 0 #ffd700,
-    3px 3px 0px #000000 !important;
+  -webkit-text-stroke-color: #ffd700 !important;
 }
 
-.card-eggman .character-name {
-  color: #ff0000 !important;
-  -webkit-text-fill-color: #ff0000 !important;
-  text-shadow: 
-    -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff,
-    3px 3px 0px #000000 !important;
-}
-
+/* AMY ROSE */
 .card-amy .character-name {
   color: #ff66cc !important;
   -webkit-text-fill-color: #ff66cc !important;
-  text-shadow: 
-    -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff,
-    3px 3px 0px #000000 !important;
+  -webkit-text-stroke-color: #ffffff !important;
 }
 
+/* MIGHTY THE ARMADILLO */
 .card-mighty .character-name {
   color: #ee3322 !important;
   -webkit-text-fill-color: #ee3322 !important;
-  text-shadow: 
-    -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000,
-    3px 3px 0px #000000 !important;
+  -webkit-text-stroke-color: #000000 !important;
 }
 
-.card-chaotix .character-name {
-  color: #9933ff !important;
-  -webkit-text-fill-color: #9933ff !important;
-  text-shadow: 
-    -1px -1px 0 #22cc44, 1px -1px 0 #22cc44, -1px 1px 0 #22cc44, 1px 1px 0 #22cc44,
-    3px 3px 0px #000000 !important;
-}
-
+/* RISTAR */
 .card-ristar .character-name {
   color: #ffcc00 !important;
   -webkit-text-fill-color: #ffcc00 !important;
-  text-shadow: 
-    -1px -1px 0 #ff0055, 1px -1px 0 #ff0055, -1px 1px 0 #ff0055, 1px 1px 0 #ff0055,
-    3px 3px 0px #000000 !important;
+  -webkit-text-stroke-color: #ff0055 !important;
 }
 
+/* HATSUNE MIKU */
 .card-miku .character-name {
   color: #39c5bb !important;
   -webkit-text-fill-color: #39c5bb !important;
-  text-shadow: 
-    -1px -1px 0 #ff66cc, 1px -1px 0 #ff66cc, -1px 1px 0 #ff66cc, 1px 1px 0 #ff66cc,
-    3px 3px 0px #000000 !important;
+  -webkit-text-stroke-color: #ff66cc !important;
 }
+
 
 /* ==========================================================================
    NICK & NOGGIN CHARACTERS
    ========================================================================== */
 
+/* SPONGEBOB SQUAREPANTS */
 .card-spongebob .character-name {
   color: #fff000 !important;
   -webkit-text-fill-color: #fff000 !important;
-  text-shadow: 
-    -1px -1px 0 #ff6600, 1px -1px 0 #ff6600, -1px 1px 0 #ff6600, 1px 1px 0 #ff6600,
-    3px 3px 0px #000000 !important;
+  -webkit-text-stroke-color: #ff6600 !important;
 }
 
+/* PATRICK STAR */
 .card-patrick .character-name {
   color: #ff88aa !important;
   -webkit-text-fill-color: #ff88aa !important;
-  text-shadow: 
-    -1px -1px 0 #88cc00, 1px -1px 0 #88cc00, -1px 1px 0 #88cc00, 1px 1px 0 #88cc00,
-    3px 3px 0px #000000 !important;
+  -webkit-text-stroke-color: #88cc00 !important;
 }
 
+/* SQUIDWARD TENTACLES */
 .card-squidward .character-name {
   color: #55d4c4 !important;
   -webkit-text-fill-color: #55d4c4 !important;
-  text-shadow: 
-    -1px -1px 0 #8800cc, 1px -1px 0 #8800cc, -1px 1px 0 #8800cc, 1px 1px 0 #8800cc,
-    3px 3px 0px #000000 !important;
+  -webkit-text-stroke-color: #8800cc !important;
 }
 
+/* LARRY THE LOBSTER */
 .card-larry .character-name {
   color: #e63946 !important;
   -webkit-text-fill-color: #e63946 !important;
-  text-shadow: 
-    -1px -1px 0 #fff000, 1px -1px 0 #fff000, -1px 1px 0 #fff000, 1px 1px 0 #fff000,
-    3px 3px 0px #000000 !important;
+  -webkit-text-stroke-color: #fff000 !important;
 }
 
-.card-sandy .character-name {
-  color: #d2a679 !important;
-  -webkit-text-fill-color: #d2a679 !important;
-  text-shadow: 
-    -1px -1px 0 #ff3399, 1px -1px 0 #ff3399, -1px 1px 0 #ff3399, 1px 1px 0 #ff3399,
-    3px 3px 0px #000000 !important;
-}
-
+/* DORA THE EXPLORER */
 .card-dora .character-name {
   color: #ff6600 !important;
   -webkit-text-fill-color: #ff6600 !important;
-  text-shadow: 
-    -1px -1px 0 #ffcc00, 1px -1px 0 #ffcc00, -1px 1px 0 #ffcc00, 1px 1px 0 #ffcc00,
-    3px 3px 0px #000000 !important;
+  -webkit-text-stroke-color: #ffcc00 !important;
 }
 
+/* LINCOLN LOUD */
 .card-lincoln .character-name {
   color: #ffffff !important;
   -webkit-text-fill-color: #ffffff !important;
-  text-shadow: 
-    -1px -1px 0 #ffaa00, 1px -1px 0 #ffaa00, -1px 1px 0 #ffaa00, 1px 1px 0 #ffaa00,
-    3px 3px 0px #000000 !important;
+  -webkit-text-stroke-color: #ffaa00 !important;
 }
 
+/* LOLA LOUD */
 .card-lola .character-name {
   color: #ff69b4 !important;
   -webkit-text-fill-color: #ff69b4 !important;
-  text-shadow: 
-    -1px -1px 0 #ffd700, 1px -1px 0 #ffd700, -1px 1px 0 #ffd700, 1px 1px 0 #ffd700,
-    3px 3px 0px #000000 !important;
+  -webkit-text-stroke-color: #ffd700 !important;
 }
 
 /* --- CHARACTER CARD BIO TEXT --- */
