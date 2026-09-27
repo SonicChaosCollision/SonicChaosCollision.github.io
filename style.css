@@ -276,7 +276,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 40px 20px 20px;
+  padding: 15px 10px 30px; /* Reduced side padding so the logo can span full width */
   
   /* Your level background artwork (Sky + City + Water) */
   background-image: url('Untitled1941_20260925181204.png'); 
@@ -297,34 +297,39 @@ body {
 
 /* Scaled Logo to match Megamix layout proportions */
 .hero-logo {
-  width: 85vw;          /* Takes up 85% of the viewport width */
-  max-width: 500px;     /* Prevents it from getting absurdly huge on 4K desktop screens */
-  height: auto;         /* Preserves aspect ratio automatically */
+  width: 96% !important;        /* Spans edge-to-edge across the screen */
+  max-width: 720px !important;  /* Higher cap so it fills the header frame */
+  height: auto;                 /* Preserves aspect ratio automatically */
   display: block;
-  margin: 10px auto 0;  /* Centers the logo */
+  margin: 5px auto 0;           /* Centers the logo */
   filter: drop-shadow(0 4px 0px rgba(0, 0, 0, 0.5));
 }
 
-/* Mobile tweak so it doesn't crowd small screens */
+/* Mobile tweak to match target proportions without crowding top edge */
 @media (max-width: 480px) {
   .hero-logo {
-    max-width: 240px; 
+    width: 98% !important;
+    max-width: 100% !important; /* Lets it fill the view on small mobile displays */
   }
 }
 
 /* Download Button (Matching that metallic blue retro look) */
 .download-btn {
   display: inline-block;
-  padding: 18px 60px;
+  width: 90%;
+  max-width: 380px;             /* Pill-style wide footprint */
+  text-align: center;
+  padding: 18px 0;
   font-family: 'Press Start 2P', sans-serif, system-ui; /* Retro arcade font */
   font-size: 1.5rem;
   color: #FFFFFF;
   text-decoration: none;
   background: linear-gradient(180deg, #8a99db 0%, #43529c 50%, #202b66 100%);
   border: 4px solid #101538;
-  border-radius: 25px;
+  border-radius: 50px;          /* Smooth rounded pill border */
   box-shadow: 0 6px 0 #0a0d24, inset 0 3px 0 rgba(255,255,255,0.6);
   transition: transform 0.1s ease, filter 0.2s ease;
+  box-sizing: border-box;
 }
 
 .download-btn:hover {
